@@ -14,6 +14,8 @@ namespace Rhythem.TrackEditor {
         public string artist;
         public int bpm;
         [Title("Track Editor Info")]
+
+        public int beats;
         public int subdivisions;
         public int numberOfMeasures;
         public AudioClip songFile;

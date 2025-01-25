@@ -43,7 +43,7 @@ Material:
     - _QueueOffset: 0
     - _Ring_Divisions: 1.43
     - _Ring_Inner_Radius: 93
-    - _Ring_Noise_Scale: 0.04
+    - _Ring_Noise_Scale: 0.02
     - _Ring_Noise_Strength: 2
     m_Colors:
     - _Ring_Color_A: {r: 2, g: 0.51886797, b: 1.8304131, a: 1}
