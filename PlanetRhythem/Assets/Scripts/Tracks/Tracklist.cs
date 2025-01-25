@@ -3,7 +3,9 @@ using UnityEngine;
 using System.Collections.Generic;
 
 namespace Rhythem.Songs
-{
+{/// <summary>
+/// Serialized asset for storing lists of songs in folders
+/// </summary>
     [CreateAssetMenu(fileName = "Tracklist", menuName = "Rhythem/Tracklist")]
     public class Tracklist : ScriptableObject
     {
