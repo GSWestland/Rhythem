@@ -16,6 +16,9 @@ public enum PlayPosition
     Standing
 }
 
+/// <summary>
+/// The possible types of note that the player could encounter in the game
+/// </summary>
 public enum NoteType
 {
     Note,
