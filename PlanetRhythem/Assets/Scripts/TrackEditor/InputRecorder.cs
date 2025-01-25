@@ -1,14 +1,28 @@
 using UnityEngine;
+using Sirenix.OdinInspector;
+using SimpleJSON;
+using System.IO;
 
-public class InputRecorder : MonoBehaviour
+namespace Rhythem.TrackEditor
 {
-    void Start()
+    /// <summary>
+    /// Contains logic for converting user input into serializable JSON data and storing it in a JSON object
+    /// </summary>
+    public class InputRecorder : MonoBehaviour
     {
-        
-    }
+        private static string BEATMAP_ROOT_PATH = "Assets/Resources/Beatmaps";
+        private static string JSON_DATA_PATH = "Assets/Resources/Beatmaps/BeatmapsData";
 
-    void Update()
-    {
-        
+        private Beatmap currentBeatmap;
+
+        void Start()
+        {
+
+        }
+
+        void Update()
+        {
+
+        }
     }
 }

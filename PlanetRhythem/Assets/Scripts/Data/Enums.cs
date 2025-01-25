@@ -15,3 +15,11 @@ public enum PlayPosition
     Seated,
     Standing
 }
+
+public enum NoteType
+{
+    Note,
+    NoteHoldStart,
+    NoteHoldEnd,
+    Obstacle
+}
