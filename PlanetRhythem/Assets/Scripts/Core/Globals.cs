@@ -9,6 +9,9 @@ namespace Rhythem
         public const string USE_WORLD_DIRECTION_NAME = "USE_ WORLD_DIRECTION";
         public const string USE_CONTROLLER_DIRECTION_NAME = "USE_CONTROLLER_DIRECTION";
 
+        public const string BEATMAP_ROOT_PATH = "Assets/Resources/Beatmaps";
+        public const string JSON_DATA_PATH = "Assets/Resources/Beatmaps/BeatmapsData";
+
         public bool HeadsetDirection { get; private set; } = true;
 
         public void UseHeadsetDirection()

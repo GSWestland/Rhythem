@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f9f42c6a66acb4478c1d8b967a5325d, type: 3}
   m_Name: ggj2025_tracklist
   m_EditorClassIdentifier: 
-  tracklistName: 
+  tracklistName: Global Game Jam 2025
   tracklistThumbnail: {fileID: 0}
-  tracks: []
+  tracks:
+  - {fileID: 11400000, guid: 074620b957c2e294f9aa0ef4f47c0742, type: 2}
+  - {fileID: 11400000, guid: 5d608ff3821802b4097599c4c3a5d71e, type: 2}
