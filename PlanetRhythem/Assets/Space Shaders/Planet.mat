@@ -67,13 +67,13 @@ Material:
     - _South_Cap_Horizontal_Stretch: 5
     - _South_Cap_Noise_Scale: 10
     m_Colors:
-    - _Atmosphere_Color: {r: 0.120276816, g: 0.8207547, b: 0.05032932, a: 0}
-    - _Cloud_Color: {r: 0.5754717, g: 0.16409764, b: 0.06786222, a: 0}
+    - _Atmosphere_Color: {r: 0.8679245, g: 0.1760413, b: 0.69263506, a: 0}
+    - _Cloud_Color: {r: 0.7169812, g: 0.33481666, b: 0.49106342, a: 0}
     - _Main_Star_Color: {r: 1, g: 0.47134608, b: 0, a: 1}
-    - _Main_Star_Position: {r: -10, g: 10, b: 10, a: 0}
+    - _Main_Star_Position: {r: 10, g: 5, b: -5, a: 0}
     - _Mid_Band_Color: {r: 0.6792453, g: 0.20825917, b: 0.55021673, a: 0}
-    - _North_Cap_Color_A: {r: 0.6792453, g: 0.41690668, b: 0.06087574, a: 1}
-    - _North_Cap_Color_B: {r: 0, g: 0.8668444, b: 1, a: 1}
+    - _North_Cap_Color_A: {r: 1, g: 1, b: 1, a: 1}
+    - _North_Cap_Color_B: {r: 0.31163225, g: 0.4258277, b: 0.4433962, a: 1}
     - _South_Cap_Color_A: {r: 0.0045834924, g: 0.9716981, b: 0.37636068, a: 0}
     - _South_Cap_Color_B: {r: 0, g: 1, b: 0.29319787, a: 0}
   m_BuildTextureStacks: []
