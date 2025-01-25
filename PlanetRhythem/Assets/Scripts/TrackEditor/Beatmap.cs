@@ -12,7 +12,7 @@ namespace Rhythem.TrackEditor {
         [Title("Track Card Info")]
         public string songTitle;
         public string artist;
-        public int bPM;
+        public int bpm;
         [Title("Track Editor Info")]
         public int subdivisions;
         public int numberOfMeasures;
