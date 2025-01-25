@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8765411c598df6743b110a676883d269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vrRigPrefab: {fileID: 0}
+  vrRigPrefab: {fileID: 8404871649812681847, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
   showDebugLogs: 1
 --- !u!1 &2048200871551173992
 GameObject:
