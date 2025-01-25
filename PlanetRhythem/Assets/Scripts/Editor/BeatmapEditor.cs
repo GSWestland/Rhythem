@@ -1,16 +1,33 @@
+using UnityEditor;
 using UnityEngine;
 
-public class BeatmapEditor : MonoBehaviour
-{
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+namespace Rhythem.TrackEditor {
+    /// <summary>
+    /// Custom editor for Beatmap.cs SerializedObject that adds a button to generate and link JSON object to the SerializedObject
+    /// </summary>
+    [CustomEditor(typeof(Beatmap))]
+    public class BeatmapEditor : Editor
     {
-        
-    }
+        SerializedProperty trackDataPath;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void OnEnable()
+        {
+            trackDataPath = serializedObject.FindProperty("trackDataPath");
+        }
+
+        public override void OnInspectorGUI()
+        {
+            Beatmap beatmap = (Beatmap)target;
+            base.OnInspectorGUI();
+            serializedObject.Update();
+            if (trackDataPath.stringValue == string.Empty) {
+                if (GUILayout.Button("Generate Track Data"))
+                {
+                    //generate json file with same name as beatmap
+                    beatmap.DoJsonTrackDataSetup();
+                    serializedObject.ApplyModifiedProperties();
+                }
+            }
+        }
     }
 }

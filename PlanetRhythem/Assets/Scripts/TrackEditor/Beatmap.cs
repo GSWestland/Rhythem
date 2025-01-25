@@ -17,6 +17,12 @@ namespace Rhythem.TrackEditor {
         public int subdivisions;
         public int numberOfMeasures;
         public AudioClip songFile;
-        public string trackDataPath;
+        [HideInInspector]public string trackDataPath;
+
+        public void DoJsonTrackDataSetup()
+        {
+            var newJsonFile = $"{Globals.JSON_DATA_PATH}/{songTitle}.json";
+
+        }
     }
 }
