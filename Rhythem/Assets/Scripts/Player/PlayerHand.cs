@@ -9,7 +9,6 @@ namespace Rhythem.Player
     public class PlayerHand : MonoBehaviour
     {
         public DesiredHand desiredHand;
-        public XRController xrController;
         public RuntimeAnimatorController animator;
 
         private Animator anim;
