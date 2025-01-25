@@ -41,13 +41,13 @@ Material:
     - _Bit_Depth: 32
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Ring_Divisions: 1
-    - _Ring_Inner_Radius: 31.97
-    - _Ring_Noise_Scale: 5
-    - _Ring_Noise_Strength: 0.5
+    - _Ring_Divisions: 0.65
+    - _Ring_Inner_Radius: 70
+    - _Ring_Noise_Scale: 0.74
+    - _Ring_Noise_Strength: 0.1
     m_Colors:
-    - _Ring_Color_A: {r: 0.20799217, g: 0.73969656, b: 0.7735849, a: 1}
-    - _Ring_Color_B: {r: 0, g: 0, b: 0, a: 1}
+    - _Ring_Color_A: {r: 1, g: 0.25943398, b: 0.91520655, a: 1}
+    - _Ring_Color_B: {r: 0.62812746, g: 0.6320754, b: 0.33690813, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &615776694939198695
