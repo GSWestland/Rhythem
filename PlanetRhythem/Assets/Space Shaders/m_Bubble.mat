@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Bubble
+  m_Name: m_Bubble
   m_Shader: {fileID: -6465566751694194690, guid: 22d53cb38773e8e4587a9b68f4f3356d, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -49,7 +49,7 @@ Material:
     - Vector1_52F1B902: 8.1
     - Vector1_7C632D0B: 0
     - Vector1_9D0BAAB8: 0.335
-    - Vector1_CA749EDD: 0.102
+    - Vector1_CA749EDD: 0.02
     - Vector1_DDB19D48: 0.75
     - Vector1_E750199E: 1
     - Vector1_FF24B3E1: 0
@@ -58,6 +58,7 @@ Material:
     - _Pop_Percent: 0
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _Texture_Rotation_Speed: 30
     m_Colors:
     - Vector2_3062C954: {r: 2, g: 2, b: 0, a: 0}
     - _Pop_Position: {r: 0, g: 0, b: -1, a: 0}

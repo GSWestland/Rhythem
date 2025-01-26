@@ -8,20 +8,35 @@ namespace Rhythem.Songs {
         public NoteType noteType;
         public DesiredHand noteHand;
         public Vector2 notePosition;
-        public float measureTime = 0f;
 
         [Title("Assign Me :3")]
         public Color leftHandColor;
         public Color rightHandColor;
-        public MeshRenderer noteMesh;
-        public List<MeshRenderer> obstacleMeshOptions;
 
-        private MeshRenderer _currentMesh;
-        private MeshRenderer _nextMesh;
+        public Renderer noteMesh;
+        public List<Renderer> obstacleMeshOptions;
+        private Renderer _currentMesh;
+        private Renderer _nextMesh;
         private Material _starMaterial;
+        
+        public float measureTime = 0f;
         private Collider _col;
         private ScoreZone _scoreZone;
         private float _targetHitTime = 0f;
+
+        private Animator _animator;
+        public Animator animator
+        {
+            get
+            {
+                if (_animator == null && (_animator = GetComponent<Animator>()) == null)
+                {
+                    Debug.LogError($"No animator available on ScorableNote{gameObject.GetInstanceID()}");
+                    return null;
+                }
+                return _animator;
+            }
+        }
 
         private void Awake()
         {
