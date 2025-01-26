@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{393d9e9d-ec55-4bcf-97ae-1ecf9c2711f5}">
+		<property name="assetPath">
+			<value>Note flub.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.6666666666666665</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{749bce5c-e378-4df8-a36a-748d3980a194}</destination>
+		</relationship>
+	</object>
+</objects>

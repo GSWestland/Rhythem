@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{f7416b42-80d4-4313-9803-303f96acbfea}">
+		<property name="name">
+			<value>Song failed</value>
+		</property>
+		<relationship name="folder">
+			<destination>{da369af1-49d8-46b4-a4ef-267ac02f12de}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{456dbfb3-3f42-4b30-82d3-e26765ed860b}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{456dbfb3-3f42-4b30-82d3-e26765ed860b}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.61000001430511475</value>
+		</property>
+	</object>
+</objects>
