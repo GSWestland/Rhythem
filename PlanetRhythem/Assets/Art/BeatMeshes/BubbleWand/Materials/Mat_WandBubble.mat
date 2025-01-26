@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Mat_WandBubble
   m_Shader: {fileID: -6465566751694194690, guid: 22d53cb38773e8e4587a9b68f4f3356d, type: 3}
-  m_Parent: {fileID: 2100000, guid: aa7cbad9c5925f840ba506daa39da19a, type: 2}
+  m_Parent: {fileID: 2100000, guid: 99e6c4e9eeb7e2c4ca5c1dbbbc72a410, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -28,6 +28,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 17a0fae0defbcdc499e286c32b910e8f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Base_Map:
+        m_Texture: {fileID: 2800000, guid: 23cd3b38ba7527f448b8ad449e5f82c1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - Boolean_C577D1F3: 1
@@ -37,12 +41,12 @@ Material:
     - Vector1_52F1B902: 0
     - Vector1_7C632D0B: 0.75
     - Vector1_9D0BAAB8: 0.2
-    - Vector1_CA749EDD: 0.386
     - Vector1_DDB19D48: 0.75
     - Vector1_E750199E: 1.5
     - Vector1_FF24B3E1: 0.5
     - _Light_Fade_Angle: 0.629
     - _Minimum_Light_Level: 0.419
+    - _QueueControl: 0
     - _Texture_Rotation_Speed: 30
     m_Colors:
     - Vector2_3062C954: {r: 2, g: 2, b: 0, a: 0}
