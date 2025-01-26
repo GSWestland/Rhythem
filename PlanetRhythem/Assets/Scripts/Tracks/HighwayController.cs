@@ -20,13 +20,19 @@ namespace Rhythem.Tracks
 
         public int score = 0;
 
-        public float fadeOutTime;
 
         [Title("FMOD Events")]
         public EventReference popSFXEvent;
         public EventReference perfectSFXEvent;
         public EventReference missSFXEvent;
+
+        public EventReference songFailSFXEvent;
+        public EventReference songCompleteSFXEvent;
+        public EventReference obstacleAsteroidSFXEvent;
+        public EventReference obstacleIceSFXEvent;
         public EventReference musicEvent;
+
+        public float failTime = 1.5f;
 
         private EventInstance activeSong;
         
@@ -81,10 +87,19 @@ namespace Rhythem.Tracks
 
         }
 
+        public IEnumerator SongWin()
+        {
+            PlayOneShot(songCompleteSFXEvent, Camera.main.transform.position);
+            //YOU WIN MENU
+            yield return null;
+        }
+
         public IEnumerator SongFail()
         {
-            for ()
-            activeSong.setParameterByName("", 0);
+            activeSong.setParameterByName("Song failed", 1f);
+            PlayOneShot(songFailSFXEvent, Camera.main.transform.position);
+            yield return new WaitForSeconds(failTime);
+            //YOU FAILED MENU
         }
 
         public void SetupSong(Beatmap beatmap)
@@ -120,7 +135,7 @@ namespace Rhythem.Tracks
 
             //FMOD VERSION
             yield return new WaitForSeconds(_song.bpm / 60 * (measuresPerRotation / 4));
-
+            StartSong(musicEvent);
 
         }
     }
