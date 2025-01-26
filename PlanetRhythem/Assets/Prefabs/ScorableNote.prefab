@@ -166,6 +166,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fb6c1a59f7c315f47a2a9d94022043b4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aa7cbad9c5925f840ba506daa39da19a, type: 2}
     - target: {fileID: 919132149155446097, guid: fb6c1a59f7c315f47a2a9d94022043b4, type: 3}
       propertyPath: m_Name
       value: BubbleStar
