@@ -9,7 +9,7 @@ namespace Rhythem.TrackEditor {
     public class BeatmapEditor : Editor
     {
         SerializedProperty trackDataPath;
-
+        int dummyFillNoteRatio = 2;
         private void OnEnable()
         {
             trackDataPath = serializedObject.FindProperty("trackDataPath");
@@ -32,9 +32,10 @@ namespace Rhythem.TrackEditor {
             else
             {
                 GUILayout.Label($"Track Data Path:\n    {trackDataPath.stringValue}");
+                dummyFillNoteRatio = EditorGUILayout.IntField("Note : Obstacle Ratio", dummyFillNoteRatio);
                 if (GUILayout.Button("Fill Song with Dummy Data"))
                 {
-                    beatmap.FillSongWithDummyData();
+                    beatmap.FillSongWithDummyData(dummyFillNoteRatio);
                     AssetDatabase.Refresh();
                 }
             }

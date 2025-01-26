@@ -71,7 +71,7 @@ namespace Rhythem.TrackEditor
             return song;
         }
 
-        public void FillSongWithDummyData()
+        public void FillSongWithDummyData(int obstacleRatio)
         {
             var song = new Song();
             song.songTitle = songTitle;
@@ -92,9 +92,9 @@ namespace Rhythem.TrackEditor
                         if (makeNote > 0)
                         {
                             var newNote = new Note();
-                            var randomNote = new System.Random().Next(2);
+                            var randomNote = new System.Random().Next(obstacleRatio);
                             var randomHand = new System.Random().Next(2);
-                            newNote.noteType = (NoteType)randomNote;
+                            newNote.noteType = randomNote < obstacleRatio - 1 ? NoteType.Note : NoteType.Obstacle;
                             newNote.hand = (DesiredHand)randomHand;
                             newNote.noteTime = k;
                             newNote.notePositionX = UnityEngine.Random.Range(0.0f, 0.5f) + (randomHand * 0.5f);
