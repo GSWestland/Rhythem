@@ -10,6 +10,7 @@ namespace Rhythem.Tracks
 {
     public class HighwayController : MonoBehaviour
     {
+        public static HighwayController s;
         [Title("Testing Fields")]
         public Beatmap testBeatmap;
         public GameObject notePrefab;
@@ -51,6 +52,16 @@ namespace Rhythem.Tracks
                 }
                 return _audioSource;
             }
+        }
+
+        void Awake()
+        {
+            if(s != null)
+            {
+                Debug.LogError("Error: More than 1 Highway Controller in scene");
+                return;
+            }
+            s = this;
         }
 
         void Start()
