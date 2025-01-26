@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{7f226f5d-eb59-4e65-90df-652975cd9e41}">
+		<property name="assetPath">
+			<value>Ice hit 2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.6666666666666665</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{749bce5c-e378-4df8-a36a-748d3980a194}</destination>
+		</relationship>
+	</object>
+</objects>

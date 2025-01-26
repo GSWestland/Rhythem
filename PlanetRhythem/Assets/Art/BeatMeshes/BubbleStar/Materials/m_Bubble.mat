@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: m_Bubble
   m_Shader: {fileID: -6465566751694194690, guid: 22d53cb38773e8e4587a9b68f4f3356d, type: 3}
-  m_Parent: {fileID: 2100000, guid: 99e6c4e9eeb7e2c4ca5c1dbbbc72a410, type: 2}
+  m_Parent: {fileID: 2100000, guid: aa7cbad9c5925f840ba506daa39da19a, type: 2}
   m_ModifiedSerializedProperties: 2
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -43,7 +43,6 @@ Material:
     - Vector1_FF24B3E1: 1
     - _Light_Fade_Angle: 0.42
     - _Minimum_Light_Level: 0.2
-    - _QueueControl: 0
     m_Colors:
     - Vector2_3062C954: {r: 1, g: 1, b: 0, a: 0}
     - _Star_Color: {r: 1, g: 1, b: 1, a: 1}

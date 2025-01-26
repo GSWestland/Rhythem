@@ -10,6 +10,7 @@ namespace Rhythem.Tracks
 {
     public class HighwayController : MonoBehaviour
     {
+        public static HighwayController s;
         [Title("Testing Fields")]
         public Beatmap testBeatmap;
         public GameObject notePrefab;
@@ -20,11 +21,22 @@ namespace Rhythem.Tracks
 
         public int score = 0;
 
-        [Title("Events")]
+
+        [Title("FMOD Events")]
         public EventReference popSFXEvent;
+        public EventReference perfectSFXEvent;
         public EventReference missSFXEvent;
+
+        public EventReference songFailSFXEvent;
+        public EventReference songCompleteSFXEvent;
+        public EventReference obstacleAsteroidSFXEvent;
+        public EventReference obstacleIceSFXEvent;
         public EventReference musicEvent;
 
+        public float failTime = 1.5f;
+
+        private EventInstance activeSong;
+        
         private IEnumerator _songStartAsync;
 
         private NoteManager _noteManager;
@@ -42,6 +54,16 @@ namespace Rhythem.Tracks
             }
         }
 
+        void Awake()
+        {
+            if(s != null)
+            {
+                Debug.LogError("Error: More than 1 Highway Controller in scene");
+                return;
+            }
+            s = this;
+        }
+
         void Start()
         {
             if (_noteManager == null)
@@ -50,6 +72,8 @@ namespace Rhythem.Tracks
             }
 
             SetupSong(testBeatmap);
+
+            EventManager.Startup();
         }
 
         void Update()
@@ -60,6 +84,33 @@ namespace Rhythem.Tracks
         void FixedUpdate()
         {
             UpdateRing();
+        }
+
+        public void PlayOneShot(EventReference sound, Vector3 worldPos)
+        {
+            RuntimeManager.PlayOneShot(sound, worldPos);
+        }
+
+        public void StartSong(EventReference song)
+        {
+            activeSong = RuntimeManager.CreateInstance(song);
+            RuntimeManager.AttachInstanceToGameObject(activeSong, Camera.main.transform);
+
+        }
+
+        public IEnumerator SongWin()
+        {
+            PlayOneShot(songCompleteSFXEvent, Camera.main.transform.position);
+            //YOU WIN MENU
+            yield return null;
+        }
+
+        public IEnumerator SongFail()
+        {
+            activeSong.setParameterByName("Song failed", 1f);
+            PlayOneShot(songFailSFXEvent, Camera.main.transform.position);
+            yield return new WaitForSeconds(failTime);
+            //YOU FAILED MENU
         }
 
         public void SetupSong(Beatmap beatmap)
@@ -84,10 +135,19 @@ namespace Rhythem.Tracks
             {
                 yield return null;
             }
+            
+            //UNITY AUDIO VERSION
+            /*
             audioSource.playOnAwake = false;
             audioSource.clip = songFile;
             yield return new WaitForSeconds(_song.bpm / 60 * (measuresPerRotation / 4));
             audioSource.Play();
+            */
+
+            //FMOD VERSION
+            yield return new WaitForSeconds(_song.bpm / 60 * (measuresPerRotation / 4));
+            StartSong(musicEvent);
+
         }
     }
 }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2063837710163895657
+--- !u!1 &1430709828011274394
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,154 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3841700048094805700}
-  - component: {fileID: 5879525948002899525}
-  m_Layer: 0
-  m_Name: HIghway Controller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3841700048094805700
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2063837710163895657}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5083687699148148781}
-  - {fileID: 8689321686389544667}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5879525948002899525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2063837710163895657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e33de11ce66241a43b19494b0fda7511, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  testBeatmap: {fileID: 11400000, guid: 074620b957c2e294f9aa0ef4f47c0742, type: 2}
-  notePrefab: {fileID: 9090144462337807331, guid: a8c17d403e62b0148ad1bebc0e93204a, type: 3}
-  activeNoteLimit: 75
-  ringPivot: {fileID: 0}
-  measuresPerRotation: 8
-  score: 0
-  popSFXEvent:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  missSFXEvent:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  musicEvent:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
---- !u!1 &7831678501243226581
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5083687699148148781}
-  - component: {fileID: 3544875269587484308}
-  - component: {fileID: 1288424573729219515}
-  m_Layer: 0
-  m_Name: NoteSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5083687699148148781
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7831678501243226581}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -34.9, y: 0.06, z: 34.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3841700048094805700}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!65 &3544875269587484308
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7831678501243226581}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 0.1}
-  m_Center: {x: 0, y: 1.18, z: 0}
---- !u!114 &1288424573729219515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7831678501243226581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7a85e9097520c4f9def1ef0c20e04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  song:
-    songTitle: 
-    artist: 
-    bpm: 0
-    beatsPerMeasure: 0
-    subdivisionsPerBeat: 0
-    measures: []
---- !u!1 &8315400286237072614
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8689321686389544667}
-  - component: {fileID: 7644980681121360997}
+  - component: {fileID: 8567839411751703346}
+  - component: {fileID: 3615079909709643705}
   m_Layer: 0
   m_Name: MissedNoteHell
   m_TagString: NoteDeadzone
@@ -163,28 +17,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8689321686389544667
+--- !u!4 &8567839411751703346
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8315400286237072614}
+  m_GameObject: {fileID: 1430709828011274394}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3841700048094805700}
+  m_Father: {fileID: 3741077475602470701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &7644980681121360997
+--- !u!65 &3615079909709643705
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8315400286237072614}
+  m_GameObject: {fileID: 1430709828011274394}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -199,3 +53,185 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.5, y: 2.5, z: 1}
   m_Center: {x: 0, y: 1.18, z: -0.6}
+--- !u!1 &2550332827359500303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6139455081395597923}
+  - component: {fileID: 5674425999312237081}
+  - component: {fileID: 111076691726842833}
+  m_Layer: 0
+  m_Name: NoteSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6139455081395597923
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2550332827359500303}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -34.9, y: 0.06, z: 34.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3741077475602470701}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &5674425999312237081
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2550332827359500303}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 2, z: 0.1}
+  m_Center: {x: 0, y: 1.18, z: 0}
+--- !u!114 &111076691726842833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2550332827359500303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7a85e9097520c4f9def1ef0c20e04f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  song:
+    songTitle: 
+    artist: 
+    bpm: 0
+    beatsPerMeasure: 0
+    subdivisionsPerBeat: 0
+    measures: []
+--- !u!1 &6506939157310045876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3741077475602470701}
+  - component: {fileID: 3037913275409593128}
+  m_Layer: 0
+  m_Name: HIghway Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3741077475602470701
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6506939157310045876}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6139455081395597923}
+  - {fileID: 8567839411751703346}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3037913275409593128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6506939157310045876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e33de11ce66241a43b19494b0fda7511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testBeatmap: {fileID: 11400000, guid: 074620b957c2e294f9aa0ef4f47c0742, type: 2}
+  notePrefab: {fileID: 9090144462337807331, guid: a8c17d403e62b0148ad1bebc0e93204a, type: 3}
+  activeNoteLimit: 75
+  ringPivot: {fileID: 0}
+  measuresPerRotation: 8
+  score: 0
+  popSFXEvent:
+    Guid:
+      Data1: -582266472
+      Data2: 1203634081
+      Data3: 1295020701
+      Data4: 1174765834
+    Path: event:/SFX/Notes/Note Hit (correct)
+  perfectSFXEvent:
+    Guid:
+      Data1: -1911416326
+      Data2: 1228855340
+      Data3: -1306424146
+      Data4: 28318356
+    Path: event:/SFX/Notes/Note Hit (perfect)
+  missSFXEvent:
+    Guid:
+      Data1: 1116549216
+      Data2: 1291804809
+      Data3: -1258144121
+      Data4: -2139916640
+    Path: event:/SFX/Notes/Note Hit (miss)
+  songFailSFXEvent:
+    Guid:
+      Data1: -445739149
+      Data2: 1284748372
+      Data3: -799277897
+      Data4: 1714220036
+    Path: event:/SFX/UI/Song Failed
+  songCompleteSFXEvent:
+    Guid:
+      Data1: 2014529978
+      Data2: 1146502696
+      Data3: -698075459
+      Data4: 1170590430
+    Path: event:/SFX/UI/Song Complete
+  obstacleAsteroidSFXEvent:
+    Guid:
+      Data1: 694450774
+      Data2: 1151003676
+      Data3: 598445742
+      Data4: -1671612474
+    Path: event:/SFX/Obstacles/Obstacle Hit (asteroid)
+  obstacleIceSFXEvent:
+    Guid:
+      Data1: 795911776
+      Data2: 1283669882
+      Data3: -2068776794
+      Data4: -78359682
+    Path: event:/SFX/Obstacles/Obstacle Hit (ice mine)
+  musicEvent:
+    Guid:
+      Data1: -438332273
+      Data2: 1292611206
+      Data3: 262691735
+      Data4: -993217669
+    Path: event:/Music/The Astral Glass
+  failTime: 1.5
