@@ -3540,8 +3540,8 @@
     "m_ObjectId": "3313e83c5ec44f51a3524a4a20146b14",
     "m_Title": "Texture",
     "m_Position": {
-        "x": -1854.999755859375,
-        "y": 623.0001831054688
+        "x": -1855.0,
+        "y": 623.0
     }
 }
 
@@ -5472,8 +5472,8 @@
     "m_ObjectId": "55ff8fb62e8b44f99487244e3b4414c3",
     "m_Title": "Boolan | Wobble",
     "m_Position": {
-        "x": 177.99998474121095,
-        "y": -561.9999389648438
+        "x": 178.0,
+        "y": -562.0
     }
 }
 
@@ -6428,8 +6428,8 @@
     "m_ObjectId": "6d1df87581ed4f07bcdbfd9bb042f80c",
     "m_Title": "Color Quantization",
     "m_Position": {
-        "x": 644.9999389648438,
-        "y": 198.99993896484376
+        "x": 645.0,
+        "y": 199.0
     }
 }
 
@@ -6764,8 +6764,8 @@
     "m_ObjectId": "74d94009e79c44b1ae40cf0b1923af67",
     "m_Title": "Lighting",
     "m_Position": {
-        "x": -1466.9998779296875,
-        "y": 1697.99951171875
+        "x": -1467.0,
+        "y": 1698.0
     }
 }
 
@@ -7696,8 +7696,8 @@
     "m_ObjectId": "8c0dd69ea4b94996b8887a6f04ac2e39",
     "m_Title": "Surface Distortion",
     "m_Position": {
-        "x": -3922.999755859375,
-        "y": 58.99992752075195
+        "x": -3923.0,
+        "y": 59.0
     }
 }
 
@@ -10127,8 +10127,8 @@
     "m_ObjectId": "d03c701db5214202ad72a0558c341e11",
     "m_Title": "Color Quantization",
     "m_Position": {
-        "x": 711.9999389648438,
-        "y": 743.0000610351563
+        "x": 712.0,
+        "y": 743.0
     }
 }
 
@@ -10607,8 +10607,8 @@
     "m_ObjectId": "ddc71cfd336747359feafd22210cb585",
     "m_Title": "Wobble Displacement",
     "m_Position": {
-        "x": -1030.9998779296875,
-        "y": -651.9999389648438
+        "x": -1031.0,
+        "y": -652.0
     }
 }
 
@@ -11581,7 +11581,7 @@
     "m_ObjectId": "fe3faabfd49b49388af97ca137ab690f",
     "m_Title": "Reflection & Alpha",
     "m_Position": {
-        "x": -806.9999389648438,
+        "x": -807.0,
         "y": 1159.0
     }
 }
