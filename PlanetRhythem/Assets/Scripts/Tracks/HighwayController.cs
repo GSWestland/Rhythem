@@ -33,6 +33,6 @@ public class HighwayController : MonoBehaviour
 
     void UpdateRing()
     {
-        ringPivot.Rotate(new Vector3(0,  (beatmap.bpm/60f) * 360f / beatmap.beats / measuresPerRotation* Time.fixedDeltaTime,0));
+        ringPivot.Rotate(new Vector3(0,  (beatmap.bpm/60f) * 360f / beatmap.beatsPerMeasure / measuresPerRotation* Time.fixedDeltaTime,0));
     }
 }
