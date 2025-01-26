@@ -1,11 +1,8 @@
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
-using System.Collections;
-using System.Collections.Generic;
 using Rhythem.Songs;
 using Rhythem.TrackEditor;
-using Rhythem.Play;
 using Sirenix.OdinInspector;
 
 namespace Rhythem.Tracks

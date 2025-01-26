@@ -80,7 +80,7 @@ namespace Rhythem.Tracks
 
         private IEnumerator DoNoteSpawnPerMeasure(Measure measure)
         {
-            Debug.Log($"Current Measure: {_currentMeasure}");
+            //Debug.Log($"Current Measure: {_currentMeasure}");
             for (int i = 0; i < measure.beats.Count; i++)
             {
                 int currentNoteSubdiv = 0;
@@ -107,7 +107,6 @@ namespace Rhythem.Tracks
                     catch
                     {
                     }
-                    Debug.Log("I made a note :)");
                     yield return new WaitForSeconds(_noteTime);
                 }
             }
