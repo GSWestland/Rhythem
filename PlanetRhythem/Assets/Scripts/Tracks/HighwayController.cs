@@ -4,6 +4,7 @@ using FMOD.Studio;
 using Rhythem.Songs;
 using Rhythem.TrackEditor;
 using Sirenix.OdinInspector;
+using System.Collections;
 
 namespace Rhythem.Tracks
 {
@@ -24,8 +25,22 @@ namespace Rhythem.Tracks
         public EventReference missSFXEvent;
         public EventReference musicEvent;
 
+        private IEnumerator _songStartAsync;
+
         private NoteManager _noteManager;
         private Song _song;
+        private AudioSource _audioSource;
+        public AudioSource audioSource
+        {
+            get
+            {
+                if(_audioSource == null && (_audioSource = GetComponent<AudioSource>()) == null)
+                {
+                    _audioSource = gameObject.AddComponent<AudioSource>();
+                }
+                return _audioSource;
+            }
+        }
 
         void Start()
         {
@@ -54,11 +69,25 @@ namespace Rhythem.Tracks
             _noteManager.Cleanup();
             _noteManager.InitializeNoteList(notePrefab, ringPivot, activeNoteLimit);
             _noteManager.InitializeMeasures();
+            _songStartAsync = DoSongStartWithDelay(testBeatmap.audioFile);
+            StartCoroutine(_songStartAsync);
         }
 
         void UpdateRing()
         {
             ringPivot.Rotate(new Vector3(0, (_song.bpm / 60f) * 360f / _song.beatsPerMeasure / measuresPerRotation * Time.fixedDeltaTime, 0));
+        }
+
+        IEnumerator DoSongStartWithDelay(AudioClip songFile)
+        {
+            if (songFile == null)
+            {
+                yield return null;
+            }
+            audioSource.playOnAwake = false;
+            audioSource.clip = songFile;
+            yield return new WaitForSeconds(_song.bpm / 60 * (measuresPerRotation / 4));
+            audioSource.Play();
         }
     }
 }

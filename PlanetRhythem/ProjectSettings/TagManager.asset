@@ -7,6 +7,8 @@ TagManager:
   - Anchor
   - NoteDeadzone
   - Note
+  - HitZone
+  - PerfectZone
   layers:
   - Default
   - TransparentFX

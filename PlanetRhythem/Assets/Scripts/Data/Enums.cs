@@ -26,3 +26,12 @@ public enum NoteType
     NoteHoldStart,
     NoteHoldEnd
 }
+
+public enum ScoreZone
+{
+    Miss,
+    Close,
+    Good,
+    Great,
+    Stellar
+}

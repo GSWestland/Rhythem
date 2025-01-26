@@ -8,6 +8,7 @@ namespace Rhythem.Songs {
         public NoteType noteType;
         public DesiredHand noteHand;
         public Vector2 notePosition;
+        public float measureTime = 0f;
 
         [Title("Assign Me :3")]
         public Color leftHandColor;
@@ -17,19 +18,18 @@ namespace Rhythem.Songs {
 
         private MeshRenderer _currentMesh;
         private MeshRenderer _nextMesh;
+        private Collider _col;
+        private ScoreZone _scoreZone;
+        private float _targetHitTime = 0f;
 
         private void Awake()
         {
+            _col = GetComponent<Collider>();
             noteMesh.enabled = false;
             foreach (var m in obstacleMeshOptions)
             {
                 m.enabled = false;
             }
-        }
-
-        void Update()
-        {
-
         }
 
         private void OnTriggerEnter(Collider other)
@@ -39,6 +39,7 @@ namespace Rhythem.Songs {
                 if (_currentMesh != null)
                 {
                     _currentMesh.enabled = false;
+                    _col.enabled = false;
                 }
                 if (noteType == NoteType.Note)
                 {
@@ -49,6 +50,7 @@ namespace Rhythem.Songs {
             {
                 if (noteType == NoteType.Note)
                 {
+
                     //get controller hand and compare against this note's hand
                 }
                 else if (noteType == NoteType.Obstacle)
@@ -58,8 +60,10 @@ namespace Rhythem.Songs {
             }
         }
 
-        public void ResetNote(Note noteData, Vector2 playSpaceSize)
+        public void ResetNote(Note noteData, float currentTime, Vector2 playSpaceSize)
         {
+            _col.enabled = true;
+            _targetHitTime = Time.time + (2 * measureTime); // hard coded to be 1/4 of the way around the ring
             noteType = noteData.noteType;
             if (noteType == NoteType.Note)
             {

@@ -50,6 +50,7 @@ namespace Rhythem.Tracks
             {
                 var newNoteGO = Instantiate(notePrefab);
                 var sn = newNoteGO.GetComponent<ScorableNote>();
+                sn.measureTime = song.bpm / 60f;
                 newNoteGO.transform.position = transform.position;
                 newNoteGO.transform.rotation = transform.rotation;
                 newNoteGO.transform.SetParent(noteHighwayParent, true);
@@ -99,7 +100,7 @@ namespace Rhythem.Tracks
                                 _activeNotes[_lastNoteSpawned++].gameObject.SetActive(true);
                                 _activeNotes[_lastNoteSpawned].gameObject.transform.position = transform.position;
                                 _activeNotes[_lastNoteSpawned].gameObject.transform.rotation = transform.rotation;
-                                _activeNotes[_lastNoteSpawned].ResetNote(note, playSpaceSize);
+                                _activeNotes[_lastNoteSpawned].ResetNote(note, Time.time, playSpaceSize);
                                 break;
                             }
                         }
