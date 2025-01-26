@@ -24,6 +24,7 @@ namespace Rhythem.Songs {
         private ScoreZone _scoreZone;
         private float _targetHitTime = 0f;
 
+        public float animSpeed = 1f;
         private Animator _animator;
         public Animator animator
         {
@@ -88,6 +89,7 @@ namespace Rhythem.Songs {
 
         public void ResetNote(Note noteData, float currentTime, Vector2 playSpaceSize)
         {
+            animator.SetFloat("playSpeed", animSpeed);
             _col.enabled = true;
             _targetHitTime = Time.time + (2 * measureTime); // hard coded to be 1/4 of the way around the ring
             noteType = noteData.noteType;
