@@ -2,7 +2,7 @@ using Rhythem.TrackEditor;
 using UnityEngine;
 using System.Collections.Generic;
 
-namespace Rhythem.Songs
+namespace Rhythem.Tracks
 {/// <summary>
 /// Serialized asset for storing lists of songs in folders
 /// </summary>
