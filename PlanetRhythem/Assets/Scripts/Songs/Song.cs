@@ -8,6 +8,9 @@ namespace Rhythem.Songs
     {
         public string songTitle;
         public string artist;
+        public int bpm;
+        public int beatsPerMeasure;
+        public int subdivisionsPerBeat;
         [SerializeField] public List<Measure> measures;
     }
 }
