@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songTitle: The Astral Glass
   artist: Luca Westland
-  bPM: 110
+  bpm: 90
+  beats: 4
   subdivisions: 5
-  numberOfMeasures: 86
+  numberOfMeasures: 64
   songFile: {fileID: 0}
   trackDataPath: 
