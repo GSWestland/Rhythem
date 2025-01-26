@@ -32,13 +32,29 @@ namespace Rhythem.Songs {
 
         }
 
-        private void OnCollisionEnter(Collision collision)
+        private void OnTriggerEnter(Collider other)
         {
-            //do some animation or something?
-            if (collision.collider.tag == "NoteDeadzone")
+            if (other.tag == "NoteDeadzone")
             {
-                Debug.Log("NOTE PASSED");
-                gameObject.SetActive(false);
+                if (_currentMesh != null)
+                {
+                    _currentMesh.enabled = false;
+                }
+                if (noteType == NoteType.Note)
+                {
+                    Debug.Log("MISSED NOTE");
+                }
+            }
+            else if (other.tag == "playerHand")
+            {
+                if (noteType == NoteType.Note)
+                {
+                    //get controller hand and compare against this note's hand
+                }
+                else if (noteType == NoteType.Obstacle)
+                {
+                    //womp womp
+                }
             }
         }
 
@@ -66,8 +82,7 @@ namespace Rhythem.Songs {
                 _currentMesh = _nextMesh;
                 _nextMesh = null;
             }
-            var playSpaceXMod = playSpaceSize.x * 0.5f;
-            notePosition.x = noteData.notePositionX * playSpaceXMod;
+            notePosition.x = (noteData.notePositionX - playSpaceSize.x * 0.5f) * playSpaceSize.x;
             notePosition.y = noteData.notePositionY * playSpaceSize.y;
 
             Vector3 offsetPosition = transform.position;
