@@ -1,33 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8001451632776432100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/The Astral Glass
-  m_EditorClassIdentifier: 
-  Path: event:/Music/The Astral Glass
-  Guid:
-    Data1: -438332273
-    Data2: 1292611206
-    Data3: 262691735
-    Data4: -993217669
-  Banks:
-  - {fileID: 1066821978897378665}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 3079383288226338067}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 149551
 --- !u!114 &-5831116698687231042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,19 +155,19 @@ MonoBehaviour:
   - {fileID: -3586719295838429124}
   - {fileID: -5414472385307612908}
   - {fileID: 1036383259081668499}
-  - {fileID: -8001451632776432100}
   - {fileID: 254382565105391255}
   - {fileID: 1469719309079401925}
   - {fileID: 3487181589868853238}
   - {fileID: 1328067072777250544}
   - {fileID: -5831116698687231042}
   - {fileID: -5249217879711856965}
+  - {fileID: 5684750658368484828}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1066821978897378665}
   StringsBanks:
   - {fileID: 3065897326761358009}
-  cacheTime: 638735088590168347
+  cacheTime: 638735145633260481
   cacheVersion: 131622
 --- !u!114 &254382565105391255
 MonoBehaviour:
@@ -266,10 +238,10 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638735088590148549
+  lastModified: 638735145633240640
   FileSizes:
   - Name: Desktop
-    Value: 2923744
+    Value: 1197120
   Exists: 1
 --- !u!114 &1328067072777250544
 MonoBehaviour:
@@ -340,34 +312,10 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638735088590168347
+  lastModified: 638735145633260481
   FileSizes:
   - Name: Desktop
-    Value: 1362
-  Exists: 1
---- !u!114 &3079383288226338067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/The Astral Glass/Song failed
-  m_EditorClassIdentifier: 
-  Name: Song failed
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 1385171058
-    data2: 4022792415
-  Type: 0
-  IsGlobal: 0
-  Labels: []
+    Value: 1356
   Exists: 1
 --- !u!114 &3487181589868853238
 MonoBehaviour:
@@ -396,3 +344,55 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 40000
+--- !u!114 &4552647421327796501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Play Music/Song failed
+  m_EditorClassIdentifier: 
+  Name: Song failed
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1385171058
+    data2: 4022792415
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &5684750658368484828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Play Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Play Music
+  Guid:
+    Data1: -438332273
+    Data2: 1292611206
+    Data3: 262691735
+    Data4: -993217669
+  Banks:
+  - {fileID: 1066821978897378665}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 4552647421327796501}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 149551
