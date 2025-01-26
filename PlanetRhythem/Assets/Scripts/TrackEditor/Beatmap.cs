@@ -89,11 +89,20 @@ namespace Rhythem.TrackEditor
                     var newBeat = new Beat();
                     for (int k = 0; k < subdivisionsPerBeat; k++)
                     {
-                        var newNote = new Note();
-                        float x = UnityEngine.Random.Range(0.0f, 1.0f);
-                        float y = UnityEngine.Random.Range(0.0f, 1.0f);
-                        newNote.SetNoteInfo(NoteType.Note, new Vector2(x, y), DesiredHand.Left);
-                        newBeat.notes.Add(newNote);
+                        var makeNote = new System.Random().Next(2);
+                        if (makeNote > 0)
+                        {
+                            var newNote = new Note();
+                            var randomNote = new System.Random().Next(2);
+                            var randomHand = new System.Random().Next(2);
+                            newNote.noteType = (NoteType)randomNote;
+                            newNote.hand = (DesiredHand)randomHand;
+                            newNote.noteTime = k;
+                            newNote.notePositionX = UnityEngine.Random.Range(0.0f, 0.5f) + (randomHand * 0.5f);
+                            newNote.notePositionY = UnityEngine.Random.Range(0.1f, 0.9f);
+                        
+                            newBeat.notes.Add(newNote);
+                        }
                     }
                     newMeasure.beats.Add(newBeat);
                 }

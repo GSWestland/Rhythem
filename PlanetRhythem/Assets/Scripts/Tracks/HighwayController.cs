@@ -15,94 +15,53 @@ namespace Rhythem.Tracks
         [Title("Testing Fields")]
         public Beatmap testBeatmap;
         public GameObject notePrefab;
-
-        private Song song;
-
-        private List<Measure> activeMeasures = new();
-        private List<GameObject> activeNotes = new();
+        public int activeNoteLimit = 50;
 
         public Transform ringPivot;
         public int measuresPerRotation = 8;
 
+        public int score = 0;
+
+        [Title("Events")]
         public EventReference popSFXEvent;
         public EventReference missSFXEvent;
         public EventReference musicEvent;
 
-        public int score = 0;
-
-        private int currentMeasure = 1;
-        private int currentBeat = 1;
-        private int currentNote = 1;
-
-        private float measureTime = 0f;
-        private float currentTime = 0f;
+        private NoteManager _noteManager;
+        private Song _song;
 
         void Start()
         {
+            if (_noteManager == null)
+            {
+                _noteManager = GetComponentInChildren<NoteManager>();
+            }
+
             SetupSong(testBeatmap);
         }
 
         void Update()
         {
-            if (song == null)
-            {
-                return;
-            }
-            if (currentMeasure >= song.measures.Count)
-            {
-                return;
-            }
-            currentTime += Time.deltaTime;
-            if (currentTime / currentBeat / currentNote > measureTime / song.beatsPerMeasure / song.subdivisionsPerBeat)
-            {
-                //Debug.Log($"MEASURE {currentMeasure}--BEAT {currentBeat}--NOTE {currentNote}");
-                Debug.Log(song.measures[currentMeasure - 1].beats[currentBeat - 1].notes[currentNote - 1]);
-                currentNote++;
-            }
-            if (currentTime / currentBeat > measureTime / song.beatsPerMeasure)
-            {
-                currentBeat++;
-                currentNote = 1;
-            }
-            if (currentTime > measureTime)
-            {
-                currentMeasure++;
-                currentTime = 0f;
-                currentBeat = 1;
-            }
+
         }
 
         void FixedUpdate()
         {
-            if (song == null)
-            {
-                return;
-            }
             UpdateRing();
-
         }
 
         public void SetupSong(Beatmap beatmap)
         {
-            song = beatmap.DeserializeSongData();
-            activeMeasures.Clear();
-            activeNotes.Clear();
-            for (int i = 0; i < 4; i++)
-            {
-                activeMeasures.Add(song.measures[i]);
-            }
-            measureTime = song.bpm / 60f;
-
+            _song = beatmap.DeserializeSongData();
+            _noteManager.song = _song;
+            _noteManager.Cleanup();
+            _noteManager.InitializeNoteList(notePrefab, ringPivot, activeNoteLimit);
+            _noteManager.InitializeMeasures();
         }
 
         void UpdateRing()
         {
-            ringPivot.Rotate(new Vector3(0, (song.bpm / 60f) * 360f / song.beatsPerMeasure / measuresPerRotation * Time.fixedDeltaTime, 0));
-        }
-
-        void QueueMeasure()
-        {
-
+            ringPivot.Rotate(new Vector3(0, (_song.bpm / 60f) * 360f / _song.beatsPerMeasure / measuresPerRotation * Time.fixedDeltaTime, 0));
         }
     }
 }

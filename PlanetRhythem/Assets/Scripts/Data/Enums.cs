@@ -22,7 +22,7 @@ public enum PlayPosition
 public enum NoteType
 {
     Note,
+    Obstacle,
     NoteHoldStart,
-    NoteHoldEnd,
-    Obstacle
+    NoteHoldEnd
 }

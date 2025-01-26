@@ -26,12 +26,19 @@ namespace Rhythem.TrackEditor {
                     //generate json file with same name as beatmap
                     beatmap.DoJsonTrackDataSetup();
                     serializedObject.ApplyModifiedProperties();
+                    AssetDatabase.Refresh();
                 }
             }
             else
             {
                 GUILayout.Label($"Track Data Path:\n    {trackDataPath.stringValue}");
+                if (GUILayout.Button("Fill Song with Dummy Data"))
+                {
+                    beatmap.FillSongWithDummyData();
+                    AssetDatabase.Refresh();
+                }
             }
+
             serializedObject.Update();
         }
     }
