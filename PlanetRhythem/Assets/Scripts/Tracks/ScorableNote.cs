@@ -18,12 +18,23 @@ namespace Rhythem.Songs {
 
         private MeshRenderer _currentMesh;
         private MeshRenderer _nextMesh;
+        private Material _starMaterial;
         private Collider _col;
         private ScoreZone _scoreZone;
         private float _targetHitTime = 0f;
 
         private void Awake()
         {
+
+            for (int i = 0; i <  noteMesh.sharedMaterials.Length; i++)
+            {
+                if (noteMesh.sharedMaterials[i].name == "m_StarBubble")
+                {
+                    _starMaterial = new Material(noteMesh.sharedMaterials[i]);
+                    noteMesh.sharedMaterial = _starMaterial;
+                    break;
+                }
+            }
             _col = GetComponent<Collider>();
             noteMesh.enabled = false;
             foreach (var m in obstacleMeshOptions)
@@ -68,7 +79,7 @@ namespace Rhythem.Songs {
             if (noteType == NoteType.Note)
             {
                 noteHand = noteData.hand;
-                noteMesh.material.color = noteHand == DesiredHand.Left ? leftHandColor : rightHandColor;
+                _starMaterial.SetColor("_Star_Color", noteHand == DesiredHand.Left ? leftHandColor : rightHandColor);
                 _nextMesh = noteMesh;
                 
             }

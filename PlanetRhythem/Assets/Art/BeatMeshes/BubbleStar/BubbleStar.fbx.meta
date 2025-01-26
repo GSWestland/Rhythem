@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: m_Bubble
-    second: {fileID: 2100000, guid: 78fce2b41a011144db06d68b30c3d998, type: 2}
+    second: {fileID: 2100000, guid: aa7cbad9c5925f840ba506daa39da19a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: m_Star
-    second: {fileID: 2100000, guid: e1e73064d3f5dbf40a25e621174c9455, type: 2}
+    second: {fileID: 2100000, guid: 1769195357c94664097c80add0efab89, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
