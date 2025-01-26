@@ -20,11 +20,16 @@ namespace Rhythem.Tracks
 
         public int score = 0;
 
-        [Title("Events")]
+        public float fadeOutTime;
+
+        [Title("FMOD Events")]
         public EventReference popSFXEvent;
+        public EventReference perfectSFXEvent;
         public EventReference missSFXEvent;
         public EventReference musicEvent;
 
+        private EventInstance activeSong;
+        
         private IEnumerator _songStartAsync;
 
         private NoteManager _noteManager;
@@ -50,6 +55,8 @@ namespace Rhythem.Tracks
             }
 
             SetupSong(testBeatmap);
+
+            EventManager.Startup();
         }
 
         void Update()
@@ -60,6 +67,24 @@ namespace Rhythem.Tracks
         void FixedUpdate()
         {
             UpdateRing();
+        }
+
+        public void PlayOneShot(EventReference sound, Vector3 worldPos)
+        {
+            RuntimeManager.PlayOneShot(sound, worldPos);
+        }
+
+        public void StartSong(EventReference song)
+        {
+            activeSong = RuntimeManager.CreateInstance(song);
+            RuntimeManager.AttachInstanceToGameObject(activeSong, Camera.main.transform);
+
+        }
+
+        public IEnumerator SongFail()
+        {
+            for ()
+            activeSong.setParameterByName("", 0);
         }
 
         public void SetupSong(Beatmap beatmap)
@@ -84,10 +109,19 @@ namespace Rhythem.Tracks
             {
                 yield return null;
             }
+            
+            //UNITY AUDIO VERSION
+            /*
             audioSource.playOnAwake = false;
             audioSource.clip = songFile;
             yield return new WaitForSeconds(_song.bpm / 60 * (measuresPerRotation / 4));
             audioSource.Play();
+            */
+
+            //FMOD VERSION
+            yield return new WaitForSeconds(_song.bpm / 60 * (measuresPerRotation / 4));
+
+
         }
     }
 }
