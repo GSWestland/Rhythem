@@ -77,6 +77,9 @@ namespace Rhythem.TrackEditor
             var song = new Song();
             song.songTitle = songTitle;
             song.artist = artist;
+            song.bpm = bpm;
+            song.beatsPerMeasure = beatsPerMeasure;
+            song.subdivisionsPerBeat = subdivisionsPerBeat;
             var measures = new List<Measure>();
             for (int i = 0; i < numberOfMeasures; i++)
             {
@@ -97,7 +100,7 @@ namespace Rhythem.TrackEditor
                 measures.Add(newMeasure);
             }
             song.measures = measures;
-
+            SerializeSongData(song);
         }
     }
 }
