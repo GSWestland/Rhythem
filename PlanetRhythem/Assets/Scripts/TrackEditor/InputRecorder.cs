@@ -10,9 +10,6 @@ namespace Rhythem.TrackEditor
     /// </summary>
     public class InputRecorder : MonoBehaviour
     {
-        private static string BEATMAP_ROOT_PATH = "Assets/Resources/Beatmaps";
-        private static string JSON_DATA_PATH = "Assets/Resources/Beatmaps/BeatmapsData";
-
         private Beatmap currentBeatmap;
 
         void Start()

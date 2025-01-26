@@ -19,8 +19,8 @@ namespace Rhythem.TrackEditor {
         {
             Beatmap beatmap = (Beatmap)target;
             base.OnInspectorGUI();
-            serializedObject.Update();
-            if (trackDataPath.stringValue == string.Empty) {
+            if (trackDataPath.stringValue == string.Empty)
+            {
                 if (GUILayout.Button("Generate Track Data"))
                 {
                     //generate json file with same name as beatmap
@@ -28,6 +28,11 @@ namespace Rhythem.TrackEditor {
                     serializedObject.ApplyModifiedProperties();
                 }
             }
+            else
+            {
+                GUILayout.Label($"Track Data Path:\n    {trackDataPath.stringValue}");
+            }
+            serializedObject.Update();
         }
     }
 }
