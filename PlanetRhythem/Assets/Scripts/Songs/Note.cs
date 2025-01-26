@@ -21,5 +21,11 @@ namespace Rhythem.Songs
             hand = newHand;
         }
 
+        public override string ToString()
+        {
+            string strout = $"NOTE TYPE: {noteType.ToString()}--HAND: {hand.ToString()}--POSITION: ({notePositionX},{notePositionY})";
+            return strout;
+        }
+
     }
 }
