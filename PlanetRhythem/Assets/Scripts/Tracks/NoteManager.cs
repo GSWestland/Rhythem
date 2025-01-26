@@ -44,6 +44,7 @@ namespace Rhythem.Tracks
 
         public void InitializeNoteList(GameObject notePrefab, Transform noteHighwayParent, int numberOfSafeNotes)
         {
+            float animationSpeed = 1 / (song.bpm / 60 / (song.beatsPerMeasure - 1));
             _noteTime = (song.bpm / 60f) / (song.beatsPerMeasure - 1) / (song.subdivisionsPerBeat - 1);
 
             for (int i = 0; i < numberOfSafeNotes; i++)
@@ -51,6 +52,7 @@ namespace Rhythem.Tracks
                 var newNoteGO = Instantiate(notePrefab);
                 var sn = newNoteGO.GetComponent<ScorableNote>();
                 sn.measureTime = song.bpm / 60f;
+                sn.animator.SetFloat("playSpeed", animationSpeed);
                 newNoteGO.transform.position = transform.position;
                 newNoteGO.transform.rotation = transform.rotation;
                 newNoteGO.transform.SetParent(noteHighwayParent, true);
