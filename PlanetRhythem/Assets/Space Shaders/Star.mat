@@ -51,14 +51,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Base_Temperature: 905
-    - _Bump_Srength: 0.02
-    - _Coldspot_Temperature: 500
-    - _Deform_Strength: 0.054
-    - _Fresnel_Power: 2.94
-    - _Fresnel_Srength: 2.24
-    - _Hotspot_Temperature: 1319.3
-    - _Noise_Influence: 0.23
+    - _Base_Temperature: 1860.9
+    - _Bump_Srength: 0.88
+    - _Coldspot_Temperature: 985.2
+    - _Deform_Strength: 0.03
+    - _Fresnel_Power: 1.47
+    - _Fresnel_Srength: 1.03
+    - _Hotspot_Temperature: 3292.2
+    - _Noise_Influence: 0.19
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors: []
