@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{332be70c-1f46-4b5d-8ab0-1173f90bb832}">
+		<property name="assetPath">
+			<value>The Astral Glass.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>149.55102040816325</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{749bce5c-e378-4df8-a36a-748d3980a194}</destination>
+		</relationship>
+	</object>
+</objects>
