@@ -2,6 +2,7 @@ using Rhythem.Songs;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Rhythem.Tracks
 {
@@ -20,6 +21,8 @@ namespace Rhythem.Tracks
         private IEnumerator _noteSpawnAsync;
         private int _lastNoteSpawned = 0;
         private Vector2 playSpaceSize = new();
+
+        [HideInInspector] public UnityEvent<ScorableNote> OnNoteMissed;
 
         void Start()
         {

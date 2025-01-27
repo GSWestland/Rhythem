@@ -6,7 +6,7 @@ using UnityEngine.AI;
 // ReSharper disable MemberCanBeProtected.Global
 #endregion
 
-namespace Rhythem.Player
+namespace Rhythem.Play
 {
     public class InputModule : Module
     {
