@@ -284,10 +284,6 @@ namespace Rhythem.Tracks
             PlayOneShot(missSFXEvent, note.transform.position);
         }
 
-        public void StartSong(EventReference song)
-        {
-            PlayClipInFmod(songFile);
-        }
 
         public IEnumerator SongWin()
         {
