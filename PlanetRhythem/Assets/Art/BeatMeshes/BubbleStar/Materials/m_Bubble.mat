@@ -43,6 +43,7 @@ Material:
     - Vector1_FF24B3E1: 1
     - _Light_Fade_Angle: 0.42
     - _Minimum_Light_Level: 0.2
+    - _QueueControl: 0
     m_Colors:
     - Vector2_3062C954: {r: 1, g: 1, b: 0, a: 0}
     - _Star_Color: {r: 1, g: 1, b: 1, a: 1}
