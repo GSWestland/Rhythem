@@ -67,7 +67,9 @@ MonoBehaviour:
   - {fileID: 7729179656253077366}
   - {fileID: 6405610598364116011}
   - {fileID: 3830212616707087972}
+  currentMesh: {fileID: 0}
   measureTime: 0
+  targetHitTime: 0
   animSpeed: 1
 --- !u!135 &1647976524556501214
 SphereCollider:
@@ -191,6 +193,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b4f096ed8bc9bb84cb7eda5b7d03db66, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4c99a8fae575f634a8875ebeac53123f, type: 2}
     - target: {fileID: 919132149155446097, guid: b4f096ed8bc9bb84cb7eda5b7d03db66, type: 3}
       propertyPath: m_Name
       value: Asteroids_1
@@ -262,6 +268,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e4567cca96d05ca459ed3bb46709cfc4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4c99a8fae575f634a8875ebeac53123f, type: 2}
     - target: {fileID: 919132149155446097, guid: e4567cca96d05ca459ed3bb46709cfc4, type: 3}
       propertyPath: m_Name
       value: Asteroids_3
@@ -333,6 +343,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 202f017b654532646bb652fc9451af63, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 289a06d27f690f2409bed4f8931365c7, type: 2}
     - target: {fileID: 919132149155446097, guid: 202f017b654532646bb652fc9451af63, type: 3}
       propertyPath: m_Name
       value: IceCrystals_3
@@ -404,6 +418,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BubbleStar_a
       objectReference: {fileID: 0}
+    - target: {fileID: 7049034741710429493, guid: f9c602f6c13fc904eac2afa6a1c188eb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -471,6 +489,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d4bbb880db2c6074eb300d7b69cc6d13, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 289a06d27f690f2409bed4f8931365c7, type: 2}
     - target: {fileID: 919132149155446097, guid: d4bbb880db2c6074eb300d7b69cc6d13, type: 3}
       propertyPath: m_Name
       value: IceCrystals_2
@@ -542,6 +564,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5eb03a7d9a938954c9bc19162378710f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 289a06d27f690f2409bed4f8931365c7, type: 2}
     - target: {fileID: 919132149155446097, guid: 5eb03a7d9a938954c9bc19162378710f, type: 3}
       propertyPath: m_Name
       value: IceCrystals_1
@@ -613,6 +639,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2589e45e36f2bec4a8ceb84cf8ec13cf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4c99a8fae575f634a8875ebeac53123f, type: 2}
     - target: {fileID: 919132149155446097, guid: 2589e45e36f2bec4a8ceb84cf8ec13cf, type: 3}
       propertyPath: m_Name
       value: Asteroids_2
