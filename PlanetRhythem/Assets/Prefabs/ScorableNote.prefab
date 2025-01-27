@@ -57,8 +57,8 @@ MonoBehaviour:
   noteType: 0
   noteHand: 0
   notePosition: {x: 0, y: 0}
-  leftHandColor: {r: 1, g: 0, b: 0.4432993, a: 1}
-  rightHandColor: {r: 0, g: 0.260571, b: 1, a: 1}
+  leftHandColor: {r: 0.41998935, g: 0.17915626, b: 0.6226415, a: 1}
+  rightHandColor: {r: 0.6048387, g: 0.7735849, b: 0.18609823, a: 1}
   noteMesh: {fileID: 6332113388562058389}
   obstacleMeshOptions:
   - {fileID: 869534310164433410}
@@ -68,6 +68,7 @@ MonoBehaviour:
   - {fileID: 6405610598364116011}
   - {fileID: 3830212616707087972}
   measureTime: 0
+  animSpeed: 1
 --- !u!135 &1647976524556501214
 SphereCollider:
   m_ObjectHideFlags: 0

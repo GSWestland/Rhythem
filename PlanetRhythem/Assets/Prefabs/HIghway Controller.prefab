@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 3741077475602470701}
   - component: {fileID: 3037913275409593128}
   m_Layer: 0
-  m_Name: HIghway Controller
+  m_Name: Highway Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
