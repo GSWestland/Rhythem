@@ -397,7 +397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6506939157310045876, guid: bce5b0b73e8cdc342aff5f06dec20bf8, type: 3}
       propertyPath: m_Name
-      value: HIghway Controller
+      value: Highway Controller
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

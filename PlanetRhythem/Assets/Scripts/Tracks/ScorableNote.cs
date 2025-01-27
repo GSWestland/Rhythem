@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
+using FMODUnity;
 
 namespace Rhythem.Songs {
     public class ScorableNote : MonoBehaviour
@@ -15,14 +16,13 @@ namespace Rhythem.Songs {
 
         public Renderer noteMesh;
         public List<Renderer> obstacleMeshOptions;
-        private Renderer _currentMesh;
+        [HideInInspector] public Renderer currentMesh;
         private Renderer _nextMesh;
         private Material _starMaterial;
         
         public float measureTime = 0f;
         private Collider _col;
-        private ScoreZone _scoreZone;
-        private float _targetHitTime = 0f;
+        public float targetHitTime = 0f;
 
         public float animSpeed = 1f;
         private Animator _animator;
@@ -63,9 +63,9 @@ namespace Rhythem.Songs {
         {
             if (other.tag == "NoteDeadzone")
             {
-                if (_currentMesh != null)
+                if (currentMesh != null)
                 {
-                    _currentMesh.enabled = false;
+                    currentMesh.enabled = false;
                     _col.enabled = false;
                 }
                 if (noteType == NoteType.Note)
@@ -91,7 +91,7 @@ namespace Rhythem.Songs {
         {
             animator.SetFloat("playSpeed", animSpeed);
             _col.enabled = true;
-            _targetHitTime = Time.time + (2 * measureTime); // hard coded to be 1/4 of the way around the ring
+            targetHitTime = Time.time + (2 * measureTime); // hard coded to be 1/4 of the way around the ring
             noteType = noteData.noteType;
             if (noteType == NoteType.Note)
             {
@@ -106,12 +106,12 @@ namespace Rhythem.Songs {
             }
             if (_nextMesh != null)
             {
-                if (_currentMesh != null)
+                if (currentMesh != null)
                 {
-                    _currentMesh.enabled = false;
+                    currentMesh.enabled = false;
                 }
                 _nextMesh.enabled = true;
-                _currentMesh = _nextMesh;
+                currentMesh = _nextMesh;
                 _nextMesh = null;
             }
             notePosition.x = (noteData.notePositionX - playSpaceSize.x * 0.5f) * playSpaceSize.x;

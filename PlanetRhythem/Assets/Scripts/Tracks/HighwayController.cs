@@ -2,6 +2,7 @@ using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
 using Rhythem.Songs;
+using Rhythem.Play;
 using Rhythem.TrackEditor;
 using Rhythem.Util;
 using Sirenix.OdinInspector;
@@ -22,7 +23,7 @@ namespace Rhythem.Tracks
         public Transform ringPivot;
         public int measuresPerRotation = 8;
 
-        public int score = 0;
+        public float failTime = 1.5f;
 
 
         [Title("FMOD Events")]
@@ -38,12 +39,12 @@ namespace Rhythem.Tracks
         public EventReference obstacleIceSFXEvent;
         public EventReference musicEvent;
 
-        public float failTime = 1.5f;
 
         private EventInstance activeSong;
         
         private IEnumerator _songStartAsync;
 
+        private Player player;
         private NoteManager _noteManager;
         private Song _song;
         private AudioSource _audioSource;
@@ -83,6 +84,9 @@ namespace Rhythem.Tracks
             songCallback = new FMOD.Studio.EVENT_CALLBACK(PlayFileCallBackUsingAudioFile);
 
             EventManager.Startup();
+            player = GameManager.Instance.VRRig.GetComponent<Player>();
+            player.OnNoteHit.AddListener(PlayNoteHitSound);
+            _noteManager.OnNoteMissed.AddListener(PlayNoteMissedSound);
         }
 
         public void PlayClipInFmod(AudioClip audioclip)
@@ -242,6 +246,45 @@ namespace Rhythem.Tracks
         }
 
         public void StartSong(AudioClip songFile)
+        {
+            PlayClipInFmod(songFile);
+        }
+        public void PlayNoteHitSound(ScorableNote note, ScoreZone scoreZone)
+        {
+            if (scoreZone == ScoreZone.Miss)
+            {
+                _noteManager.OnNoteMissed.Invoke(note);
+            }
+
+            switch (note.noteType)
+            {
+                case NoteType.Note:
+                    
+                    Debug.Log(scoreZone.ToString());
+                    PlayOneShot(perfectSFXEvent, note.transform.position);
+                    break;
+                case NoteType.Obstacle:
+                    var meshname = note.currentMesh.name;
+                    if (meshname.Contains("Ice"))
+                    {
+                        PlayOneShot(obstacleIceSFXEvent, note.transform.position);
+                    }
+                    else if (meshname.Contains("Asteroids"))
+                    {
+                        PlayOneShot(obstacleAsteroidSFXEvent, note.transform.position);
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        public void PlayNoteMissedSound(ScorableNote note)
+        {
+            PlayOneShot(missSFXEvent, note.transform.position);
+        }
+
+        public void StartSong(EventReference song)
         {
             PlayClipInFmod(songFile);
         }

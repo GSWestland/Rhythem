@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Rhythem.Player
+namespace Rhythem.Play
 {
     public class Module : MonoBehaviour
     {

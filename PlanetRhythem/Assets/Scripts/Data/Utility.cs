@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.AI;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using Rhythem.Player;
+using Rhythem.Play;
 using static UnityEngine.ParticleSystem;
 using UnityEngine.TextCore.Text;
 
