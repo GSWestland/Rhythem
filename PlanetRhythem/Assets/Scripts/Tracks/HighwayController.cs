@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
@@ -5,7 +6,6 @@ using Rhythem.Songs;
 using Rhythem.Play;
 using Rhythem.TrackEditor;
 using Rhythem.Util;
-using Sirenix.OdinInspector;
 using System;
 using System.Collections;
 using System.Runtime.InteropServices;
@@ -135,8 +135,9 @@ namespace Rhythem.Tracks
             [AOT.MonoPInvokeCallback(typeof(FMOD.Studio.EVENT_CALLBACK))]
         static FMOD.RESULT PlayFileCallBackUsingAudioFile(FMOD.Studio.EVENT_CALLBACK_TYPE type, IntPtr instPrt, IntPtr paramsPrt)
         {
-            UnityEngine.Debug.Log("PlayFileCallBackUsingAudioFile event type " + type.ToString());
-
+#if UNITY_EDITOR
+            Debug.Log("PlayFileCallBackUsingAudioFile event type " + type.ToString());
+#endif
             FMOD.Studio.EventInstance inst = new FMOD.Studio.EventInstance(instPrt);
 
             if (!inst.isValid())
