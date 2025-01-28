@@ -1,39 +1,87 @@
 using Sirenix.OdinInspector;
+using UnityEditor.ShaderGraph;
 using UnityEngine;
-using UnityEngine.AI;
-
-#region Resharper Comments
-// ReSharper disable MemberCanBeProtected.Global
-#endregion
+using UnityEngine.InputSystem;
+using UnityEngine.SpatialTracking;
 
 namespace Rhythem.Play
 {
     public class InputModule : Module
     {
-        [Title("General Input Module References")]
-        public bool Moving { get; protected set; }
-        public bool Turning { get; protected set; }
-        public float CurrentMaxMoveSpeed { get; protected set; } = 100;
-        public float DefaultMaxMoveSpeed { get; protected set; } = 100;
+        [Title("Player-Specific References")]
+        public TrackedPoseDriver head;
+        public PlayerWand leftHand;
+        public PlayerWand rightHand;
 
-        public float SetCurrentMaxMoveSpeed(float newMax)
+        private PlayerControls _controls;
+        private Ray _selectionRay;
+        private RaycastHit _selectionHit;
+
+        protected override void Start()
         {
-            return CurrentMaxMoveSpeed = newMax;
+            base.Start();
+            _controls ??= new PlayerControls();
+            SubscribeToControls();
         }
 
-        public float ResetMaxMoveSpeed()
+        protected void OnDestroy()
         {
-            return CurrentMaxMoveSpeed = DefaultMaxMoveSpeed;
+            UnsubscribeToControls();
+        }
+
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+            _controls ??= new PlayerControls();
+            _controls.Enable();
+        }
+
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+            _controls?.Disable();
         }
 
         protected override void Update()
         {
             base.Update();
-            OnMoving(Moving);
-            OnTurning(Turning);
+        }
+        private void OnConfirmPerformed(InputAction.CallbackContext context)
+        {
+
         }
 
-        protected virtual void OnMoving(bool currentlyMoving) { }
-        protected virtual void OnTurning(bool currentlyTurning) { }
+        private void OnBackPerformed(InputAction.CallbackContext context)
+        {
+
+        }
+
+        private void OnPausePerformed(InputAction.CallbackContext context)
+        {
+            GameManager.Instance.PauseGame(!GameManager.Instance.Paused);
+        }
+
+        private void OnSelectionChangePerformed(InputAction.CallbackContext context)
+        {
+
+        }
+
+        protected void SubscribeToControls()
+        {
+            if (_controls == null) { return; }
+            _controls.Player.Interact.performed += OnConfirmPerformed;
+            _controls.Player.Back.performed += OnBackPerformed;
+            _controls.Player.Pause.performed += OnPausePerformed;
+            _controls.Player.ChangeSelection.performed += OnSelectionChangePerformed;
+        }
+
+        protected void UnsubscribeToControls()
+        {
+            if (_controls == null) { return; }
+            _controls.Player.Interact.performed -= OnConfirmPerformed;
+            _controls.Player.Back.performed -= OnBackPerformed;
+            _controls.Player.Pause.performed -= OnPausePerformed;
+            _controls.Player.ChangeSelection.performed -= OnSelectionChangePerformed;
+        }
     }
 }

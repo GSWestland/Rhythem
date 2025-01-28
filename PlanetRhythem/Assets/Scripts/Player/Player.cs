@@ -3,17 +3,29 @@ using Sirenix.OdinInspector;
 using System;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.InputSystem;
+using UnityEngine.SpatialTracking;
 
 namespace Rhythem.Play
 {
     public class Player : MonoBehaviour
     {
-        [Title("Input Actions")]
-        InputAction confirm;
-        InputAction back;
-        InputAction navigate;
-        InputAction pause;
+        [Title("Player-Specific References")]
+        public TrackedPoseDriver head;
+        public PlayerWand leftHand;
+        public PlayerWand rightHand;
+        private InputModule _inputModule;
+        public InputModule inputModule
+        {
+            get
+            {
+                if ( _inputModule == null && (_inputModule = GetComponent<InputModule>()) == null)
+                {
+                    Debug.LogError("No InputModule found on player. fix that.");
+                    return null;
+                }
+                return _inputModule;
+            }
+        }
 
         [Title("Events")]
         public UnityEvent<ScorableNote, ScoreZone> OnNoteHit;
@@ -23,12 +35,10 @@ namespace Rhythem.Play
         public int energy = 100;
         public int score = 0;
 
+
         void Start()
         {
-            confirm = InputSystem.actions.FindAction("Player/Interact");
-            back = InputSystem.actions.FindAction("Player/Back");
-            navigate = InputSystem.actions.FindAction("Player/Navigate");
-            pause = InputSystem.actions.FindAction("Player/Pause");
+        
         }
 
         void Update()
