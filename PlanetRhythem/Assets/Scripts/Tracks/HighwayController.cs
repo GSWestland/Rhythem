@@ -126,6 +126,7 @@ namespace Rhythem.Tracks
                 
             // Play the sound 
             audioClipInstance.start();
+            Debug.Log("Playing clip " + audioclip.name);
 
             // Release the memory, however if you would like to access parameters or other functions of the instane, 
             // you don't have to release it now. 
@@ -312,6 +313,7 @@ namespace Rhythem.Tracks
             _noteManager.InitializeNoteList(notePrefab, ringPivot, notesSpawnStart, activeNoteLimit);
             _noteManager.InitializeMeasures();
             _songStartAsync = DoSongStartWithDelay(testBeatmap.audioFile);
+            //Debug.Log("Trying to start async function...");
             StartCoroutine(_songStartAsync);
         }
 
@@ -341,8 +343,10 @@ namespace Rhythem.Tracks
             */
 
             //FMOD VERSION
+            //Debug.Log("Waiting to start...");
             yield return new WaitForSeconds(_song.startWaitTime);
             yield return new WaitForSeconds(_song.bpm / 60 * (measuresPerRotation / 4));
+            //Debug.Log("attempting to start song...");
             StartSong(songFile);
 
         }
