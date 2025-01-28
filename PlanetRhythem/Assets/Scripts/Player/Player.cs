@@ -29,12 +29,10 @@ namespace Rhythem.Play
             back = InputSystem.actions.FindAction("Player/Back");
             navigate = InputSystem.actions.FindAction("Player/Navigate");
             pause = InputSystem.actions.FindAction("Player/Pause");
-
         }
 
         void Update()
         {
-
         }
 
         public void DoSongStartPlayerSetup()
