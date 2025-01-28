@@ -20,4 +20,4 @@ MonoBehaviour:
   numberOfMeasures: 141
   silenceAtStartOfTrack: 0
   audioFile: {fileID: 8300000, guid: c83aae088f8a5464da43b2dde052e3e4, type: 3}
-  trackDataPath: 
+  trackDataPath: Assets/Resources/Beatmaps/BeatmapsData/YellowSand.json
