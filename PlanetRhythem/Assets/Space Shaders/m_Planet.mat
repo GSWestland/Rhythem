@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3169837217425695985
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 9
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: m_Planet
+  m_Shader: {fileID: -6465566751694194690, guid: e5eb796f03983be4ea1697f6f9ce7682, type: 3}
+  m_Parent: {fileID: 2100000, guid: b6345b98061bf744fa8c41960589bb79, type: 2}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _Cloud_Detail_Scale: 50.5
+    - _Cloud_Horizontal_Stretch: 1.5
+    - _Cloud_Scale: 0.28
+    - _Light_Fade_Angle: 0.097
+    - _Mid_Band_Falloff: 0
+    - _Mid_Band_Noise_Stretch: 0.97
+    - _Mid_Band_Power: 0.77
+    - _Mid_Band_Vertical_Offset: -1
+    - _Minimum_Light_Level: 0.044
+    - _North_Cap_Edge_Fade_End_Height: -18.73
+    - _North_Cap_Edge_Noise_Scale: 0.9
+    - _North_Cap_Edge_Noise_Strength: 0.409
+    - _North_Cap_Horizontal_Stretch: 2.16
+    - _North_Cap_Noise_Scale: 0.18
+    - _South_Cap_Edge_Fade_End_Height: -34.6
+    - _South_Cap_Edge_Fade_Start_Height: -16.25
+    m_Colors:
+    - _Atmosphere_Color: {r: 0.8805031, g: 0.678375, b: 0.83104634, a: 0}
+    - _Main_Star_Color: {r: 0.91823894, g: 0.6231999, b: 0.3609429, a: 1}
+    - _Mid_Band_Color: {r: 0.61960787, g: 0.454902, b: 0.7176471, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

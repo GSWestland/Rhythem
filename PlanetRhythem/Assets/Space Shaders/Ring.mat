@@ -42,7 +42,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Ring_Divisions: 1.43
-    - _Ring_Inner_Radius: 93
+    - _Ring_Inner_Radius: 32.52
     - _Ring_Noise_Scale: 0.02
     - _Ring_Noise_Strength: 2
     m_Colors:
