@@ -42,7 +42,6 @@ namespace Rhythem.Songs {
             {
                 transform.Rotate(obstacleRotationSpeed);
             }
-            animator.SetFloat("playSpeed", animSpeed);
         }
 
         private void OnTriggerEnter(Collider other)
@@ -75,12 +74,12 @@ namespace Rhythem.Songs {
             }
             _col ??= GetComponent<Collider>();
             _col.enabled = false;
+            animator.SetFloat("playSpeed", animSpeed);
             noteMesh.enabled = false;
             foreach (var m in obstacleMeshOptions)
             {
                 m.enabled = false;
             }
-            //DoStarSpinOnSpawn ??= DoNoteSpinOnDelay(measureTime * 1.6f);
         }
 
         public void ResetNote(Note noteData, float currentTime, Vector2 playSpaceSize)
@@ -91,7 +90,6 @@ namespace Rhythem.Songs {
                 noteHand = noteData.hand;
                 _starMaterial.SetColor("_Star_Color", noteHand == DesiredHand.Left ? leftHandColor : rightHandColor);
                 _nextMesh = noteMesh;
-                //StartCoroutine(DoStarSpinOnSpawn);
                 transform.DOScale(0.35f, measureTime - 0.4f).OnComplete(()=>
                 {
                     animator.SetTrigger("DoSpin");

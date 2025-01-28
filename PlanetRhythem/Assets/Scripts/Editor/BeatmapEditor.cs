@@ -19,6 +19,15 @@ namespace Rhythem.TrackEditor {
         {
             Beatmap beatmap = (Beatmap)target;
             base.OnInspectorGUI();
+            if (beatmap.audioFile != null && beatmap.bpm != 0 && beatmap.subdivisionsPerBeat != 0)
+            {
+                if (GUILayout.Button("Auto Fill Measure Count from Audio file"))
+                {
+                    beatmap.songTitle = beatmap.audioFile.name;
+                    var measureCount = (int)Mathf.Ceil((beatmap.audioFile.length - beatmap.silenceAtStartOfTrack) / (beatmap.bpm / 60f));
+                    beatmap.numberOfMeasures = measureCount;
+                }
+            }
             if (trackDataPath.stringValue == string.Empty)
             {
                 if (GUILayout.Button("Generate Track Data"))
