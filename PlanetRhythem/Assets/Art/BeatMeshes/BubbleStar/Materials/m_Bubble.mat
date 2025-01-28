@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: m_Bubble
   m_Shader: {fileID: -6465566751694194690, guid: 22d53cb38773e8e4587a9b68f4f3356d, type: 3}
-  m_Parent: {fileID: 2100000, guid: aa7cbad9c5925f840ba506daa39da19a, type: 2}
+  m_Parent: {fileID: 2100000, guid: 99e6c4e9eeb7e2c4ca5c1dbbbc72a410, type: 2}
   m_ModifiedSerializedProperties: 2
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -26,6 +26,10 @@ Material:
     m_TexEnvs:
     - Texture2D_7D742DCF:
         m_Texture: {fileID: 2800000, guid: 17a0fae0defbcdc499e286c32b910e8f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Base_Map:
+        m_Texture: {fileID: 2800000, guid: 23cd3b38ba7527f448b8ad449e5f82c1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
