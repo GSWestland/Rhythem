@@ -1,0 +1,6 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement name="SongSelectionMenu" style="flex-grow: 1;">
+        <engine:Label text="Select Song..." name="SelectSongTitle" style="-unity-text-align: upper-center; font-size: 64px; color: rgb(228, 217, 244); -unity-text-outline-width: 2px; -unity-font-style: bold; -unity-text-outline-color: rgb(0, 0, 0);" />
+        <engine:ListView virtualization-method="DynamicHeight" data-source="project://database/Assets/Resources/Beatmaps/ggj2025_tracklist.asset?fileID=11400000&amp;guid=09cc378aa99eec14a803dfcd2e9fcaa4&amp;type=2#ggj2025_tracklist" data-source-path="tracklistName" item-template="project://database/Assets/UI/PlanetRhythem_SongContainerUI.uxml?fileID=9197481963319205126&amp;guid=9008348fafa6bcc449888cde591d1107&amp;type=3#PlanetRhythem_SongContainerUI" binding-source-selection-mode="AutoAssign" />
+    </engine:VisualElement>
+</engine:UXML>

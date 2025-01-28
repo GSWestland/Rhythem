@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="SongContainer" style="flex-grow: 1;">
+        <ui:Button text="SongTitle" style="font-size: 104px; background-color: rgba(188, 188, 188, 0); background-image: url(&quot;project://database/Assets/Art/2dAssets/cloud%20song%20title.png?fileID=2800000&amp;guid=177328c2aae315a439235b2d8c644066&amp;type=3#cloud song title&quot;); background-size: 100% 100%; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; -unity-text-align: middle-right; background-position-y: bottom -4px;" />
+    </ui:VisualElement>
+</ui:UXML>
