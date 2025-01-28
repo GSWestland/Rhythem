@@ -1,8 +1,7 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
-using FMODUnity;
-
 namespace Rhythem.Songs {
     public class ScorableNote : MonoBehaviour
     {
@@ -24,20 +23,9 @@ namespace Rhythem.Songs {
         private Collider _col;
         public float targetHitTime = 0f;
 
+        public Animator animator;
         public float animSpeed = 1f;
-        private Animator _animator;
-        public Animator animator
-        {
-            get
-            {
-                if (_animator == null && (_animator = GetComponent<Animator>()) == null)
-                {
-                    Debug.LogError($"No animator available on ScorableNote{gameObject.GetInstanceID()}");
-                    return null;
-                }
-                return _animator;
-            }
-        }
+        private IEnumerator DoSpinOnSpawn;
 
         private void Awake()
         {
@@ -57,6 +45,12 @@ namespace Rhythem.Songs {
             {
                 m.enabled = false;
             }
+            DoSpinOnSpawn ??= DoNoteSpinOnDelay(measureTime);
+
+        }
+
+        public void Update()
+        {
         }
 
         private void OnTriggerEnter(Collider other)
@@ -70,28 +64,12 @@ namespace Rhythem.Songs {
                 }
                 if (noteType == NoteType.Note)
                 {
-                    Debug.Log("MISSED NOTE");
-                }
-            }
-            else if (other.tag == "playerHand")
-            {
-                if (noteType == NoteType.Note)
-                {
-
-                    //get controller hand and compare against this note's hand
-                }
-                else if (noteType == NoteType.Obstacle)
-                {
-                    //womp womp
+                    Debug.Log($"NOTE {gameObject.name} HIT {other.gameObject}");
                 }
             }
         }
-
         public void ResetNote(Note noteData, float currentTime, Vector2 playSpaceSize)
         {
-            animator.SetFloat("playSpeed", animSpeed);
-            _col.enabled = true;
-            targetHitTime = Time.time + (2 * measureTime); // hard coded to be 1/4 of the way around the ring
             noteType = noteData.noteType;
             if (noteType == NoteType.Note)
             {
@@ -122,6 +100,21 @@ namespace Rhythem.Songs {
             offsetPosition.y += notePosition.y;
             transform.position = offsetPosition;
             transform.parent = transform;
+
+            StartCoroutine(DoSpinOnSpawn);
+            _col.enabled = true;
+            targetHitTime = Time.time + (2 * measureTime); // hard coded to be 1/4 of the way around the ring
+            animator.SetFloat("playSpeed", animSpeed);
+        }
+
+        private IEnumerator DoNoteSpinOnDelay(float delay)
+        {
+            if (noteMesh == null || animator == null)
+            {
+                yield return null;
+            }
+            yield return new WaitForSeconds(delay);
+            animator.SetTrigger("DoSpin");
         }
     }
 }

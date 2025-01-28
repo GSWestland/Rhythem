@@ -53,6 +53,7 @@ namespace Rhythem.Tracks
             for (int i = 0; i < numberOfSafeNotes; i++)
             {
                 var newNoteGO = Instantiate(notePrefab);
+                newNoteGO.name = $"ScorableNote_{i}";
                 var sn = newNoteGO.GetComponent<ScorableNote>();
                 sn.measureTime = song.bpm / 60f;
                 sn.animSpeed = animationSpeed;
@@ -86,7 +87,6 @@ namespace Rhythem.Tracks
 
         private IEnumerator DoNoteSpawnPerMeasure(Measure measure)
         {
-            //Debug.Log($"Current Measure: {_currentMeasure}");
             for (int i = 0; i < measure.beats.Count; i++)
             {
                 int currentNoteSubdiv = 0;
@@ -102,10 +102,10 @@ namespace Rhythem.Tracks
                                 {
                                     _lastNoteSpawned = 0;
                                 }
-                                _activeNotes[_lastNoteSpawned++].gameObject.SetActive(true);
+                                _activeNotes[_lastNoteSpawned].gameObject.SetActive(true);
                                 _activeNotes[_lastNoteSpawned].gameObject.transform.position = transform.position;
                                 _activeNotes[_lastNoteSpawned].gameObject.transform.rotation = transform.rotation;
-                                _activeNotes[_lastNoteSpawned].ResetNote(note, Time.time, playSpaceSize);
+                                _activeNotes[_lastNoteSpawned++].ResetNote(note, Time.time, playSpaceSize);
                                 break;
                             }
                         }
