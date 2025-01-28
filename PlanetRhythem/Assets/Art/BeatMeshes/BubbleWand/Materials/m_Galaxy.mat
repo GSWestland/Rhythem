@@ -133,7 +133,7 @@ Material:
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
-    - _Center_Glow_Amount: 3.33
+    - _Center_Glow_Amount: 2.85
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
@@ -143,6 +143,7 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
+    - _FanVisibility: 0
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
