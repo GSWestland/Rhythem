@@ -90,7 +90,6 @@ namespace Rhythem.Tracks
             player.OnNoteHit.AddListener(DoNoteHit);
             _noteManager.deadzoneController.OnNoteMissed.AddListener(DoNoteMissed);
             _noteManager.deadzoneController.OnNoteMissed.AddListener(player.DoMissedNoteAction);
-            StartSong(testBeatmap.audioFile);
         }
 
         public void PlayClipInFmod(AudioClip audioclip)
