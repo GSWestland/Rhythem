@@ -17,13 +17,16 @@ namespace Rhythem.Tracks
         public static HighwayController s;
         [Title("Testing Fields")]
         public Beatmap testBeatmap;
+
+        [Title("Notes Setup")]
         public GameObject notePrefab;
         public int activeNoteLimit = 50;
+        public int measuresPerRotation = 8;
+        public float failTime = 1.5f;
 
         public Transform ringPivot;
-        public int measuresPerRotation = 8;
+        public Transform notesSpawnStart;
 
-        public float failTime = 1.5f;
 
 
         [Title("FMOD Events")]
@@ -76,7 +79,6 @@ namespace Rhythem.Tracks
             {
                 _noteManager = GetComponentInChildren<NoteManager>();
             }
-
             SetupSong(testBeatmap);
 
             //FMOD Setup
@@ -85,8 +87,10 @@ namespace Rhythem.Tracks
 
             EventManager.Startup();
             player = GameManager.Instance.VRRig.GetComponent<Player>();
-            player.OnNoteHit.AddListener(PlayNoteHitSound);
-            _noteManager.OnNoteMissed.AddListener(PlayNoteMissedSound);
+            player.OnNoteHit.AddListener(DoNoteHit);
+            _noteManager.deadzoneController.OnNoteMissed.AddListener(DoNoteMissed);
+            _noteManager.deadzoneController.OnNoteMissed.AddListener(player.DoMissedNoteAction);
+            StartSong(testBeatmap.audioFile);
         }
 
         public void PlayClipInFmod(AudioClip audioclip)
@@ -249,11 +253,12 @@ namespace Rhythem.Tracks
         {
             PlayClipInFmod(songFile);
         }
-        public void PlayNoteHitSound(ScorableNote note, ScoreZone scoreZone)
+
+        public void DoNoteHit(ScorableNote note, ScoreZone scoreZone)
         {
             if (scoreZone == ScoreZone.Miss)
             {
-                _noteManager.OnNoteMissed.Invoke(note);
+                _noteManager.deadzoneController.OnNoteMissed.Invoke(note);
             }
 
             switch (note.noteType)
@@ -279,7 +284,7 @@ namespace Rhythem.Tracks
             }
         }
 
-        public void PlayNoteMissedSound(ScorableNote note)
+        public void DoNoteMissed(ScorableNote note)
         {
             PlayOneShot(missSFXEvent, note.transform.position);
         }
@@ -305,7 +310,7 @@ namespace Rhythem.Tracks
             _song = beatmap.DeserializeSongData();
             _noteManager.song = _song;
             _noteManager.Cleanup();
-            _noteManager.InitializeNoteList(notePrefab, ringPivot, activeNoteLimit);
+            _noteManager.InitializeNoteList(notePrefab, ringPivot, notesSpawnStart, activeNoteLimit);
             _noteManager.InitializeMeasures();
             _songStartAsync = DoSongStartWithDelay(testBeatmap.audioFile);
             StartCoroutine(_songStartAsync);
@@ -313,6 +318,10 @@ namespace Rhythem.Tracks
 
         void UpdateRing()
         {
+            if (ringPivot == null && (ringPivot = GameObject.Find("Ring").transform) == null)
+            {
+                return;
+            }
             ringPivot.Rotate(new Vector3(0, (_song.bpm / 60f) * 360f / _song.beatsPerMeasure / measuresPerRotation * Time.fixedDeltaTime, 0));
         }
 
@@ -320,6 +329,7 @@ namespace Rhythem.Tracks
         {
             if (songFile == null)
             {
+                Debug.LogError("NO SONG TO PLAY");
                 yield return null;
             }
             
@@ -332,6 +342,7 @@ namespace Rhythem.Tracks
             */
 
             //FMOD VERSION
+            yield return new WaitForSeconds(_song.startWaitTime);
             yield return new WaitForSeconds(_song.bpm / 60 * (measuresPerRotation / 4));
             StartSong(songFile);
 

@@ -22,6 +22,8 @@ namespace Rhythem.TrackEditor
         public int beatsPerMeasure;
         public int subdivisionsPerBeat;
         public int numberOfMeasures;
+        [Space]
+        public float silenceAtStartOfTrack;
         public AudioClip audioFile;
         [HideInInspector]
         public string trackDataPath;
@@ -79,6 +81,7 @@ namespace Rhythem.TrackEditor
             song.bpm = bpm;
             song.beatsPerMeasure = beatsPerMeasure;
             song.subdivisionsPerBeat = subdivisionsPerBeat;
+            song.startWaitTime = silenceAtStartOfTrack;
             var measures = new List<Measure>();
             for (int i = 0; i < numberOfMeasures; i++)
             {

@@ -21,12 +21,12 @@ namespace Rhythem.Tracks
         private IEnumerator _noteSpawnAsync;
         private int _lastNoteSpawned = 0;
         private Vector2 playSpaceSize = new();
-
-        [HideInInspector] public UnityEvent<ScorableNote> OnNoteMissed;
+        public NoteDeadzoneController deadzoneController;
 
         void Start()
         {
             playSpaceSize = GetComponent<BoxCollider>().size;
+            
         }
 
         void Update()
@@ -45,14 +45,14 @@ namespace Rhythem.Tracks
             _activeNotes?.Clear();
         }
 
-        public void InitializeNoteList(GameObject notePrefab, Transform noteHighwayParent, int numberOfSafeNotes)
+        public void InitializeNoteList(GameObject notePrefab, Transform noteHighwayParent, Transform spawnLocation, int numberOfSafeNotes)
         {
             float animationSpeed = 1 / (song.bpm / 60f / (song.beatsPerMeasure - 1));
             _noteTime = (song.bpm / 60f) / (song.beatsPerMeasure - 1) / (song.subdivisionsPerBeat - 1);
 
             for (int i = 0; i < numberOfSafeNotes; i++)
             {
-                var newNoteGO = Instantiate(notePrefab);
+                var newNoteGO = Instantiate(notePrefab, position: spawnLocation.position, rotation: spawnLocation.rotation);
                 newNoteGO.name = $"ScorableNote_{i}";
                 var sn = newNoteGO.GetComponent<ScorableNote>();
                 sn.measureTime = song.bpm / 60f;

@@ -29,9 +29,9 @@ public enum NoteType
 
 public enum ScoreZone
 {
-    Miss,
-    Close,
-    Good,
-    Great,
-    Stellar
+    Miss = 0,
+    Close = 10,
+    Good = 100,
+    Great = 150,
+    Stellar = 250
 }

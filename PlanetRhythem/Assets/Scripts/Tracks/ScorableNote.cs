@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
+using DG.Tweening;
 namespace Rhythem.Songs {
     public class ScorableNote : MonoBehaviour
     {
@@ -12,6 +13,7 @@ namespace Rhythem.Songs {
         [Title("Assign Me :3")]
         public Color leftHandColor;
         public Color rightHandColor;
+        public Vector3 obstacleRotationSpeed;
 
         public Renderer noteMesh;
         public List<Renderer> obstacleMeshOptions;
@@ -25,32 +27,22 @@ namespace Rhythem.Songs {
 
         public Animator animator;
         public float animSpeed = 1f;
-        private IEnumerator DoSpinOnSpawn;
+        private IEnumerator DoStarSpinOnSpawn;
 
         private void Awake()
         {
-
-            for (int i = 0; i <  noteMesh.sharedMaterials.Length; i++)
-            {
-                if (noteMesh.sharedMaterials[i].name == "m_StarBubble")
-                {
-                    _starMaterial = new Material(noteMesh.sharedMaterials[i]);
-                    noteMesh.sharedMaterial = _starMaterial;
-                    break;
-                }
-            }
-            _col = GetComponent<Collider>();
-            noteMesh.enabled = false;
-            foreach (var m in obstacleMeshOptions)
-            {
-                m.enabled = false;
-            }
-            DoSpinOnSpawn ??= DoNoteSpinOnDelay(measureTime);
+            SpawnNote();
+            
 
         }
 
         public void Update()
         {
+            if (noteType == NoteType.Obstacle)
+            {
+                transform.Rotate(obstacleRotationSpeed);
+            }
+            animator.SetFloat("playSpeed", animSpeed);
         }
 
         private void OnTriggerEnter(Collider other)
@@ -64,10 +56,33 @@ namespace Rhythem.Songs {
                 }
                 if (noteType == NoteType.Note)
                 {
-                    Debug.Log($"NOTE {gameObject.name} HIT {other.gameObject}");
+                    //Debug.Log($"NOTE {gameObject.name} HIT {other.gameObject}");
+
                 }
             }
         }
+
+        private void SpawnNote()
+        {
+            for (int i = 0; i < noteMesh.sharedMaterials.Length; i++)
+            {
+                if (noteMesh.sharedMaterials[i].name == "m_StarBubble")
+                {
+                    _starMaterial = new Material(noteMesh.sharedMaterials[i]);
+                    noteMesh.sharedMaterial = _starMaterial;
+                    break;
+                }
+            }
+            _col ??= GetComponent<Collider>();
+            _col.enabled = false;
+            noteMesh.enabled = false;
+            foreach (var m in obstacleMeshOptions)
+            {
+                m.enabled = false;
+            }
+            //DoStarSpinOnSpawn ??= DoNoteSpinOnDelay(measureTime * 1.6f);
+        }
+
         public void ResetNote(Note noteData, float currentTime, Vector2 playSpaceSize)
         {
             noteType = noteData.noteType;
@@ -76,10 +91,16 @@ namespace Rhythem.Songs {
                 noteHand = noteData.hand;
                 _starMaterial.SetColor("_Star_Color", noteHand == DesiredHand.Left ? leftHandColor : rightHandColor);
                 _nextMesh = noteMesh;
-                
+                //StartCoroutine(DoStarSpinOnSpawn);
+                transform.DOScale(0.35f, measureTime - 0.4f).OnComplete(()=>
+                {
+                    animator.SetTrigger("DoSpin");
+                    transform.DOScale(1f, 0.5f).SetEase(Ease.OutBounce);
+                });
             }
             else if (noteType == NoteType.Obstacle && obstacleMeshOptions.Count > 0)
             {
+                obstacleRotationSpeed = new Vector3(Random.Range(-0.5f, 0.6f), Random.Range(-0.5f, 0.6f), Random.Range(-0.5f, 0.6f));
                 _nextMesh = obstacleMeshOptions[new System.Random().Next(0, obstacleMeshOptions.Count)];
             }
             if (_nextMesh != null)
@@ -100,11 +121,12 @@ namespace Rhythem.Songs {
             offsetPosition.y += notePosition.y;
             transform.position = offsetPosition;
             transform.parent = transform;
+            transform.eulerAngles = new Vector3(0f, 90f, 0f);
 
-            StartCoroutine(DoSpinOnSpawn);
             _col.enabled = true;
             targetHitTime = Time.time + (2 * measureTime); // hard coded to be 1/4 of the way around the ring
             animator.SetFloat("playSpeed", animSpeed);
+            
         }
 
         private IEnumerator DoNoteSpinOnDelay(float delay)

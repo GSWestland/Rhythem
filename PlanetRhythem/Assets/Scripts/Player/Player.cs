@@ -53,7 +53,35 @@ namespace Rhythem.Play
 
         public void DoHitNoteAction(ScorableNote note, ScoreZone zone)
         {
-
+            if(note.noteType == NoteType.Obstacle)
+            {
+                energy -= 15;
+                score -= 50;
+            }
+            else if (note.noteType == NoteType.Note)
+            {
+                energy += 3;
+                switch (zone)
+                {
+                    case ScoreZone.Stellar:
+                        score += 250;
+                        break;
+                    case ScoreZone.Great:
+                        score += 150;
+                        break;
+                    case ScoreZone.Good:
+                        score += 100;
+                        break;
+                    case ScoreZone.Close:
+                        score += 10;
+                        break;
+                    case ScoreZone.Miss:
+                        score -= 10;
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
 
         public void DoMissedNoteAction(ScorableNote note)

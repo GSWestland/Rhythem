@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8567839411751703346}
   - component: {fileID: 3615079909709643705}
+  - component: {fileID: 7628534151852633726}
   m_Layer: 0
   m_Name: MissedNoteHell
   m_TagString: NoteDeadzone
@@ -53,6 +54,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.5, y: 2.5, z: 1}
   m_Center: {x: 0, y: 1.18, z: -0.6}
+--- !u!114 &7628534151852633726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430709828011274394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f944265019f910e45bb4d45c679aedb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2550332827359500303
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,6 +139,7 @@ MonoBehaviour:
     beatsPerMeasure: 0
     subdivisionsPerBeat: 0
     measures: []
+  deadzoneController: {fileID: 7628534151852633726}
   OnNoteMissed:
     m_PersistentCalls:
       m_Calls: []
@@ -180,6 +194,7 @@ MonoBehaviour:
   notePrefab: {fileID: 9090144462337807331, guid: a8c17d403e62b0148ad1bebc0e93204a, type: 3}
   activeNoteLimit: 75
   ringPivot: {fileID: 0}
+  notesSpawnStart: {fileID: 6139455081395597923}
   measuresPerRotation: 8
   failTime: 1.5
   popSFXEvent:

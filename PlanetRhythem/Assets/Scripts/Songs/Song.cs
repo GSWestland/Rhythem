@@ -11,6 +11,7 @@ namespace Rhythem.Songs
         public int bpm;
         public int beatsPerMeasure;
         public int subdivisionsPerBeat;
+        public float startWaitTime;
         [SerializeField] public List<Measure> measures;
     }
 }
