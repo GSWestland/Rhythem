@@ -29,6 +29,9 @@ namespace Rhythem.Songs {
         public float animSpeed = 1f;
         private IEnumerator DoStarSpinOnSpawn;
 
+        private bool printLog = false;
+        private float timeFromSpawn = 0f;
+
         private void Awake()
         {
             SpawnNote();
@@ -42,12 +45,16 @@ namespace Rhythem.Songs {
             {
                 transform.Rotate(obstacleRotationSpeed);
             }
+            if (printLog) timeFromSpawn += Time.deltaTime;
         }
 
         private void OnTriggerEnter(Collider other)
         {
             if (other.tag == "NoteDeadzone")
             {
+                printLog = false;
+                Debug.Log(timeFromSpawn);
+
                 if (currentMesh != null)
                 {
                     currentMesh.enabled = false;
@@ -82,8 +89,11 @@ namespace Rhythem.Songs {
             }
         }
 
-        public void ResetNote(Note noteData, float currentTime, Vector2 playSpaceSize)
+        public void ResetNote(Note noteData, float currentTime)
         {
+            timeFromSpawn = 0f;
+            printLog = true;
+
             noteType = noteData.noteType;
             if (noteType == NoteType.Note)
             {
@@ -111,18 +121,11 @@ namespace Rhythem.Songs {
                 currentMesh = _nextMesh;
                 _nextMesh = null;
             }
-            notePosition.x = (noteData.notePositionX - playSpaceSize.x * 0.5f) * playSpaceSize.x;
-            notePosition.y = noteData.notePositionY * playSpaceSize.y;
 
-            Vector3 offsetPosition = transform.position;
-            offsetPosition.x += notePosition.x;
-            offsetPosition.y += notePosition.y;
-            transform.position = offsetPosition;
-            transform.parent = transform;
             transform.eulerAngles = new Vector3(0f, 90f, 0f);
 
             _col.enabled = true;
-            targetHitTime = Time.time + (2 * measureTime); // hard coded to be 1/4 of the way around the ring
+            targetHitTime = Time.time + (2f * measureTime); // hard coded to be 1/4 of the way around the ring
             animator.SetFloat("playSpeed", animSpeed);
             
         }

@@ -17,34 +17,31 @@ namespace Rhythem.Tracks
         public static HighwayController s;
         [Title("Testing Fields")]
         public Beatmap testBeatmap;
+        [SerializeField] private float timePerSong = 0f;
+        [SerializeField] private float timePerMeasure = 0f;
+        [SerializeField] private float timePerBeat = 0f;
+        [SerializeField] private float timePerNote = 0f;
 
         [Title("Notes Setup")]
         public GameObject notePrefab;
         public int activeNoteLimit = 50;
         public int measuresPerRotation = 8;
         public float failTime = 1.5f;
-
         public Transform ringPivot;
         public Transform notesSpawnStart;
 
-
-
-        [Title("FMOD Events")]
-
-        private FMOD.Studio.EVENT_CALLBACK songCallback;
-        public EventReference popSFXEvent;
-        public EventReference perfectSFXEvent;
-        public EventReference missSFXEvent;
-
-        public EventReference songFailSFXEvent;
-        public EventReference songCompleteSFXEvent;
-        public EventReference obstacleAsteroidSFXEvent;
-        public EventReference obstacleIceSFXEvent;
-        public EventReference musicEvent;
-
-
+        [FoldoutGroup("FMOD Events")]public EventReference popSFXEvent;
+        [FoldoutGroup("FMOD Events")] public EventReference perfectSFXEvent;
+        [FoldoutGroup("FMOD Events")] public EventReference missSFXEvent;
+        [FoldoutGroup("FMOD Events")] public EventReference songFailSFXEvent;
+        [FoldoutGroup("FMOD Events")] public EventReference songCompleteSFXEvent;
+        [FoldoutGroup("FMOD Events")] public EventReference obstacleAsteroidSFXEvent;
+        [FoldoutGroup("FMOD Events")] public EventReference obstacleIceSFXEvent;
+        [FoldoutGroup("FMOD Events")] public EventReference musicEvent;
         private EventInstance activeSong;
-        
+        private FMOD.Studio.EVENT_CALLBACK songCallback;
+
+        //public SongSession songSession;
         private IEnumerator _songStartAsync;
 
         private Player player;
@@ -65,6 +62,8 @@ namespace Rhythem.Tracks
 
         void Awake()
         {
+            //songSession = SessionsManager.Instance.GetCurrentSession<SongSession>();
+
             if(s != null)
             {
                 Debug.LogError("Error: More than 1 Highway Controller in scene");
@@ -80,6 +79,11 @@ namespace Rhythem.Tracks
                 _noteManager = GetComponentInChildren<NoteManager>();
             }
             SetupSong(testBeatmap);
+
+            timePerSong = testBeatmap.audioFile.length - testBeatmap.silenceAtStartOfTrack;
+            timePerMeasure = timePerSong / testBeatmap.bPM / 60f;
+            timePerBeat = timePerMeasure / testBeatmap.beatsPerMeasure;
+            timePerNote = timePerBeat / testBeatmap.subdivisionsPerBeat;
 
             //FMOD Setup
 
@@ -233,8 +237,6 @@ namespace Rhythem.Tracks
             return result;
         }
 
-
-
         void Update()
         {
 
@@ -312,7 +314,6 @@ namespace Rhythem.Tracks
             _noteManager.song = _song;
             _noteManager.Cleanup();
             _noteManager.InitializeNoteList(notePrefab, ringPivot, notesSpawnStart, activeNoteLimit);
-            _noteManager.InitializeMeasures();
             _songStartAsync = DoSongStartWithDelay(testBeatmap.audioFile);
             //Debug.Log("Trying to start async function...");
             StartCoroutine(_songStartAsync);
@@ -334,20 +335,14 @@ namespace Rhythem.Tracks
                 Debug.LogError("NO SONG TO PLAY");
                 yield return null;
             }
-            
-            //UNITY AUDIO VERSION
-            /*
-            audioSource.playOnAwake = false;
-            audioSource.clip = songFile;
-            yield return new WaitForSeconds(_song.bpm / 60 * (measuresPerRotation / 4));
-            audioSource.Play();
-            */
 
             //FMOD VERSION
-            //Debug.Log("Waiting to start...");
-            yield return new WaitForSeconds(_song.startWaitTime);
-            yield return new WaitForSeconds(_song.bpm / 60 * (measuresPerRotation / 4));
-            //Debug.Log("attempting to start song...");
+            Debug.Log("Waiting to start...");
+            yield return new WaitForSeconds(_song.startWaitTime); //this doesn't belong here, we need to pass the NoteManager the song.startWaitTime in a new coroutine that handles ALL measures' note spawning so we can delay that process by the appropriate amount, instead of handling each measure as a coroutine
+            _noteManager.InitializeMeasures();
+            var waitTime = _song.bpm / 60f * (measuresPerRotation / 4f);
+            yield return new WaitForSeconds(waitTime);
+            Debug.Log("attempting to start song...");
             StartSong(songFile);
 
         }

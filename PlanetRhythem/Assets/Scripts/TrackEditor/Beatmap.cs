@@ -14,23 +14,25 @@ namespace Rhythem.TrackEditor
     [CreateAssetMenu(fileName = "Beatmap", menuName = "Rhythem/Beatmap")]
     public class Beatmap : ScriptableObject
     {
-        [Title("Track Card Info")]
+        [Header("Track Card Info")]
         public string songTitle;
         public string artist;
-        public int bpm;
-        [Title("Track Editor Info")]
+        public Texture2D songThumbnail;
+        [Space]
+        [Header("Track Editor Info")]
+        public int bPM;
         public int beatsPerMeasure;
         public int subdivisionsPerBeat;
         public int numberOfMeasures;
-        [Space]
         public float silenceAtStartOfTrack;
+        [Space]
         public AudioClip audioFile;
         [HideInInspector]
         public string trackDataPath;
 
         public void DoJsonTrackDataSetup()
         {
-            if (songTitle == null || bpm == 0 || subdivisionsPerBeat == 0 || numberOfMeasures == 0 )
+            if (songTitle == null || bPM == 0 || subdivisionsPerBeat == 0 || numberOfMeasures == 0 )
             {
                 Debug.LogWarning($"Track {songTitle} is missing parameters for Data generation. Please add missing data before continuing.");
                 return;
@@ -78,7 +80,7 @@ namespace Rhythem.TrackEditor
             var song = new Song();
             song.songTitle = songTitle;
             song.artist = artist;
-            song.bpm = bpm;
+            song.bpm = bPM;
             song.beatsPerMeasure = beatsPerMeasure;
             song.subdivisionsPerBeat = subdivisionsPerBeat;
             song.startWaitTime = silenceAtStartOfTrack;
