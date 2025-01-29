@@ -36,22 +36,22 @@ Material:
     m_Floats:
     - Boolean_C577D1F3: 1
     - Vector1_155F0743: 1.75
-    - Vector1_2E64A2C2: 0.001
+    - Vector1_2E64A2C2: 0.005
     - Vector1_3D2DA75D: 0.05
     - Vector1_52F1B902: 0
-    - Vector1_7C632D0B: 0.75
+    - Vector1_7C632D0B: 1
     - Vector1_9D0BAAB8: 0.2
-    - Vector1_CA749EDD: 0.05
-    - Vector1_DDB19D48: 0.75
-    - Vector1_E750199E: 1.5
-    - Vector1_FF24B3E1: 0.5
+    - Vector1_CA749EDD: 0.022
+    - Vector1_DDB19D48: 0.55
+    - Vector1_E750199E: 0.97
+    - Vector1_FF24B3E1: 0
     - _Light_Fade_Angle: 0.629
     - _Minimum_Light_Level: 0.419
     - _QueueControl: 0
     - _Texture_Rotation_Speed: 30
     m_Colors:
     - Vector2_3062C954: {r: 2, g: 2, b: 0, a: 0}
-    - _Star_Color: {r: 2.6390157, g: 1.4243412, b: 0.012448217, a: 1}
+    - _Star_Color: {r: 3.523293, g: 3.523293, b: 3.523293, a: 1}
     - _Star_Position: {r: 100, g: 22, b: -25, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
