@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51b8a334f002ca54fa969cd1419bf809, type: 3}
   m_Name: NoneShallBiteTheDust_beatmap
   m_EditorClassIdentifier: 
-  songTitle: None Shall Bite the Dust
+  songTitle: None Shall Bite The Dust
   artist: Luca Westland
-  bpm: 115
+  songThumbnail: {fileID: 0}
+  bPM: 116
   beatsPerMeasure: 4
   subdivisionsPerBeat: 4
-  numberOfMeasures: 40
+  numberOfMeasures: 43
+  silenceAtStartOfTrack: 0
   audioFile: {fileID: 8300000, guid: 9317be97b53b6c24488742b9d19b7db0, type: 3}
   trackDataPath: Assets/Resources/Beatmaps/BeatmapsData/NoneShallBitetheDust.json

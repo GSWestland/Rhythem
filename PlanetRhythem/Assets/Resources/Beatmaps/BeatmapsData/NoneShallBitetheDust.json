@@ -1,77 +1,28 @@
 {
-  "songTitle": "None Shall Bite the Dust",
+  "songTitle": "None Shall Bite The Dust",
   "artist": "Luca Westland",
-  "bpm": 115,
+  "bpm": 116,
   "beatsPerMeasure": 4,
   "subdivisionsPerBeat": 4,
+  "startWaitTime": 0.0,
   "measures": [
     {
       "beats": [
         {
           "notes": [
             {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.347397864,
-              "notePositionY": 0.101874731
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.740882754,
-              "notePositionY": 0.7027184
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.3014252,
-              "notePositionY": 0.1924632
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.05847752,
-              "notePositionY": 0.1478321
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
+              "noteType": 1,
               "hand": 1,
               "noteTime": 0,
-              "notePositionX": 0.933731258,
-              "notePositionY": 0.8328339
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.601112545,
-              "notePositionY": 0.6959096
+              "notePositionX": 0.8482843,
+              "notePositionY": 0.74076736
             },
             {
               "noteType": 1,
               "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.1952307,
-              "notePositionY": 0.242526427
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
               "noteTime": 3,
-              "notePositionX": 0.539884448,
-              "notePositionY": 0.5647511
+              "notePositionX": 0.0451385975,
+              "notePositionY": 0.7096212
             }
           ]
         },
@@ -79,81 +30,60 @@
           "notes": [
             {
               "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.805856466,
-              "notePositionY": 0.474666834
-            },
-            {
-              "noteType": 1,
               "hand": 0,
               "noteTime": 2,
-              "notePositionX": 0.396609426,
-              "notePositionY": 0.7741152
-            },
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.644123554,
-              "notePositionY": 0.5617687
+              "notePositionX": 0.07961553,
+              "notePositionY": 0.812549949
             }
           ]
-        }
-      ]
-    },
-    {
-      "beats": [
+        },
         {
           "notes": [
             {
               "noteType": 1,
-              "hand": 0,
+              "hand": 1,
               "noteTime": 1,
-              "notePositionX": 0.126260012,
-              "notePositionY": 0.194570243
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.0289958119,
-              "notePositionY": 0.8295239
+              "notePositionX": 0.7846303,
+              "notePositionY": 0.31438458
             },
             {
               "noteType": 1,
-              "hand": 1,
+              "hand": 0,
               "noteTime": 3,
-              "notePositionX": 0.917188466,
-              "notePositionY": 0.313870847
+              "notePositionX": 0.167075425,
+              "notePositionY": 0.527927339
             }
           ]
         },
         {
           "notes": []
-        },
+        }
+      ]
+    },
+    {
+      "beats": [
         {
           "notes": [
             {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.281475335,
-              "notePositionY": 0.5839675
-            },
-            {
               "noteType": 1,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.137921423,
-              "notePositionY": 0.3916226
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.9776257,
+              "notePositionY": 0.327032626
             },
             {
               "noteType": 0,
               "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.6258662,
-              "notePositionY": 0.4441024
+              "noteTime": 1,
+              "notePositionX": 0.8954756,
+              "notePositionY": 0.3444306
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.136306018,
+              "notePositionY": 0.372613
             }
           ]
         },
@@ -161,17 +91,67 @@
           "notes": [
             {
               "noteType": 0,
-              "hand": 0,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.864149034,
+              "notePositionY": 0.8085352
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
               "noteTime": 2,
-              "notePositionX": 0.318841577,
-              "notePositionY": 0.169813544
+              "notePositionX": 0.8660927,
+              "notePositionY": 0.6138023
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.8355406,
+              "notePositionY": 0.724555731
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.104078829,
+              "notePositionY": 0.389669
             },
             {
               "noteType": 1,
               "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.229115278,
+              "notePositionY": 0.5164723
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
               "noteTime": 3,
-              "notePositionX": 0.106805444,
-              "notePositionY": 0.4025779
+              "notePositionX": 0.646251559,
+              "notePositionY": 0.877753735
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.516253054,
+              "notePositionY": 0.290183246
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.09089768,
+              "notePositionY": 0.484426618
             }
           ]
         }
@@ -182,25 +162,18 @@
         {
           "notes": [
             {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.457315981,
-              "notePositionY": 0.3840449
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.6021989,
+              "notePositionY": 0.290619254
             },
             {
               "noteType": 0,
               "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.9409088,
-              "notePositionY": 0.5058695
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.18471238,
-              "notePositionY": 0.6144445
+              "noteTime": 1,
+              "notePositionX": 0.705338955,
+              "notePositionY": 0.1672059
             }
           ]
         },
@@ -209,23 +182,20 @@
             {
               "noteType": 1,
               "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.05153525,
-              "notePositionY": 0.649082065
-            },
-            {
-              "noteType": 1,
-              "hand": 1,
               "noteTime": 2,
-              "notePositionX": 0.8479904,
-              "notePositionY": 0.4424724
-            },
+              "notePositionX": 0.09964293,
+              "notePositionY": 0.7664548
+            }
+          ]
+        },
+        {
+          "notes": [
             {
               "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.37185967,
-              "notePositionY": 0.867962837
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.5279994,
+              "notePositionY": 0.474484861
             }
           ]
         },
@@ -235,33 +205,15 @@
               "noteType": 0,
               "hand": 0,
               "noteTime": 0,
-              "notePositionX": 0.187550634,
-              "notePositionY": 0.659269035
+              "notePositionX": 0.365156174,
+              "notePositionY": 0.6797301
             },
             {
-              "noteType": 0,
-              "hand": 1,
+              "noteType": 1,
+              "hand": 0,
               "noteTime": 3,
-              "notePositionX": 0.7094679,
-              "notePositionY": 0.286534876
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.9432511,
-              "notePositionY": 0.867553353
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.9725626,
-              "notePositionY": 0.114027791
+              "notePositionX": 0.3355847,
+              "notePositionY": 0.4427415
             }
           ]
         }
@@ -272,47 +224,18 @@
         {
           "notes": [
             {
-              "noteType": 0,
+              "noteType": 1,
               "hand": 0,
               "noteTime": 1,
-              "notePositionX": 0.202233166,
-              "notePositionY": 0.774295
-            },
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.825487256,
-              "notePositionY": 0.660279
+              "notePositionX": 0.407569766,
+              "notePositionY": 0.132173926
             },
             {
               "noteType": 1,
               "hand": 0,
               "noteTime": 3,
-              "notePositionX": 0.1956574,
-              "notePositionY": 0.312344968
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.751647949,
-              "notePositionY": 0.406863719
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.120348811,
-              "notePositionY": 0.3310842
+              "notePositionX": 0.2338166,
+              "notePositionY": 0.115813442
             }
           ]
         },
@@ -320,298 +243,24 @@
           "notes": [
             {
               "noteType": 1,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.790968537,
-              "notePositionY": 0.550057054
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
+              "hand": 0,
               "noteTime": 0,
-              "notePositionX": 0.5088201,
-              "notePositionY": 0.53405863
+              "notePositionX": 0.261292249,
+              "notePositionY": 0.335528433
             },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.2789757,
-              "notePositionY": 0.6722619
-            },
-            {
-              "noteType": 1,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.439740658,
-              "notePositionY": 0.149970144
-            }
-          ]
-        },
-        {
-          "notes": [
             {
               "noteType": 0,
               "hand": 0,
               "noteTime": 2,
-              "notePositionX": 0.007990897,
-              "notePositionY": 0.221212864
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.125661463,
-              "notePositionY": 0.234513372
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.204237729,
-              "notePositionY": 0.5070008
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.7070612,
-              "notePositionY": 0.764937043
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.5552318,
-              "notePositionY": 0.5348424
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.677835941,
-              "notePositionY": 0.247192755
-            },
-            {
-              "noteType": 1,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.4974479,
-              "notePositionY": 0.8608644
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": []
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.66031456,
-              "notePositionY": 0.101969428
+              "notePositionX": 0.321048379,
+              "notePositionY": 0.167740911
             },
             {
               "noteType": 0,
               "hand": 1,
               "noteTime": 3,
-              "notePositionX": 0.817383468,
-              "notePositionY": 0.5432483
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.9668583,
-              "notePositionY": 0.334760725
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.7532085,
-              "notePositionY": 0.6134364
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.7924503,
-              "notePositionY": 0.262308478
-            },
-            {
-              "noteType": 1,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.364311457,
-              "notePositionY": 0.423558354
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.0606690049,
-              "notePositionY": 0.5025459
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.6479597,
-              "notePositionY": 0.7980161
-            },
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.60516876,
-              "notePositionY": 0.5665135
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.691236138,
-              "notePositionY": 0.8791772
-            },
-            {
-              "noteType": 1,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.260115772,
-              "notePositionY": 0.484037519
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.7081778,
-              "notePositionY": 0.468857616
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.825851262,
-              "notePositionY": 0.170754045
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.8004942,
-              "notePositionY": 0.348149359
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.0571455359,
-              "notePositionY": 0.182959467
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.648493648,
-              "notePositionY": 0.145254046
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.762608647,
-              "notePositionY": 0.474846482
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.0692336,
-              "notePositionY": 0.5358689
-            },
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.5372805,
-              "notePositionY": 0.307484269
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.902431,
-              "notePositionY": 0.556898654
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.153929442,
-              "notePositionY": 0.444372982
+              "notePositionX": 0.5906165,
+              "notePositionY": 0.5135912
             }
           ]
         },
@@ -623,9 +272,9 @@
             {
               "noteType": 0,
               "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.9568424,
-              "notePositionY": 0.215251625
+              "noteTime": 2,
+              "notePositionX": 0.6996336,
+              "notePositionY": 0.188332647
             }
           ]
         }
@@ -639,80 +288,40 @@
               "noteType": 0,
               "hand": 1,
               "noteTime": 1,
-              "notePositionX": 0.7356589,
-              "notePositionY": 0.6438242
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.226182014,
-              "notePositionY": 0.748026848
+              "notePositionX": 0.6177207,
+              "notePositionY": 0.163571447
             },
             {
               "noteType": 0,
               "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.9561781,
-              "notePositionY": 0.898924
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
               "noteTime": 2,
-              "notePositionX": 0.7934972,
-              "notePositionY": 0.674481869
+              "notePositionX": 0.9694649,
+              "notePositionY": 0.232940674
             }
           ]
         },
         {
           "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.953719437,
-              "notePositionY": 0.224575326
-            },
             {
               "noteType": 0,
               "hand": 0,
               "noteTime": 1,
-              "notePositionX": 0.345730722,
-              "notePositionY": 0.555267155
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": []
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.451417148,
-              "notePositionY": 0.6366309
+              "notePositionX": 0.4921726,
+              "notePositionY": 0.6630125
             },
             {
               "noteType": 1,
-              "hand": 0,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.6813916,
+              "notePositionY": 0.8189844
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
               "noteTime": 3,
-              "notePositionX": 0.048563242,
-              "notePositionY": 0.757230759
+              "notePositionX": 0.6886474,
+              "notePositionY": 0.5395159
             }
           ]
         },
@@ -720,304 +329,7 @@
           "notes": []
         },
         {
-          "notes": [
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.657672167,
-              "notePositionY": 0.697459
-            },
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.645148158,
-              "notePositionY": 0.427933246
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.460509479,
-              "notePositionY": 0.767675757
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.1460729,
-              "notePositionY": 0.567323148
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.7140304,
-              "notePositionY": 0.622266054
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.6025126,
-              "notePositionY": 0.6965725
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.4112695,
-              "notePositionY": 0.6327021
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.858656764,
-              "notePositionY": 0.845161557
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.8218263,
-              "notePositionY": 0.6694131
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.0681467652,
-              "notePositionY": 0.443500161
-            },
-            {
-              "noteType": 1,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.25929752,
-              "notePositionY": 0.423138261
-            },
-            {
-              "noteType": 1,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.0168106556,
-              "notePositionY": 0.150085628
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 1,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.309257954,
-              "notePositionY": 0.223588943
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.00507307053,
-              "notePositionY": 0.2522108
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.6886424,
-              "notePositionY": 0.47835058
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.622644961,
-              "notePositionY": 0.64710176
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.307859451,
-              "notePositionY": 0.1800417
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.3428164,
-              "notePositionY": 0.7000158
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
           "notes": []
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.306474775,
-              "notePositionY": 0.189725012
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.7767329,
-              "notePositionY": 0.490724683
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.158502191,
-              "notePositionY": 0.4442409
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.7950498,
-              "notePositionY": 0.194922358
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 1,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.128398985,
-              "notePositionY": 0.253305525
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.369386435,
-              "notePositionY": 0.700617433
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.888934553,
-              "notePositionY": 0.850370049
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.377146542,
-              "notePositionY": 0.558659732
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.910962939,
-              "notePositionY": 0.541185737
-            },
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.937473834,
-              "notePositionY": 0.6247136
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.70506525,
-              "notePositionY": 0.489003032
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.248481184,
-              "notePositionY": 0.61700356
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.0911939144,
-              "notePositionY": 0.7294011
-            }
-          ]
         }
       ]
     },
@@ -1029,199 +341,22 @@
               "noteType": 1,
               "hand": 0,
               "noteTime": 0,
-              "notePositionX": 0.03422767,
-              "notePositionY": 0.680357158
+              "notePositionX": 0.279661924,
+              "notePositionY": 0.324467033
             },
             {
-              "noteType": 0,
+              "noteType": 1,
               "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.414766669,
-              "notePositionY": 0.8056946
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
               "noteTime": 2,
-              "notePositionX": 0.9320932,
-              "notePositionY": 0.123212814
+              "notePositionX": 0.301760763,
+              "notePositionY": 0.320909083
             },
             {
               "noteType": 1,
               "hand": 0,
               "noteTime": 3,
-              "notePositionX": 0.154923946,
-              "notePositionY": 0.368851244
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.8822319,
-              "notePositionY": 0.288681328
-            },
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.6431545,
-              "notePositionY": 0.372137129
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.6228755,
-              "notePositionY": 0.383082062
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.5363032,
-              "notePositionY": 0.3333324
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.451906323,
-              "notePositionY": 0.6457819
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.3460577,
-              "notePositionY": 0.4658606
-            },
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.9912472,
-              "notePositionY": 0.8003942
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.449368954,
-              "notePositionY": 0.27392894
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.8908883,
-              "notePositionY": 0.351813376
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.323540866,
-              "notePositionY": 0.8419955
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.409576118,
-              "notePositionY": 0.4830395
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.811797,
-              "notePositionY": 0.861634254
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.861094654,
-              "notePositionY": 0.366706431
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.7647656,
-              "notePositionY": 0.5428039
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.158034474,
-              "notePositionY": 0.7022034
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.9867148,
-              "notePositionY": 0.310385168
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.743501067,
-              "notePositionY": 0.6895486
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.741467237,
-              "notePositionY": 0.4567858
+              "notePositionX": 0.23353526,
+              "notePositionY": 0.6096679
             }
           ]
         },
@@ -1232,1289 +367,17 @@
           "notes": [
             {
               "noteType": 0,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.21261844,
-              "notePositionY": 0.344720781
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.5218126,
-              "notePositionY": 0.5126178
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.683316469,
-              "notePositionY": 0.542732
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.573991537,
-              "notePositionY": 0.738028646
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.477278471,
-              "notePositionY": 0.718003869
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.284950644,
-              "notePositionY": 0.125461861
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.201041311,
-              "notePositionY": 0.5681184
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.401904821,
-              "notePositionY": 0.732806563
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.485580742,
-              "notePositionY": 0.564444244
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.9085616,
-              "notePositionY": 0.301487863
-            },
-            {
-              "noteType": 0,
               "hand": 1,
               "noteTime": 1,
-              "notePositionX": 0.6769186,
-              "notePositionY": 0.791561842
-            },
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.509901464,
-              "notePositionY": 0.777707458
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.8672641,
-              "notePositionY": 0.315969229
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.09921819,
-              "notePositionY": 0.313505024
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.675488949,
-              "notePositionY": 0.5148748
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.954510331,
-              "notePositionY": 0.854819059
-            },
-            {
-              "noteType": 1,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.3579502,
-              "notePositionY": 0.4136657
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.113639176,
-              "notePositionY": 0.503527761
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.951382041,
-              "notePositionY": 0.384822518
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.429906666,
-              "notePositionY": 0.363577425
-            },
-            {
-              "noteType": 1,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.328336,
-              "notePositionY": 0.759896159
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.056186676,
-              "notePositionY": 0.253700554
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.92641747,
-              "notePositionY": 0.198221385
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.962245166,
-              "notePositionY": 0.68706435
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.566144645,
-              "notePositionY": 0.8891418
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.84097296,
-              "notePositionY": 0.6732907
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.09723073,
-              "notePositionY": 0.84456
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.2593507,
-              "notePositionY": 0.3228398
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.316708028,
-              "notePositionY": 0.220257461
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.8254996,
-              "notePositionY": 0.220361128
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.8603057,
-              "notePositionY": 0.197032928
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.7873095,
-              "notePositionY": 0.1013012
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.585172236,
-              "notePositionY": 0.4483767
-            },
-            {
-              "noteType": 1,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.197026938,
-              "notePositionY": 0.328184843
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.38632375,
-              "notePositionY": 0.159696192
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.0119455457,
-              "notePositionY": 0.13593626
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.9079837,
-              "notePositionY": 0.679734945
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.07528341,
-              "notePositionY": 0.6439537
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.361248374,
-              "notePositionY": 0.2092286
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.9540267,
-              "notePositionY": 0.334674984
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.874496341,
-              "notePositionY": 0.252971053
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.752971768,
-              "notePositionY": 0.46433568
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.5518834,
-              "notePositionY": 0.8779868
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.747634768,
-              "notePositionY": 0.304787219
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.217029423,
-              "notePositionY": 0.796270847
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.548722267,
-              "notePositionY": 0.8376999
-            },
-            {
-              "noteType": 1,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.137504369,
-              "notePositionY": 0.678521037
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": []
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.3192433,
-              "notePositionY": 0.1430602
-            },
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.923965931,
-              "notePositionY": 0.428494781
+              "notePositionX": 0.9650809,
+              "notePositionY": 0.411379665
             },
             {
               "noteType": 1,
               "hand": 1,
               "noteTime": 3,
-              "notePositionX": 0.561949253,
-              "notePositionY": 0.770803332
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.194596678,
-              "notePositionY": 0.5481679
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.825798631,
-              "notePositionY": 0.147864729
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.0447317362,
-              "notePositionY": 0.640885
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.8995437,
-              "notePositionY": 0.52174145
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.382253766,
-              "notePositionY": 0.137342542
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.118825674,
-              "notePositionY": 0.8540617
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.07753128,
-              "notePositionY": 0.581588566
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.487734318,
-              "notePositionY": 0.127164841
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.9041146,
-              "notePositionY": 0.285838783
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.134166867,
-              "notePositionY": 0.445309967
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.521252,
-              "notePositionY": 0.48270762
-            },
-            {
-              "noteType": 1,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.492477357,
-              "notePositionY": 0.789359
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.320518732,
-              "notePositionY": 0.433873117
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.8964432,
-              "notePositionY": 0.159475625
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.0360402465,
-              "notePositionY": 0.7356899
-            },
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.819190145,
-              "notePositionY": 0.549745142
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.021047473,
-              "notePositionY": 0.376663148
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.715177655,
-              "notePositionY": 0.355502456
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.327906549,
-              "notePositionY": 0.204724118
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 1,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.391678035,
-              "notePositionY": 0.303402841
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.1478928,
-              "notePositionY": 0.425061
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.2384325,
-              "notePositionY": 0.5186397
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.4377812,
-              "notePositionY": 0.31122297
-            },
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.65775454,
-              "notePositionY": 0.4112595
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.690456748,
-              "notePositionY": 0.6431539
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.277150184,
-              "notePositionY": 0.899837
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.789873958,
-              "notePositionY": 0.100067995
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.3131684,
-              "notePositionY": 0.5058681
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.139849931,
-              "notePositionY": 0.5285801
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.713898063,
-              "notePositionY": 0.373311579
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.652662039,
-              "notePositionY": 0.871248841
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.745035052,
-              "notePositionY": 0.229909793
-            },
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.8795561,
-              "notePositionY": 0.4177073
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.5624837,
-              "notePositionY": 0.104356669
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.738381863,
-              "notePositionY": 0.3531669
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.888254,
-              "notePositionY": 0.767602444
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.10964644,
-              "notePositionY": 0.744453549
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.07137412,
-              "notePositionY": 0.265731037
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.143667668,
-              "notePositionY": 0.1960701
-            },
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.5126362,
-              "notePositionY": 0.367335081
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.4773332,
-              "notePositionY": 0.430261075
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.244440287,
-              "notePositionY": 0.216037557
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.008870602,
-              "notePositionY": 0.486812443
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 1,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.07939422,
-              "notePositionY": 0.6843748
-            },
-            {
-              "noteType": 1,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.3173855,
-              "notePositionY": 0.2731968
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.720757365,
-              "notePositionY": 0.310756624
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.561790943,
-              "notePositionY": 0.737400532
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.7137805,
-              "notePositionY": 0.642966449
-            }
-          ]
-        },
-        {
-          "notes": []
-        },
-        {
-          "notes": [
-            {
-              "noteType": 1,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.3644631,
-              "notePositionY": 0.8932992
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.9303181,
-              "notePositionY": 0.4342645
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.146647364,
-              "notePositionY": 0.235234827
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.879702568,
-              "notePositionY": 0.849246144
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.8710425,
-              "notePositionY": 0.3503697
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.398693442,
-              "notePositionY": 0.659291267
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.202050835,
-              "notePositionY": 0.8923799
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.48676908,
-              "notePositionY": 0.254935443
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.7259579,
-              "notePositionY": 0.6113579
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.5779431,
-              "notePositionY": 0.8509494
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.9683917,
-              "notePositionY": 0.4170445
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.331135154,
-              "notePositionY": 0.413818866
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.6361537,
-              "notePositionY": 0.635169
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 1,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.350133955,
-              "notePositionY": 0.447690517
-            },
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.5402224,
-              "notePositionY": 0.478480458
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.5151556,
-              "notePositionY": 0.639772534
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.9465257,
-              "notePositionY": 0.33390516
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.7458681,
-              "notePositionY": 0.6323776
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.878443062,
-              "notePositionY": 0.492753059
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.3504008,
-              "notePositionY": 0.342412621
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.521098,
-              "notePositionY": 0.30264172
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.1813775,
-              "notePositionY": 0.353897333
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.6335969,
-              "notePositionY": 0.6196201
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.00985962152,
-              "notePositionY": 0.101710804
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.004103601,
-              "notePositionY": 0.596839964
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.9690634,
-              "notePositionY": 0.187040329
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.113042891,
-              "notePositionY": 0.319633067
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.768392444,
-              "notePositionY": 0.8115772
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.2524607,
-              "notePositionY": 0.24273023
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.669534564,
-              "notePositionY": 0.316337347
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.8921235,
-              "notePositionY": 0.3552363
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "beats": [
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.8840247,
-              "notePositionY": 0.265112579
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.903567433,
-              "notePositionY": 0.8672019
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.891039,
-              "notePositionY": 0.61972
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.6312579,
-              "notePositionY": 0.309501231
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.07502806,
-              "notePositionY": 0.4914965
-            },
-            {
-              "noteType": 1,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.0537008047,
-              "notePositionY": 0.4618521
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.143361658,
-              "notePositionY": 0.188656136
+              "notePositionX": 0.8096863,
+              "notePositionY": 0.157306015
             }
           ]
         },
@@ -2529,53 +392,46 @@
           "notes": [
             {
               "noteType": 0,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.16544655,
-              "notePositionY": 0.8315023
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.2922534,
-              "notePositionY": 0.71789515
-            },
-            {
-              "noteType": 0,
               "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.6945263,
-              "notePositionY": 0.183444113
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 0,
               "noteTime": 0,
-              "notePositionX": 0.170803457,
-              "notePositionY": 0.6382725
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.7845671,
-              "notePositionY": 0.45434916
+              "notePositionX": 0.5817834,
+              "notePositionY": 0.421837747
             },
             {
               "noteType": 1,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.687624335,
+              "notePositionY": 0.7555671
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.945007443,
+              "notePositionY": 0.8502327
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.6692349,
+              "notePositionY": 0.183204085
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
               "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.241229743,
-              "notePositionY": 0.7236054
+              "noteTime": 0,
+              "notePositionX": 0.28793487,
+              "notePositionY": 0.388937533
             }
           ]
         },
@@ -2585,29 +441,530 @@
               "noteType": 1,
               "hand": 1,
               "noteTime": 0,
-              "notePositionX": 0.6843494,
-              "notePositionY": 0.8601123
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.475477755,
-              "notePositionY": 0.279483616
+              "notePositionX": 0.9727733,
+              "notePositionY": 0.506369948
             },
             {
               "noteType": 0,
               "hand": 0,
               "noteTime": 2,
-              "notePositionX": 0.148901314,
-              "notePositionY": 0.8816447
+              "notePositionX": 0.498220563,
+              "notePositionY": 0.392595917
             },
             {
               "noteType": 0,
               "hand": 1,
               "noteTime": 3,
-              "notePositionX": 0.645815,
-              "notePositionY": 0.8714067
+              "notePositionX": 0.5656488,
+              "notePositionY": 0.862077
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.880171239,
+              "notePositionY": 0.6278664
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.135360271,
+              "notePositionY": 0.876407743
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.129547447,
+              "notePositionY": 0.515881
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.911991,
+              "notePositionY": 0.5046615
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.4151759,
+              "notePositionY": 0.310877562
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.1975101,
+              "notePositionY": 0.752427459
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.143090278,
+              "notePositionY": 0.184624955
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.9748511,
+              "notePositionY": 0.840239763
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.6462641,
+              "notePositionY": 0.3990399
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.5973801,
+              "notePositionY": 0.6758251
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.646307349,
+              "notePositionY": 0.27582103
+            }
+          ]
+        },
+        {
+          "notes": []
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.1938195,
+              "notePositionY": 0.378989071
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.999974549,
+              "notePositionY": 0.314146847
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.100491881,
+              "notePositionY": 0.8222265
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.923180044,
+              "notePositionY": 0.7407634
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.65172863,
+              "notePositionY": 0.484359682
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.04040408,
+              "notePositionY": 0.620757759
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.812131047,
+              "notePositionY": 0.5575706
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.451873,
+              "notePositionY": 0.7298269
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.633933067,
+              "notePositionY": 0.272910476
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.111681044,
+              "notePositionY": 0.3014661
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.248504132,
+              "notePositionY": 0.188303277
+            }
+          ]
+        },
+        {
+          "notes": []
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.439620018,
+              "notePositionY": 0.8688828
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.921661735,
+              "notePositionY": 0.640071154
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.4187079,
+              "notePositionY": 0.440676153
+            }
+          ]
+        },
+        {
+          "notes": []
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.530228,
+              "notePositionY": 0.161309063
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.01199615,
+              "notePositionY": 0.34687227
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.0352274776,
+              "notePositionY": 0.6623652
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.873532951,
+              "notePositionY": 0.413455427
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.0989697,
+              "notePositionY": 0.424400359
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.5841801,
+              "notePositionY": 0.5106709
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.419506669,
+              "notePositionY": 0.2349018
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.142013162,
+              "notePositionY": 0.8077694
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.833260059,
+              "notePositionY": 0.1273036
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.8247123,
+              "notePositionY": 0.7054069
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.285049647,
+              "notePositionY": 0.3475434
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.440478146,
+              "notePositionY": 0.610460639
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.7628417,
+              "notePositionY": 0.5947308
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.9176482,
+              "notePositionY": 0.436261415
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.321398079,
+              "notePositionY": 0.347269952
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.512234747,
+              "notePositionY": 0.60660094
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.887184262,
+              "notePositionY": 0.5580078
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.456873536,
+              "notePositionY": 0.8730508
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.535951,
+              "notePositionY": 0.5305741
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.482882261,
+              "notePositionY": 0.410115272
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.3504554,
+              "notePositionY": 0.37328583
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.6600822,
+              "notePositionY": 0.117023468
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.03671366,
+              "notePositionY": 0.109303184
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.557943642,
+              "notePositionY": 0.121325873
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.783868432,
+              "notePositionY": 0.889359951
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.02961719,
+              "notePositionY": 0.479536653
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.4385283,
+              "notePositionY": 0.696439445
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.8638143,
+              "notePositionY": 0.302857339
             }
           ]
         }
@@ -2621,15 +978,102 @@
               "noteType": 0,
               "hand": 0,
               "noteTime": 0,
-              "notePositionX": 0.113749206,
-              "notePositionY": 0.6571676
+              "notePositionX": 0.483777225,
+              "notePositionY": 0.37664
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.186757237,
+              "notePositionY": 0.171278775
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.9650026,
+              "notePositionY": 0.53818953
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.7601154,
+              "notePositionY": 0.383894384
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.9512263,
+              "notePositionY": 0.314232945
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.8294298,
+              "notePositionY": 0.499760747
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.9728728,
+              "notePositionY": 0.484887451
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.6531178,
+              "notePositionY": 0.414189577
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.249132842,
+              "notePositionY": 0.6325618
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.12866208,
+              "notePositionY": 0.575484931
             },
             {
               "noteType": 0,
               "hand": 0,
               "noteTime": 3,
-              "notePositionX": 0.255457848,
-              "notePositionY": 0.5911938
+              "notePositionX": 0.3282237,
+              "notePositionY": 0.234496012
             }
           ]
         },
@@ -2637,31 +1081,86 @@
           "notes": [
             {
               "noteType": 1,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.602858067,
+              "notePositionY": 0.1562311
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
               "hand": 0,
-              "noteTime": 0,
-              "notePositionX": 0.205691308,
-              "notePositionY": 0.5672842
+              "noteTime": 2,
+              "notePositionX": 0.4442762,
+              "notePositionY": 0.7510717
             },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.8129628,
+              "notePositionY": 0.8116375
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.891835451,
+              "notePositionY": 0.402682334
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.7082983,
+              "notePositionY": 0.6550237
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.5901735,
+              "notePositionY": 0.66750896
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.9156904,
+              "notePositionY": 0.6264584
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.7848954,
+              "notePositionY": 0.308192581
+            }
+          ]
+        },
+        {
+          "notes": [
             {
               "noteType": 1,
               "hand": 0,
               "noteTime": 1,
-              "notePositionX": 0.449722,
-              "notePositionY": 0.494808227
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.193384618,
-              "notePositionY": 0.745100737
-            },
-            {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.0396014452,
-              "notePositionY": 0.392159224
+              "notePositionX": 0.362895,
+              "notePositionY": 0.782227039
             }
           ]
         },
@@ -2669,28 +1168,79 @@
           "notes": [
             {
               "noteType": 0,
-              "hand": 1,
+              "hand": 0,
               "noteTime": 0,
-              "notePositionX": 0.865735769,
-              "notePositionY": 0.8613491
+              "notePositionX": 0.1706939,
+              "notePositionY": 0.251469016
             },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.190462679,
+              "notePositionY": 0.7653843
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
             {
               "noteType": 0,
               "hand": 1,
               "noteTime": 2,
-              "notePositionX": 0.882796466,
-              "notePositionY": 0.629223
+              "notePositionX": 0.936342537,
+              "notePositionY": 0.691258132
             }
           ]
         },
         {
           "notes": [
             {
-              "noteType": 0,
+              "noteType": 1,
               "hand": 1,
               "noteTime": 3,
-              "notePositionX": 0.707247138,
-              "notePositionY": 0.368745863
+              "notePositionX": 0.6921989,
+              "notePositionY": 0.1415743
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.189357132,
+              "notePositionY": 0.253790557
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.236631244,
+              "notePositionY": 0.644338369
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.2446852,
+              "notePositionY": 0.2400177
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.4537127,
+              "notePositionY": 0.33401522
             }
           ]
         }
@@ -2704,15 +1254,56 @@
               "noteType": 0,
               "hand": 0,
               "noteTime": 1,
-              "notePositionX": 0.08419001,
-              "notePositionY": 0.551902354
-            },
+              "notePositionX": 0.101456821,
+              "notePositionY": 0.135800168
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.143945366,
+              "notePositionY": 0.338251054
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.6297971,
+              "notePositionY": 0.801774144
+            }
+          ]
+        },
+        {
+          "notes": [
             {
               "noteType": 1,
               "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.832598567,
-              "notePositionY": 0.545101464
+              "noteTime": 1,
+              "notePositionX": 0.957883,
+              "notePositionY": 0.821149945
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.7195375,
+              "notePositionY": 0.4506004
             }
           ]
         },
@@ -2722,58 +1313,51 @@
               "noteType": 0,
               "hand": 1,
               "noteTime": 0,
-              "notePositionX": 0.6761067,
-              "notePositionY": 0.291897476
+              "notePositionX": 0.503738,
+              "notePositionY": 0.837740541
             },
             {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.765935659,
-              "notePositionY": 0.55632323
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 0,
-              "notePositionX": 0.982699454,
-              "notePositionY": 0.859306
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.813926041,
-              "notePositionY": 0.6381923
-            }
-          ]
-        },
-        {
-          "notes": [
-            {
-              "noteType": 0,
+              "noteType": 1,
               "hand": 0,
               "noteTime": 1,
-              "notePositionX": 0.2929338,
-              "notePositionY": 0.145695969
+              "notePositionX": 0.152008981,
+              "notePositionY": 0.2667033
             },
             {
               "noteType": 0,
               "hand": 0,
               "noteTime": 2,
-              "notePositionX": 0.4024284,
-              "notePositionY": 0.783856869
+              "notePositionX": 0.2859799,
+              "notePositionY": 0.332822859
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.453902423,
+              "notePositionY": 0.163667679
             },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.004860699,
+              "notePositionY": 0.8825965
+            }
+          ]
+        },
+        {
+          "notes": [
             {
               "noteType": 0,
               "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.396854222,
-              "notePositionY": 0.103529833
+              "noteTime": 2,
+              "notePositionX": 0.409955919,
+              "notePositionY": 0.29423818
             }
           ]
         }
@@ -2787,15 +1371,15 @@
               "noteType": 0,
               "hand": 0,
               "noteTime": 0,
-              "notePositionX": 0.0507862568,
-              "notePositionY": 0.2870863
+              "notePositionX": 0.3619719,
+              "notePositionY": 0.227485359
             },
             {
               "noteType": 0,
               "hand": 0,
               "noteTime": 1,
-              "notePositionX": 0.479140222,
-              "notePositionY": 0.165809155
+              "notePositionX": 0.242497712,
+              "notePositionY": 0.643566966
             }
           ]
         },
@@ -2803,35 +1387,28 @@
           "notes": [
             {
               "noteType": 0,
-              "hand": 1,
-              "noteTime": 1,
-              "notePositionX": 0.8560358,
-              "notePositionY": 0.579912245
-            },
-            {
-              "noteType": 0,
-              "hand": 1,
+              "hand": 0,
               "noteTime": 2,
-              "notePositionX": 0.977125,
-              "notePositionY": 0.414553881
+              "notePositionX": 0.09480709,
+              "notePositionY": 0.371097147
             }
           ]
         },
         {
           "notes": [
             {
-              "noteType": 0,
+              "noteType": 1,
               "hand": 1,
               "noteTime": 0,
-              "notePositionX": 0.926956534,
-              "notePositionY": 0.154358089
+              "notePositionX": 0.724048734,
+              "notePositionY": 0.166489512
             },
             {
               "noteType": 1,
               "hand": 0,
-              "noteTime": 2,
-              "notePositionX": 0.0318191051,
-              "notePositionY": 0.868518
+              "noteTime": 1,
+              "notePositionX": 0.1871675,
+              "notePositionY": 0.116723247
             }
           ]
         },
@@ -2841,22 +1418,614 @@
               "noteType": 1,
               "hand": 0,
               "noteTime": 0,
-              "notePositionX": 0.293188483,
-              "notePositionY": 0.379264116
+              "notePositionX": 0.474740624,
+              "notePositionY": 0.590367436
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.171306282,
+              "notePositionY": 0.4524361
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.195312589,
+              "notePositionY": 0.859776139
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.122953773,
+              "notePositionY": 0.5680215
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.93494314,
+              "notePositionY": 0.8050853
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.915160954,
+              "notePositionY": 0.328934252
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.652839661,
+              "notePositionY": 0.723885536
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.6197334,
+              "notePositionY": 0.8562914
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.6390463,
+              "notePositionY": 0.468517423
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.7252263,
+              "notePositionY": 0.211147115
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.0291982889,
+              "notePositionY": 0.6802424
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.271334678,
+              "notePositionY": 0.77669847
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.6219325,
+              "notePositionY": 0.508191
             },
             {
               "noteType": 0,
               "hand": 0,
               "noteTime": 1,
-              "notePositionX": 0.178836077,
-              "notePositionY": 0.4031915
+              "notePositionX": 0.173300356,
+              "notePositionY": 0.5047645
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.404475629,
+              "notePositionY": 0.212451354
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.924353361,
+              "notePositionY": 0.547117352
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.226798028,
+              "notePositionY": 0.7288914
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.955123544,
+              "notePositionY": 0.452688247
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.08699727,
+              "notePositionY": 0.38352257
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.521250963,
+              "notePositionY": 0.3326982
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.4334061,
+              "notePositionY": 0.3085428
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.630896449,
+              "notePositionY": 0.426989675
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.0209211111,
+              "notePositionY": 0.89126265
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.9993721,
+              "notePositionY": 0.4455604
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.8433845,
+              "notePositionY": 0.3978296
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.03676486,
+              "notePositionY": 0.424450636
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.7529453,
+              "notePositionY": 0.34478116
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.298767716,
+              "notePositionY": 0.231569856
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.5066015,
+              "notePositionY": 0.7287966
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.158417672,
+              "notePositionY": 0.698228
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.156548351,
+              "notePositionY": 0.6571784
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.783314,
+              "notePositionY": 0.6406815
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.336981535,
+              "notePositionY": 0.5727591
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.538455248,
+              "notePositionY": 0.847502232
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.5427302,
+              "notePositionY": 0.8195307
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.543889,
+              "notePositionY": 0.5568848
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.3538924,
+              "notePositionY": 0.208254337
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.808326244,
+              "notePositionY": 0.152606487
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.3103207,
+              "notePositionY": 0.19682312
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.7191415,
+              "notePositionY": 0.144803435
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.7535099,
+              "notePositionY": 0.702581048
             },
             {
               "noteType": 1,
               "hand": 0,
               "noteTime": 3,
-              "notePositionX": 0.404716551,
-              "notePositionY": 0.248396009
+              "notePositionX": 0.391465843,
+              "notePositionY": 0.624371052
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.9580361,
+              "notePositionY": 0.5667562
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.8401503,
+              "notePositionY": 0.321721017
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.677867532,
+              "notePositionY": 0.182497412
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.808446646,
+              "notePositionY": 0.312338471
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.290067226,
+              "notePositionY": 0.510329962
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.5383105,
+              "notePositionY": 0.392390966
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.4726848,
+              "notePositionY": 0.6135045
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.544424951,
+              "notePositionY": 0.448513448
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.239493519,
+              "notePositionY": 0.6048996
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.7188231,
+              "notePositionY": 0.469159454
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.9690681,
+              "notePositionY": 0.817111135
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.1773782,
+              "notePositionY": 0.7338768
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.8280316,
+              "notePositionY": 0.7327155
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.0644186139,
+              "notePositionY": 0.1063839
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.913939655,
+              "notePositionY": 0.18105334
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.1505554,
+              "notePositionY": 0.854947567
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.9120233,
+              "notePositionY": 0.632599354
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.18049714,
+              "notePositionY": 0.193245023
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.9491281,
+              "notePositionY": 0.443799257
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.7846122,
+              "notePositionY": 0.7930019
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": []
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.0990861058,
+              "notePositionY": 0.7923423
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.07636535,
+              "notePositionY": 0.7238275
+            }
+          ]
+        },
+        {
+          "notes": []
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.421173275,
+              "notePositionY": 0.3496843
             }
           ]
         }
@@ -2870,22 +2039,362 @@
               "noteType": 0,
               "hand": 0,
               "noteTime": 0,
-              "notePositionX": 0.476647139,
-              "notePositionY": 0.7030747
+              "notePositionX": 0.487920821,
+              "notePositionY": 0.671657443
             },
             {
-              "noteType": 1,
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.6554743,
+              "notePositionY": 0.788141251
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.8234874,
+              "notePositionY": 0.433825433
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.115844429,
+              "notePositionY": 0.8970778
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.08826059,
+              "notePositionY": 0.7682258
+            },
+            {
+              "noteType": 0,
               "hand": 0,
               "noteTime": 1,
-              "notePositionX": 0.20064643,
-              "notePositionY": 0.2399271
+              "notePositionX": 0.4147039,
+              "notePositionY": 0.465013534
             },
             {
               "noteType": 0,
               "hand": 0,
               "noteTime": 3,
-              "notePositionX": 0.423550248,
-              "notePositionY": 0.322245657
+              "notePositionX": 0.452229261,
+              "notePositionY": 0.41382277
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.326150775,
+              "notePositionY": 0.7669436
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.331664026,
+              "notePositionY": 0.504183531
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.130882233,
+              "notePositionY": 0.54643935
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.519625545,
+              "notePositionY": 0.121832371
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.479484618,
+              "notePositionY": 0.226544
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.759502649,
+              "notePositionY": 0.893508554
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.157615453,
+              "notePositionY": 0.45917505
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.6294972,
+              "notePositionY": 0.7644726
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.9103539,
+              "notePositionY": 0.872626662
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.07990819,
+              "notePositionY": 0.682399452
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.547470033,
+              "notePositionY": 0.699355245
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.716192961,
+              "notePositionY": 0.349463046
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.494161844,
+              "notePositionY": 0.3946709
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.399528623,
+              "notePositionY": 0.280164421
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.3034539,
+              "notePositionY": 0.5303883
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.3900875,
+              "notePositionY": 0.5456509
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.472426653,
+              "notePositionY": 0.216864288
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.6009125,
+              "notePositionY": 0.492730945
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.225698084,
+              "notePositionY": 0.677749753
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.354164541,
+              "notePositionY": 0.630546451
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.5836795,
+              "notePositionY": 0.517941356
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.251221865,
+              "notePositionY": 0.8067812
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.7136303,
+              "notePositionY": 0.117821313
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.858698547,
+              "notePositionY": 0.772285
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.245140165,
+              "notePositionY": 0.409115434
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.8934397,
+              "notePositionY": 0.8476341
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.9429001,
+              "notePositionY": 0.70888865
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.440692067,
+              "notePositionY": 0.3936913
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.0111787915,
+              "notePositionY": 0.6657626
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.256745726,
+              "notePositionY": 0.511478841
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.836170852,
+              "notePositionY": 0.5713013
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.544603467,
+              "notePositionY": 0.7702925
             }
           ]
         },
@@ -2895,22 +2404,62 @@
               "noteType": 0,
               "hand": 1,
               "noteTime": 0,
-              "notePositionX": 0.802819252,
-              "notePositionY": 0.2512946
+              "notePositionX": 0.5968724,
+              "notePositionY": 0.557035565
             },
             {
               "noteType": 0,
               "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.242542237,
-              "notePositionY": 0.895013332
+              "noteTime": 3,
+              "notePositionX": 0.0802274942,
+              "notePositionY": 0.273972869
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.732399,
+              "notePositionY": 0.8993968
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.294624418,
+              "notePositionY": 0.843575
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.434112847,
+              "notePositionY": 0.6210667
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.310854644,
+              "notePositionY": 0.358884573
             },
             {
               "noteType": 1,
               "hand": 1,
               "noteTime": 3,
-              "notePositionX": 0.766679049,
-              "notePositionY": 0.6715201
+              "notePositionX": 0.623465359,
+              "notePositionY": 0.7526715
             }
           ]
         },
@@ -2920,22 +2469,15 @@
               "noteType": 0,
               "hand": 1,
               "noteTime": 0,
-              "notePositionX": 0.9007136,
-              "notePositionY": 0.376553
+              "notePositionX": 0.5012408,
+              "notePositionY": 0.206899643
             },
             {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 1,
-              "notePositionX": 0.4123612,
-              "notePositionY": 0.5408903
-            },
-            {
-              "noteType": 0,
+              "noteType": 1,
               "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.638735652,
-              "notePositionY": 0.325640619
+              "noteTime": 3,
+              "notePositionX": 0.797606945,
+              "notePositionY": 0.4668038
             }
           ]
         },
@@ -2944,16 +2486,311 @@
             {
               "noteType": 0,
               "hand": 1,
-              "noteTime": 2,
-              "notePositionX": 0.603464,
-              "notePositionY": 0.691014647
+              "noteTime": 1,
+              "notePositionX": 0.511667252,
+              "notePositionY": 0.252220243
             },
             {
               "noteType": 0,
               "hand": 1,
               "noteTime": 3,
-              "notePositionX": 0.5428834,
-              "notePositionY": 0.515139937
+              "notePositionX": 0.517277062,
+              "notePositionY": 0.613765955
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.6704471,
+              "notePositionY": 0.80132854
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.297116429,
+              "notePositionY": 0.138673872
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.917520761,
+              "notePositionY": 0.436256915
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.12880668,
+              "notePositionY": 0.6436073
+            }
+          ]
+        },
+        {
+          "notes": []
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.421580553,
+              "notePositionY": 0.211701289
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.326575577,
+              "notePositionY": 0.486079067
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.440315,
+              "notePositionY": 0.389738142
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.126591712,
+              "notePositionY": 0.3392176
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.158440739,
+              "notePositionY": 0.329943031
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.774693251,
+              "notePositionY": 0.8391129
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.8032167,
+              "notePositionY": 0.55354923
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.9783116,
+              "notePositionY": 0.6916014
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.612305462,
+              "notePositionY": 0.838224053
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.256257266,
+              "notePositionY": 0.2790495
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.8616886,
+              "notePositionY": 0.7272483
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.6966264,
+              "notePositionY": 0.213290974
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.2391989,
+              "notePositionY": 0.223792359
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.2984194,
+              "notePositionY": 0.211741447
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.212979108,
+              "notePositionY": 0.8493792
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.07911539,
+              "notePositionY": 0.329707682
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.3542391,
+              "notePositionY": 0.6126162
+            },
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.06665063,
+              "notePositionY": 0.5119059
+            }
+          ]
+        },
+        {
+          "notes": []
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.527868,
+              "notePositionY": 0.2641862
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.167823881,
+              "notePositionY": 0.116676144
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.0714221,
+              "notePositionY": 0.348335415
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.60266,
+              "notePositionY": 0.8335477
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.582269967,
+              "notePositionY": 0.8237597
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.0226512551,
+              "notePositionY": 0.293119431
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.3641898,
+              "notePositionY": 0.53388
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.7602365,
+              "notePositionY": 0.5698332
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.8487741,
+              "notePositionY": 0.215230465
             }
           ]
         }
@@ -2967,15 +2804,15 @@
               "noteType": 0,
               "hand": 1,
               "noteTime": 1,
-              "notePositionX": 0.6309831,
-              "notePositionY": 0.788166642
+              "notePositionX": 0.6700859,
+              "notePositionY": 0.7307006
             },
             {
-              "noteType": 0,
-              "hand": 0,
-              "noteTime": 3,
-              "notePositionX": 0.17359671,
-              "notePositionY": 0.782730341
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.5691216,
+              "notePositionY": 0.210073948
             }
           ]
         },
@@ -2985,40 +2822,109 @@
               "noteType": 0,
               "hand": 0,
               "noteTime": 0,
-              "notePositionX": 0.422648251,
-              "notePositionY": 0.368723333
+              "notePositionX": 0.256282419,
+              "notePositionY": 0.685444
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.237247556,
+              "notePositionY": 0.664743543
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.9768345,
+              "notePositionY": 0.249504939
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 2,
+              "notePositionX": 0.8127266,
+              "notePositionY": 0.7593013
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 1,
+              "notePositionX": 0.62113297,
+              "notePositionY": 0.6433713
+            },
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.834158838,
+              "notePositionY": 0.157777011
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.379431427,
+              "notePositionY": 0.274964631
             },
             {
               "noteType": 0,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.5176923,
+              "notePositionY": 0.6951883
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.1569899,
+              "notePositionY": 0.470392257
+            },
+            {
+              "noteType": 1,
               "hand": 0,
               "noteTime": 1,
-              "notePositionX": 0.476956844,
-              "notePositionY": 0.7013475
-            },
-            {
-              "noteType": 1,
-              "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.8867944,
-              "notePositionY": 0.10548792
+              "notePositionX": 0.07078451,
+              "notePositionY": 0.849292159
             }
           ]
         },
         {
           "notes": [
             {
-              "noteType": 0,
+              "noteType": 1,
               "hand": 1,
               "noteTime": 0,
-              "notePositionX": 0.968583643,
-              "notePositionY": 0.388166755
+              "notePositionX": 0.54923135,
+              "notePositionY": 0.26427114
             },
             {
-              "noteType": 0,
+              "noteType": 1,
               "hand": 1,
-              "noteTime": 3,
-              "notePositionX": 0.538876355,
-              "notePositionY": 0.5830332
+              "noteTime": 2,
+              "notePositionX": 0.579547,
+              "notePositionY": 0.617249966
             }
           ]
         },
@@ -3028,15 +2934,131 @@
               "noteType": 1,
               "hand": 0,
               "noteTime": 0,
-              "notePositionX": 0.168698877,
-              "notePositionY": 0.357498884
+              "notePositionX": 0.187277585,
+              "notePositionY": 0.6132304
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 1,
+              "notePositionX": 0.09270114,
+              "notePositionY": 0.8302287
             },
             {
               "noteType": 1,
               "hand": 0,
               "noteTime": 2,
-              "notePositionX": 0.07877272,
-              "notePositionY": 0.679057837
+              "notePositionX": 0.245821863,
+              "notePositionY": 0.306998581
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.8591954,
+              "notePositionY": 0.244655788
+            },
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.433213234,
+              "notePositionY": 0.612124145
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 2,
+              "notePositionX": 0.125588983,
+              "notePositionY": 0.874732
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.6922835,
+              "notePositionY": 0.770572543
+            }
+          ]
+        },
+        {
+          "notes": []
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 0,
+              "notePositionX": 0.457875967,
+              "notePositionY": 0.239046663
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "beats": [
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.5862457,
+              "notePositionY": 0.189830959
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.12067461,
+              "notePositionY": 0.137294859
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 0,
+              "notePositionX": 0.7434455,
+              "notePositionY": 0.320100844
+            },
+            {
+              "noteType": 0,
+              "hand": 1,
+              "noteTime": 3,
+              "notePositionX": 0.670833349,
+              "notePositionY": 0.198280245
+            }
+          ]
+        },
+        {
+          "notes": [
+            {
+              "noteType": 1,
+              "hand": 0,
+              "noteTime": 3,
+              "notePositionX": 0.430802524,
+              "notePositionY": 0.452184618
             }
           ]
         }
