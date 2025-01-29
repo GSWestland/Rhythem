@@ -8,9 +8,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2042701758561148570, guid: 2d7cd3eb69d51de489fe348caa5e690d, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 80fa7ab79c4d9ac43b7ed877ee9e3c05, type: 2}
     - target: {fileID: 8136151951567124177, guid: 2d7cd3eb69d51de489fe348caa5e690d, type: 3}
       propertyPath: m_Name
-      value: PlayerWand
+      value: PlayerWand_Left
       objectReference: {fileID: 0}
     - target: {fileID: 8723577222194173279, guid: 2d7cd3eb69d51de489fe348caa5e690d, type: 3}
       propertyPath: m_LocalPosition.x
