@@ -163,14 +163,14 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Center_Glow: {r: 2, g: 2, b: 2, a: 1}
+    - _Center_Glow: {r: 2.670157, g: 0.89425075, b: 1.2024832, a: 1}
     - _Center_Glow_Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Galaxy_Inner_Glow: {r: 0.05409281, g: 0.18827294, b: 0.036115214, a: 0}
-    - _Galaxy_Outer_Glow: {r: 0.06698584, g: 0.041254777, b: 0, a: 0}
+    - _Galaxy_Inner_Glow: {r: 0.8773585, g: 0.5090335, b: 0.6004407, a: 0}
+    - _Galaxy_Outer_Glow: {r: 0.024504865, g: 0, b: 0.254717, a: 0}
     - _GlowColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Threads_Glow: {r: 0.15739204, g: 0.2648184, b: 0.17578754, a: 0}
+    - _Threads_Glow: {r: 0.1649594, g: 0.02683338, b: 0.6320754, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
