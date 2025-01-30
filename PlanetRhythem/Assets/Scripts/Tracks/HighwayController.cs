@@ -91,9 +91,37 @@ namespace Rhythem.Tracks
 
             EventManager.Startup();
             player = GameManager.Instance.VRRig.GetComponent<Player>();
-            player.OnNoteHit.AddListener(DoNoteHit);
+
+            SubscribeToSongSessionActions();
+            
+        }
+
+        private void OnDisable()
+        {
+            UnsubscribeToSongSessionActions();
+        }
+
+        private void OnDestroy()
+        {
+            UnsubscribeToSongSessionActions();
+        }
+
+        private void SubscribeToSongSessionActions()
+        {
+            player.leftHand.OnNoteHit.AddListener(DoNoteHit);
+            player.rightHand.OnNoteHit.AddListener(DoNoteHit);
             _noteManager.deadzoneController.OnNoteMissed.AddListener(DoNoteMissed);
-            _noteManager.deadzoneController.OnNoteMissed.AddListener(player.DoMissedNoteAction);
+            _noteManager.deadzoneController.OnNoteMissed.AddListener(player.OnMissedNoteAction);
+
+        }
+
+        private void UnsubscribeToSongSessionActions()
+        {
+            player.leftHand.OnNoteHit.RemoveListener(DoNoteHit);
+            player.rightHand.OnNoteHit.RemoveListener(DoNoteHit);
+            _noteManager.deadzoneController.OnNoteMissed.RemoveListener(DoNoteMissed);
+            _noteManager.deadzoneController.OnNoteMissed.RemoveListener(player.OnMissedNoteAction);
+
         }
 
         public void PlayClipInFmod(AudioClip audioclip)

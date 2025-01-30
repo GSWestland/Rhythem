@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using DG.Tweening;
+
 namespace Rhythem.Songs {
     public class ScorableNote : MonoBehaviour
     {
@@ -29,8 +30,6 @@ namespace Rhythem.Songs {
         public float animSpeed = 1f;
         private IEnumerator DoStarSpinOnSpawn;
 
-        private bool printLog = false;
-        private float timeFromSpawn = 0f;
 
         private void Awake()
         {
@@ -45,26 +44,14 @@ namespace Rhythem.Songs {
             {
                 transform.Rotate(obstacleRotationSpeed);
             }
-            if (printLog) timeFromSpawn += Time.deltaTime;
         }
 
-        private void OnTriggerEnter(Collider other)
+        public void OnNoteHit()
         {
-            if (other.tag == "NoteDeadzone")
+            if (currentMesh != null)
             {
-                printLog = false;
-                Debug.Log(timeFromSpawn);
-
-                if (currentMesh != null)
-                {
-                    currentMesh.enabled = false;
-                    _col.enabled = false;
-                }
-                if (noteType == NoteType.Note)
-                {
-                    //Debug.Log($"NOTE {gameObject.name} HIT {other.gameObject}");
-
-                }
+                currentMesh.enabled = false;
+                _col.enabled = false;
             }
         }
 
@@ -91,9 +78,6 @@ namespace Rhythem.Songs {
 
         public void ResetNote(Note noteData, float currentTime)
         {
-            timeFromSpawn = 0f;
-            printLog = true;
-
             noteType = noteData.noteType;
             if (noteType == NoteType.Note)
             {

@@ -27,10 +27,6 @@ namespace Rhythem.Play
             }
         }
 
-        [Title("Events")]
-        public UnityEvent<ScorableNote, ScoreZone> OnNoteHit;
-        //public UnityEvent OnUiItemSelected;
-
         [Title("Player-Related Members")]
         public int energy = 100;
         public int score = 0;
@@ -38,11 +34,13 @@ namespace Rhythem.Play
 
         void Start()
         {
-        
+            leftHand.OnNoteHit.AddListener(OnHitNoteAction);
+            rightHand.OnNoteHit.AddListener(OnHitNoteAction);
         }
 
         void Update()
         {
+
         }
 
         public void DoSongStartPlayerSetup()
@@ -51,7 +49,7 @@ namespace Rhythem.Play
             score = 0;
         }
 
-        public void DoHitNoteAction(ScorableNote note, ScoreZone zone)
+        public void OnHitNoteAction(ScorableNote note, ScoreZone zone)
         {
             if(note.noteType == NoteType.Obstacle)
             {
@@ -84,44 +82,9 @@ namespace Rhythem.Play
             }
         }
 
-        public void DoMissedNoteAction(ScorableNote note)
+        public void OnMissedNoteAction(ScorableNote note)
         {
             energy -= 10;
-        }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.tag == "Note")
-            {
-                var note = other.GetComponent<ScorableNote>();
-                if (note != null)
-                {
-                    var hitTimeDelta = Math.Abs(Time.time - note.targetHitTime);
-                    var scoreZone = new ScoreZone();
-                    if (hitTimeDelta < 0.02f)
-                    {
-                        scoreZone = ScoreZone.Stellar;
-                    }
-                    else if (hitTimeDelta < 0.05f)
-                    {
-                        scoreZone = ScoreZone.Great;
-                    }
-                    else if (hitTimeDelta < 0.085f)
-                    {
-                        scoreZone = ScoreZone.Good;
-                    }
-                    else if (hitTimeDelta < 0.11f)
-                    {
-                        scoreZone = ScoreZone.Close;
-                    }
-                    else
-                    {
-                        scoreZone = ScoreZone.Miss;
-                    }
-
-                    OnNoteHit.Invoke(note, scoreZone);
-                }
-            }
         }
     }
 }

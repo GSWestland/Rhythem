@@ -11,7 +11,7 @@ namespace Rhythem
     /// </summary>
     public sealed class GameManager : Manager<GameManager>
     {
-        [SerializeField] private XROrigin vrRigPrefab;
+        [SerializeField] private GameObject vrRigPrefab;
         public bool showDebugLogs = true;
 
         public XROrigin VRRig { get; private set; }
@@ -22,8 +22,8 @@ namespace Rhythem
         protected override void Awake()
         {
             base.Awake();
-            VRRig = Instantiate(vrRigPrefab);
-            VRRig.name = VRRig.name.Replace("(Clone)", "");
+            VRRig = Instantiate(vrRigPrefab).GetComponentInChildren<XROrigin>();
+            //VRRig.name = VRRig.name.Replace("(Clone)", "");
         }
 
         public void PauseGame(bool pause)

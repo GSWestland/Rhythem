@@ -1,17 +1,18 @@
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
+using System;
 using System.Collections.Generic;
+using UnityEngine.Events;
+using Rhythem.Songs;
 
 public class PlayerWand : MonoBehaviour
 {
 
     public DesiredHand desiredHand;
-    public ControllerInputActionManager controllerManager;
     public Transform lineRenderStartTransform;
-
-    private LineRenderer _selectionAssistant;
     public bool inMenuMode = true;
 
+    private LineRenderer _selectionAssistant;
+    public UnityEvent<ScorableNote, ScoreZone> OnNoteHit;
     void Start()
     {
         _selectionAssistant = lineRenderStartTransform.GetComponent<LineRenderer>();
@@ -25,6 +26,39 @@ public class PlayerWand : MonoBehaviour
             linePts.Add(lineRenderStartTransform.position);
             linePts.Add(lineRenderStartTransform.position + (lineRenderStartTransform.up * 4f));
             _selectionAssistant.SetPositions(linePts.ToArray());
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Note")
+        {
+            var note = other.GetComponent<ScorableNote>();
+            if (note != null)
+            {
+                var scoreZone = ScoreZone.Miss;
+                if (note.noteHand == desiredHand)
+                {
+                    var hitTimeDelta = Math.Abs(Time.time - note.targetHitTime);
+                    if (hitTimeDelta < 0.02f)
+                    {
+                        scoreZone = ScoreZone.Stellar;
+                    }
+                    else if (hitTimeDelta < 0.05f)
+                    {
+                        scoreZone = ScoreZone.Great;
+                    }
+                    else if (hitTimeDelta < 0.085f)
+                    {
+                        scoreZone = ScoreZone.Good;
+                    }
+                    else if (hitTimeDelta < 0.11f)
+                    {
+                        scoreZone = ScoreZone.Close;
+                    }
+                }
+                OnNoteHit.Invoke(other.gameObject.GetComponent<ScorableNote>(), scoreZone);
+            }
         }
     }
 }

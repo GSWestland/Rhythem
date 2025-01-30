@@ -167,11 +167,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8723577222194173279}
   - component: {fileID: 4411644040740597403}
-  - component: {fileID: 2348878897405258453}
   - component: {fileID: 8633917642562248081}
+  - component: {fileID: -3921588952466363016}
   m_Layer: 0
   m_Name: PlayerWand
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -184,7 +184,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8136151951567124177}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -206,37 +206,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredHand: 0
-  controllerManager: {fileID: 2348878897405258453}
   lineRenderStartTransform: {fileID: 3796150734185638338}
   inMenuMode: 0
---- !u!114 &2348878897405258453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8136151951567124177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9ac216f0eb04754b1d938aac6380b31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RayInteractor: {fileID: 0}
-  m_NearFarInteractor: {fileID: 0}
-  m_TeleportInteractor: {fileID: 0}
-  m_TeleportMode: {fileID: 0}
-  m_TeleportModeCancel: {fileID: 0}
-  m_Turn: {fileID: 0}
-  m_SnapTurn: {fileID: 0}
-  m_Move: {fileID: 0}
-  m_UIScroll: {fileID: 0}
-  m_SmoothMotionEnabled: 0
-  m_SmoothTurnEnabled: 0
-  m_NearFarEnableTeleportDuringNearInteraction: 1
-  m_UIScrollingEnabled: 1
-  m_RayInteractorChanged:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &8633917642562248081
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -258,6 +229,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.136, y: 0.154, z: 0.31}
   m_Center: {x: 0, y: 0, z: 0.095}
+--- !u!114 &-3921588952466363016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8136151951567124177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2a9c34df4095f47b9ca8f975175f5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Device: 1
+  m_PoseSource: 4
+  m_PoseProviderComponent: {fileID: 0}
+  m_TrackingType: 0
+  m_UpdateType: 0
+  m_UseRelativeTransform: 0
 --- !u!1001 &1471178160534747540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -352,6 +341,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dce48d13466a20047a6449cb592a2a5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObject: {fileID: 0}
-  targetRotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
-  active: 0
+  targetRotation: {x: 0.70710677, y: 0, z: 0}

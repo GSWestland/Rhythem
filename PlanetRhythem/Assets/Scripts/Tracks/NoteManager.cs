@@ -53,6 +53,11 @@ namespace Rhythem.Tracks
             _activeNotes?.Clear();
         }
 
+        void OnNoteHitByPlayer(ScorableNote note, ScoreZone zone)
+        {
+
+        }
+
         public void InitializeNoteList(GameObject notePrefab, Transform noteHighwayParent, Transform spawnLocation, int numberOfSafeNotes)
         {
             float animationSpeed = 1 / (song.bpm / 60f / (song.beatsPerMeasure));
