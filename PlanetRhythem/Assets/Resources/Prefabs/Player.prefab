@@ -364,10 +364,8 @@ MonoBehaviour:
   head: {fileID: 4645821360179589439}
   leftHand: {fileID: 7842582390123773546}
   rightHand: {fileID: 7441815787677268198}
-  leftHandGalaxyTexture: {fileID: 2800000, guid: 457a1f0f8ea151346b2b51b4884960b5, type: 3}
-  rightHandGalaxyTexture: {fileID: 2800000, guid: 394679147fe97ab4d981067ba15159bc, type: 3}
-  leftHandColor: {r: 0.706393, g: 0.8301887, b: 0.14489143, a: 0}
-  rightHandColor: {r: 0.7870576, g: 0.41709682, b: 0.9716981, a: 0}
+  leftHandColor: {r: 0.706393, g: 0.8301887, b: 0.14489143, a: 1}
+  rightHandColor: {r: 0.7870576, g: 0.41709682, b: 0.9716981, a: 1}
   energy: 100
   score: 0
 --- !u!114 &4513138312542639248
