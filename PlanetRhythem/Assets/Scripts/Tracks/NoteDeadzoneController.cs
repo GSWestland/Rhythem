@@ -17,7 +17,9 @@ namespace Rhythem.Tracks
         {
             if (other.tag == "Note")
             {
-                OnNoteMissed.Invoke(other.gameObject.GetComponent<ScorableNote>());
+                ScorableNote scorable = other.gameObject.GetComponent<ScorableNote>();
+                OnNoteMissed.Invoke(scorable);
+                //scorable.DisableNote();
             }
         }
     }

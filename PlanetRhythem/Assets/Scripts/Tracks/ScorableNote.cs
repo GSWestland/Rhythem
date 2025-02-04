@@ -11,9 +11,10 @@ namespace Rhythem.Songs {
         public DesiredHand noteHand;
         public Vector2 notePosition;
 
+        private Color leftHandColor;
+        private Color rightHandColor;
+
         [Title("Assign Me :3")]
-        public Color leftHandColor;
-        public Color rightHandColor;
         public Vector3 obstacleRotationSpeed;
 
         public Renderer noteMesh;
@@ -34,7 +35,8 @@ namespace Rhythem.Songs {
         private void Awake()
         {
             SpawnNote();
-            
+            leftHandColor = GameManager.Instance.player.leftHandColor;
+            rightHandColor = GameManager.Instance.player.rightHandColor;
 
         }
 
@@ -46,7 +48,7 @@ namespace Rhythem.Songs {
             }
         }
 
-        public void OnNoteHit()
+        public void DisableNote()
         {
             if (currentMesh != null)
             {

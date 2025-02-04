@@ -3,19 +3,28 @@ using System;
 using System.Collections.Generic;
 using UnityEngine.Events;
 using Rhythem.Songs;
+using Sirenix.OdinInspector;
+using Rhythem;
 
 public class PlayerWand : MonoBehaviour
 {
 
     public DesiredHand desiredHand;
     public Transform lineRenderStartTransform;
+    public ParticleSystem galaxyTrail;
     public bool inMenuMode = true;
+
+    private Color _handColor;
+
 
     private LineRenderer _selectionAssistant;
     public UnityEvent<ScorableNote, ScoreZone> OnNoteHit;
     void Start()
     {
         _selectionAssistant = lineRenderStartTransform.GetComponent<LineRenderer>();
+        _handColor = desiredHand == DesiredHand.Left ? GameManager.Instance.player.leftHandColor : GameManager.Instance.player.rightHandColor;
+        var gTrail = galaxyTrail.trails;
+        gTrail.colorOverLifetime = _handColor;
     }
 
     void Update()

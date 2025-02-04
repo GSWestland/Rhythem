@@ -30,7 +30,7 @@ namespace Rhythem.Tracks
         public Transform ringPivot;
         public Transform notesSpawnStart;
 
-        [FoldoutGroup("FMOD Events")]public EventReference popSFXEvent;
+        [FoldoutGroup("FMOD Events")] public EventReference popSFXEvent;
         [FoldoutGroup("FMOD Events")] public EventReference perfectSFXEvent;
         [FoldoutGroup("FMOD Events")] public EventReference missSFXEvent;
         [FoldoutGroup("FMOD Events")] public EventReference songFailSFXEvent;
@@ -90,7 +90,7 @@ namespace Rhythem.Tracks
             songCallback = new FMOD.Studio.EVENT_CALLBACK(PlayFileCallBackUsingAudioFile);
 
             EventManager.Startup();
-            player = GameManager.Instance.VRRig.GetComponent<Player>();
+            player = GameManager.Instance.player;
 
             SubscribeToSongSessionActions();
             

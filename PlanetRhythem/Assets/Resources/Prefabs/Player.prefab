@@ -361,12 +361,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ade76a8f5be414439448aa59e1040f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  head: {fileID: 0}
+  head: {fileID: 4645821360179589439}
   leftHand: {fileID: 7842582390123773546}
   rightHand: {fileID: 7441815787677268198}
-  OnNoteHit:
-    m_PersistentCalls:
-      m_Calls: []
+  leftHandGalaxyTexture: {fileID: 2800000, guid: 457a1f0f8ea151346b2b51b4884960b5, type: 3}
+  rightHandGalaxyTexture: {fileID: 2800000, guid: 394679147fe97ab4d981067ba15159bc, type: 3}
+  leftHandColor: {r: 0.706393, g: 0.8301887, b: 0.14489143, a: 0}
+  rightHandColor: {r: 0.7870576, g: 0.41709682, b: 0.9716981, a: 0}
   energy: 100
   score: 0
 --- !u!114 &4513138312542639248
@@ -393,9 +394,69 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6c2ab1b8-8984-453a-af3d-a3c78ae1679a
+    m_ActionName: Player/Interact
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: be8f29f4-2250-4497-925d-87aae416e02e
+    m_ActionName: Player/Back
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4b8c73d0-1df6-44c2-95da-78d35fb32579
+    m_ActionName: Player/Pause
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7db550e6-9c55-4f0e-aeae-b61b1e068362
+    m_ActionName: Player/Move
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 37ba1444-2967-45d4-887a-00c46b95c30e
+    m_ActionName: Player/ChangeSelection
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 08ab9243-76d0-4301-a99b-64383a80dd7b
+    m_ActionName: SongEditor/Interact
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1d1820ea-5e68-40f0-a5ec-d56aca5fb2f8
+    m_ActionName: SongEditor/Back
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7f83c41d-a264-4e13-a75f-017e202e682e
+    m_ActionName: SongEditor/Pause
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f8e2aa7c-1526-4ae3-9eed-e15c6782833a
+    m_ActionName: SongEditor/Move
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a11fda66-48ad-4169-b054-83f741f5b511
+    m_ActionName: SongEditor/ChangeSelection
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7607c7b6-cd76-4816-beef-bd0341cfe950
+    m_ActionName: 'UI/Submit[/Keyboard/enter]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 15cef263-9014-4fd5-94d9-4e4a6234a6ef
+    m_ActionName: 'UI/Cancel[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3c7022bf-7922-4f7c-a998-c437916075ad
+    m_ActionName: UI/Click
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 24908448-c609-4bc3-a128-ea258674378a
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
+    m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: XR
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}

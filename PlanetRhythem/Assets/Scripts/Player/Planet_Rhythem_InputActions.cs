@@ -145,6 +145,125 @@ namespace Rhythem.Play
             ]
         },
         {
+            ""name"": ""SongEditor"",
+            ""id"": ""7004c43a-a7c8-4d83-a40b-a0c3ba7bf41d"",
+            ""actions"": [
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""08ab9243-76d0-4301-a99b-64383a80dd7b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Back"",
+                    ""type"": ""Button"",
+                    ""id"": ""1d1820ea-5e68-40f0-a5ec-d56aca5fb2f8"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""7f83c41d-a264-4e13-a75f-017e202e682e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Button"",
+                    ""id"": ""f8e2aa7c-1526-4ae3-9eed-e15c6782833a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ChangeSelection"",
+                    ""type"": ""Value"",
+                    ""id"": ""a11fda66-48ad-4169-b054-83f741f5b511"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""22484710-64ec-4ec2-834b-0b69b2d3d594"",
+                    ""path"": ""<XRController>/{TriggerButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";XR;Touch"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""03797560-d525-44e5-aa05-a4e410a5970b"",
+                    ""path"": ""<XRController>/{SecondaryButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";XR"",
+                    ""action"": ""Back"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a7e929fa-3278-4f8a-bf0c-d62b7f1bd915"",
+                    ""path"": ""<XRController>/{Menu}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";XR"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fd3e28dc-0618-49af-ac0b-e6f188e6129d"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d4dd3aca-11a0-4619-aefd-7b7764443887"",
+                    ""path"": ""<XRController>/{Primary2DAxis}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";XR"",
+                    ""action"": ""ChangeSelection"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1c1d9e41-6997-43a6-a5f7-6a66e69a5bcd"",
+                    ""path"": ""<XRController>/{Secondary2DAxis}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";XR"",
+                    ""action"": ""ChangeSelection"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
             ""name"": ""UI"",
             ""id"": ""272f6d14-89ba-496f-b7ff-215263d3219f"",
             ""actions"": [
@@ -323,6 +442,13 @@ namespace Rhythem.Play
             m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
             m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
             m_Player_ChangeSelection = m_Player.FindAction("ChangeSelection", throwIfNotFound: true);
+            // SongEditor
+            m_SongEditor = asset.FindActionMap("SongEditor", throwIfNotFound: true);
+            m_SongEditor_Interact = m_SongEditor.FindAction("Interact", throwIfNotFound: true);
+            m_SongEditor_Back = m_SongEditor.FindAction("Back", throwIfNotFound: true);
+            m_SongEditor_Pause = m_SongEditor.FindAction("Pause", throwIfNotFound: true);
+            m_SongEditor_Move = m_SongEditor.FindAction("Move", throwIfNotFound: true);
+            m_SongEditor_ChangeSelection = m_SongEditor.FindAction("ChangeSelection", throwIfNotFound: true);
             // UI
             m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
             m_UI_Submit = m_UI.FindAction("Submit", throwIfNotFound: true);
@@ -335,6 +461,7 @@ namespace Rhythem.Play
         ~@PlayerControls()
         {
             UnityEngine.Debug.Assert(!m_Player.enabled, "This will cause a leak and performance issues, PlayerControls.Player.Disable() has not been called.");
+            UnityEngine.Debug.Assert(!m_SongEditor.enabled, "This will cause a leak and performance issues, PlayerControls.SongEditor.Disable() has not been called.");
             UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, PlayerControls.UI.Disable() has not been called.");
         }
 
@@ -472,6 +599,84 @@ namespace Rhythem.Play
         }
         public PlayerActions @Player => new PlayerActions(this);
 
+        // SongEditor
+        private readonly InputActionMap m_SongEditor;
+        private List<ISongEditorActions> m_SongEditorActionsCallbackInterfaces = new List<ISongEditorActions>();
+        private readonly InputAction m_SongEditor_Interact;
+        private readonly InputAction m_SongEditor_Back;
+        private readonly InputAction m_SongEditor_Pause;
+        private readonly InputAction m_SongEditor_Move;
+        private readonly InputAction m_SongEditor_ChangeSelection;
+        public struct SongEditorActions
+        {
+            private @PlayerControls m_Wrapper;
+            public SongEditorActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+            public InputAction @Interact => m_Wrapper.m_SongEditor_Interact;
+            public InputAction @Back => m_Wrapper.m_SongEditor_Back;
+            public InputAction @Pause => m_Wrapper.m_SongEditor_Pause;
+            public InputAction @Move => m_Wrapper.m_SongEditor_Move;
+            public InputAction @ChangeSelection => m_Wrapper.m_SongEditor_ChangeSelection;
+            public InputActionMap Get() { return m_Wrapper.m_SongEditor; }
+            public void Enable() { Get().Enable(); }
+            public void Disable() { Get().Disable(); }
+            public bool enabled => Get().enabled;
+            public static implicit operator InputActionMap(SongEditorActions set) { return set.Get(); }
+            public void AddCallbacks(ISongEditorActions instance)
+            {
+                if (instance == null || m_Wrapper.m_SongEditorActionsCallbackInterfaces.Contains(instance)) return;
+                m_Wrapper.m_SongEditorActionsCallbackInterfaces.Add(instance);
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
+                @Back.started += instance.OnBack;
+                @Back.performed += instance.OnBack;
+                @Back.canceled += instance.OnBack;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
+                @Move.started += instance.OnMove;
+                @Move.performed += instance.OnMove;
+                @Move.canceled += instance.OnMove;
+                @ChangeSelection.started += instance.OnChangeSelection;
+                @ChangeSelection.performed += instance.OnChangeSelection;
+                @ChangeSelection.canceled += instance.OnChangeSelection;
+            }
+
+            private void UnregisterCallbacks(ISongEditorActions instance)
+            {
+                @Interact.started -= instance.OnInteract;
+                @Interact.performed -= instance.OnInteract;
+                @Interact.canceled -= instance.OnInteract;
+                @Back.started -= instance.OnBack;
+                @Back.performed -= instance.OnBack;
+                @Back.canceled -= instance.OnBack;
+                @Pause.started -= instance.OnPause;
+                @Pause.performed -= instance.OnPause;
+                @Pause.canceled -= instance.OnPause;
+                @Move.started -= instance.OnMove;
+                @Move.performed -= instance.OnMove;
+                @Move.canceled -= instance.OnMove;
+                @ChangeSelection.started -= instance.OnChangeSelection;
+                @ChangeSelection.performed -= instance.OnChangeSelection;
+                @ChangeSelection.canceled -= instance.OnChangeSelection;
+            }
+
+            public void RemoveCallbacks(ISongEditorActions instance)
+            {
+                if (m_Wrapper.m_SongEditorActionsCallbackInterfaces.Remove(instance))
+                    UnregisterCallbacks(instance);
+            }
+
+            public void SetCallbacks(ISongEditorActions instance)
+            {
+                foreach (var item in m_Wrapper.m_SongEditorActionsCallbackInterfaces)
+                    UnregisterCallbacks(item);
+                m_Wrapper.m_SongEditorActionsCallbackInterfaces.Clear();
+                AddCallbacks(instance);
+            }
+        }
+        public SongEditorActions @SongEditor => new SongEditorActions(this);
+
         // UI
         private readonly InputActionMap m_UI;
         private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
@@ -595,6 +800,14 @@ namespace Rhythem.Play
             }
         }
         public interface IPlayerActions
+        {
+            void OnInteract(InputAction.CallbackContext context);
+            void OnBack(InputAction.CallbackContext context);
+            void OnPause(InputAction.CallbackContext context);
+            void OnMove(InputAction.CallbackContext context);
+            void OnChangeSelection(InputAction.CallbackContext context);
+        }
+        public interface ISongEditorActions
         {
             void OnInteract(InputAction.CallbackContext context);
             void OnBack(InputAction.CallbackContext context);

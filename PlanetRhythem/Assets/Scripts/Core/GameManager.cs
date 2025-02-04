@@ -11,10 +11,12 @@ namespace Rhythem
     /// </summary>
     public sealed class GameManager : Manager<GameManager>
     {
-        [SerializeField] private GameObject vrRigPrefab;
+        [SerializeField] public GameObject playerPrefab;
+        private GameObject playerObjectInstance;
         public bool showDebugLogs = true;
 
         public XROrigin VRRig { get; private set; }
+        public Play.Player player { get; private set; }
         public bool Paused { get; private set; }
         public Action<bool> onPaused;
 
@@ -22,8 +24,10 @@ namespace Rhythem
         protected override void Awake()
         {
             base.Awake();
-            VRRig = Instantiate(vrRigPrefab).GetComponentInChildren<XROrigin>();
-            //VRRig.name = VRRig.name.Replace("(Clone)", "");
+            playerObjectInstance = Instantiate(playerPrefab);
+            playerObjectInstance.name = playerObjectInstance.name.Replace("(Clone)", "");
+            VRRig = playerObjectInstance.GetComponentInChildren<XROrigin>();
+            player = playerObjectInstance.GetComponent<Play.Player>();
         }
 
         public void PauseGame(bool pause)

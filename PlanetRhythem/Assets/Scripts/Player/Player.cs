@@ -3,6 +3,7 @@ using Sirenix.OdinInspector;
 using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 using UnityEngine.SpatialTracking;
 
 namespace Rhythem.Play
@@ -27,10 +28,13 @@ namespace Rhythem.Play
             }
         }
 
+        [Title("Per-hand Color setup")]
+        public Color leftHandColor;
+        public Color rightHandColor;
+
         [Title("Player-Related Members")]
         public int energy = 100;
         public int score = 0;
-
 
         void Start()
         {
@@ -80,11 +84,24 @@ namespace Rhythem.Play
                         break;
                 }
             }
+            note.DisableNote();
+            CheckSongFailure();
         }
 
+        
         public void OnMissedNoteAction(ScorableNote note)
         {
             energy -= 10;
+            note.DisableNote();
+            CheckSongFailure();
+        }
+
+        public void CheckSongFailure()
+        {
+            if (energy <= 0)
+            {
+                Debug.Log("SONG FAILED WOOF");
+            }
         }
     }
 }

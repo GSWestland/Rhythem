@@ -48,22 +48,23 @@ namespace Rhythem.Play
         }
         private void OnConfirmPerformed(InputAction.CallbackContext context)
         {
-
+            Debug.Log("CONFIRM PRESSED");
         }
 
         private void OnBackPerformed(InputAction.CallbackContext context)
         {
-
+            Debug.Log("BACK PRESSED");
         }
 
         private void OnPausePerformed(InputAction.CallbackContext context)
         {
+            Debug.Log("PAUSE PRESSED");
             GameManager.Instance.PauseGame(!GameManager.Instance.Paused);
         }
 
         private void OnSelectionChangePerformed(InputAction.CallbackContext context)
         {
-
+            
         }
 
         protected void SubscribeToControls()
