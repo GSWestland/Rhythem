@@ -1,72 +1,74 @@
-using UnityEngine;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Events;
 using Rhythem.Songs;
 using Sirenix.OdinInspector;
-using Rhythem;
 
-public class PlayerWand : MonoBehaviour
+namespace Rhythem.Play
 {
-
-    public DesiredHand desiredHand;
-    public Transform lineRenderStartTransform;
-    public ParticleSystem galaxyTrail;
-    public bool inMenuMode = true;
-
-    private Color _handColor;
-
-
-    private LineRenderer _selectionAssistant;
-    public UnityEvent<ScorableNote, ScoreZone> OnNoteHit;
-    void Start()
+    public class PlayerWand : MonoBehaviour
     {
-        _selectionAssistant = lineRenderStartTransform.GetComponent<LineRenderer>();
-        _handColor = desiredHand == DesiredHand.Left ? GameManager.Instance.player.leftHandColor : GameManager.Instance.player.rightHandColor;
-        var gTrail = galaxyTrail.trails;
-        gTrail.colorOverLifetime = _handColor;
-    }
 
-    void Update()
-    {
-        if (inMenuMode)
+        public DesiredHand desiredHand;
+        public Transform lineRenderStartTransform;
+        public ParticleSystem galaxyTrail;
+        public bool inMenuMode = true;
+
+        private Color _handColor;
+
+
+        private LineRenderer _selectionAssistant;
+        public UnityEvent<ScorableNote, ScoreZone> OnNoteHit;
+        void Start()
         {
-            List<Vector3> linePts = new();
-            linePts.Add(lineRenderStartTransform.position);
-            linePts.Add(lineRenderStartTransform.position + (lineRenderStartTransform.up * 4f));
-            _selectionAssistant.SetPositions(linePts.ToArray());
+            _selectionAssistant = lineRenderStartTransform.GetComponent<LineRenderer>();
+            _handColor = desiredHand == DesiredHand.Left ? GameManager.Instance.player.leftHandColor : GameManager.Instance.player.rightHandColor;
+            var gTrail = galaxyTrail.trails;
+            gTrail.colorOverLifetime = _handColor;
         }
-    }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Note")
+        void Update()
         {
-            var note = other.GetComponent<ScorableNote>();
-            if (note != null)
+            if (inMenuMode)
             {
-                var scoreZone = ScoreZone.Miss;
-                if (note.noteHand == desiredHand)
+                List<Vector3> linePts = new();
+                linePts.Add(lineRenderStartTransform.position);
+                linePts.Add(lineRenderStartTransform.position + (lineRenderStartTransform.up * 4f));
+                _selectionAssistant.SetPositions(linePts.ToArray());
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.tag == "Note")
+            {
+                var note = other.GetComponent<ScorableNote>();
+                if (note != null)
                 {
-                    var hitTimeDelta = Math.Abs(Time.time - note.targetHitTime);
-                    if (hitTimeDelta < 0.02f)
+                    var scoreZone = ScoreZone.Miss;
+                    if (note.noteHand == desiredHand)
                     {
-                        scoreZone = ScoreZone.Stellar;
+                        var hitTimeDelta = Math.Abs(Time.time - note.targetHitTime);
+                        if (hitTimeDelta < 0.02f)
+                        {
+                            scoreZone = ScoreZone.Stellar;
+                        }
+                        else if (hitTimeDelta < 0.05f)
+                        {
+                            scoreZone = ScoreZone.Great;
+                        }
+                        else if (hitTimeDelta < 0.085f)
+                        {
+                            scoreZone = ScoreZone.Good;
+                        }
+                        else if (hitTimeDelta < 0.11f)
+                        {
+                            scoreZone = ScoreZone.Close;
+                        }
                     }
-                    else if (hitTimeDelta < 0.05f)
-                    {
-                        scoreZone = ScoreZone.Great;
-                    }
-                    else if (hitTimeDelta < 0.085f)
-                    {
-                        scoreZone = ScoreZone.Good;
-                    }
-                    else if (hitTimeDelta < 0.11f)
-                    {
-                        scoreZone = ScoreZone.Close;
-                    }
+                    OnNoteHit.Invoke(other.gameObject.GetComponent<ScorableNote>(), scoreZone);
                 }
-                OnNoteHit.Invoke(other.gameObject.GetComponent<ScorableNote>(), scoreZone);
             }
         }
     }

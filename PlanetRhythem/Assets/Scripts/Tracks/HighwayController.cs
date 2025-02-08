@@ -2,6 +2,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
+using Rhythem.Core;
 using Rhythem.Songs;
 using Rhythem.Play;
 using Rhythem.TrackEditor;

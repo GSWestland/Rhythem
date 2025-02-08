@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Rhythem.Core
+namespace Rhythem
 {
     public abstract class Manager<T> : Manager where T : Manager<T>
     {

@@ -1,7 +1,6 @@
 using UnityEngine;
 using System;
 using Unity.XR.CoreUtils;
-using Rhythem.Core;
 using Rhythem.TrackEditor;
 
 namespace Rhythem
