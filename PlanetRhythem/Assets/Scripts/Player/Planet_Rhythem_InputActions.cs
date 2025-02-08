@@ -101,7 +101,7 @@ namespace Rhythem.Play
                 {
                     ""name"": """",
                     ""id"": ""51bca398-b4d6-48b5-a81f-f237f0b92df8"",
-                    ""path"": ""<XRController>/{Menu}"",
+                    ""path"": ""<XRController>/{MenuButton}"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";XR"",
@@ -149,7 +149,7 @@ namespace Rhythem.Play
             ""id"": ""7004c43a-a7c8-4d83-a40b-a0c3ba7bf41d"",
             ""actions"": [
                 {
-                    ""name"": ""Interact"",
+                    ""name"": ""CommitNote"",
                     ""type"": ""Button"",
                     ""id"": ""08ab9243-76d0-4301-a99b-64383a80dd7b"",
                     ""expectedControlType"": """",
@@ -185,7 +185,7 @@ namespace Rhythem.Play
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""ChangeSelection"",
+                    ""name"": ""ChangeNoteType"",
                     ""type"": ""Value"",
                     ""id"": ""a11fda66-48ad-4169-b054-83f741f5b511"",
                     ""expectedControlType"": ""Vector2"",
@@ -202,7 +202,7 @@ namespace Rhythem.Play
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";XR;Touch"",
-                    ""action"": ""Interact"",
+                    ""action"": ""CommitNote"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -220,7 +220,7 @@ namespace Rhythem.Play
                 {
                     ""name"": """",
                     ""id"": ""a7e929fa-3278-4f8a-bf0c-d62b7f1bd915"",
-                    ""path"": ""<XRController>/{Menu}"",
+                    ""path"": ""<XRController>/{MenuButton}"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";XR"",
@@ -246,7 +246,7 @@ namespace Rhythem.Play
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";XR"",
-                    ""action"": ""ChangeSelection"",
+                    ""action"": ""ChangeNoteType"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -257,7 +257,7 @@ namespace Rhythem.Play
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";XR"",
-                    ""action"": ""ChangeSelection"",
+                    ""action"": ""ChangeNoteType"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -444,11 +444,11 @@ namespace Rhythem.Play
             m_Player_ChangeSelection = m_Player.FindAction("ChangeSelection", throwIfNotFound: true);
             // SongEditor
             m_SongEditor = asset.FindActionMap("SongEditor", throwIfNotFound: true);
-            m_SongEditor_Interact = m_SongEditor.FindAction("Interact", throwIfNotFound: true);
+            m_SongEditor_CommitNote = m_SongEditor.FindAction("CommitNote", throwIfNotFound: true);
             m_SongEditor_Back = m_SongEditor.FindAction("Back", throwIfNotFound: true);
             m_SongEditor_Pause = m_SongEditor.FindAction("Pause", throwIfNotFound: true);
             m_SongEditor_Move = m_SongEditor.FindAction("Move", throwIfNotFound: true);
-            m_SongEditor_ChangeSelection = m_SongEditor.FindAction("ChangeSelection", throwIfNotFound: true);
+            m_SongEditor_ChangeNoteType = m_SongEditor.FindAction("ChangeNoteType", throwIfNotFound: true);
             // UI
             m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
             m_UI_Submit = m_UI.FindAction("Submit", throwIfNotFound: true);
@@ -602,20 +602,20 @@ namespace Rhythem.Play
         // SongEditor
         private readonly InputActionMap m_SongEditor;
         private List<ISongEditorActions> m_SongEditorActionsCallbackInterfaces = new List<ISongEditorActions>();
-        private readonly InputAction m_SongEditor_Interact;
+        private readonly InputAction m_SongEditor_CommitNote;
         private readonly InputAction m_SongEditor_Back;
         private readonly InputAction m_SongEditor_Pause;
         private readonly InputAction m_SongEditor_Move;
-        private readonly InputAction m_SongEditor_ChangeSelection;
+        private readonly InputAction m_SongEditor_ChangeNoteType;
         public struct SongEditorActions
         {
             private @PlayerControls m_Wrapper;
             public SongEditorActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-            public InputAction @Interact => m_Wrapper.m_SongEditor_Interact;
+            public InputAction @CommitNote => m_Wrapper.m_SongEditor_CommitNote;
             public InputAction @Back => m_Wrapper.m_SongEditor_Back;
             public InputAction @Pause => m_Wrapper.m_SongEditor_Pause;
             public InputAction @Move => m_Wrapper.m_SongEditor_Move;
-            public InputAction @ChangeSelection => m_Wrapper.m_SongEditor_ChangeSelection;
+            public InputAction @ChangeNoteType => m_Wrapper.m_SongEditor_ChangeNoteType;
             public InputActionMap Get() { return m_Wrapper.m_SongEditor; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -625,9 +625,9 @@ namespace Rhythem.Play
             {
                 if (instance == null || m_Wrapper.m_SongEditorActionsCallbackInterfaces.Contains(instance)) return;
                 m_Wrapper.m_SongEditorActionsCallbackInterfaces.Add(instance);
-                @Interact.started += instance.OnInteract;
-                @Interact.performed += instance.OnInteract;
-                @Interact.canceled += instance.OnInteract;
+                @CommitNote.started += instance.OnCommitNote;
+                @CommitNote.performed += instance.OnCommitNote;
+                @CommitNote.canceled += instance.OnCommitNote;
                 @Back.started += instance.OnBack;
                 @Back.performed += instance.OnBack;
                 @Back.canceled += instance.OnBack;
@@ -637,16 +637,16 @@ namespace Rhythem.Play
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
-                @ChangeSelection.started += instance.OnChangeSelection;
-                @ChangeSelection.performed += instance.OnChangeSelection;
-                @ChangeSelection.canceled += instance.OnChangeSelection;
+                @ChangeNoteType.started += instance.OnChangeNoteType;
+                @ChangeNoteType.performed += instance.OnChangeNoteType;
+                @ChangeNoteType.canceled += instance.OnChangeNoteType;
             }
 
             private void UnregisterCallbacks(ISongEditorActions instance)
             {
-                @Interact.started -= instance.OnInteract;
-                @Interact.performed -= instance.OnInteract;
-                @Interact.canceled -= instance.OnInteract;
+                @CommitNote.started -= instance.OnCommitNote;
+                @CommitNote.performed -= instance.OnCommitNote;
+                @CommitNote.canceled -= instance.OnCommitNote;
                 @Back.started -= instance.OnBack;
                 @Back.performed -= instance.OnBack;
                 @Back.canceled -= instance.OnBack;
@@ -656,9 +656,9 @@ namespace Rhythem.Play
                 @Move.started -= instance.OnMove;
                 @Move.performed -= instance.OnMove;
                 @Move.canceled -= instance.OnMove;
-                @ChangeSelection.started -= instance.OnChangeSelection;
-                @ChangeSelection.performed -= instance.OnChangeSelection;
-                @ChangeSelection.canceled -= instance.OnChangeSelection;
+                @ChangeNoteType.started -= instance.OnChangeNoteType;
+                @ChangeNoteType.performed -= instance.OnChangeNoteType;
+                @ChangeNoteType.canceled -= instance.OnChangeNoteType;
             }
 
             public void RemoveCallbacks(ISongEditorActions instance)
@@ -809,11 +809,11 @@ namespace Rhythem.Play
         }
         public interface ISongEditorActions
         {
-            void OnInteract(InputAction.CallbackContext context);
+            void OnCommitNote(InputAction.CallbackContext context);
             void OnBack(InputAction.CallbackContext context);
             void OnPause(InputAction.CallbackContext context);
             void OnMove(InputAction.CallbackContext context);
-            void OnChangeSelection(InputAction.CallbackContext context);
+            void OnChangeNoteType(InputAction.CallbackContext context);
         }
         public interface IUIActions
         {
