@@ -14,12 +14,12 @@ namespace Rhythem.Play
         public TrackedPoseDriver head;
         public PlayerWand leftHand;
         public PlayerWand rightHand;
-        private InputModule _inputModule;
-        public InputModule inputModule
+        private PlayerSongPlayInputModule _inputModule;
+        public PlayerSongPlayInputModule inputModule
         {
             get
             {
-                if ( _inputModule == null && (_inputModule = GetComponent<InputModule>()) == null)
+                if ( _inputModule == null && (_inputModule = GetComponent<PlayerSongPlayInputModule>()) == null)
                 {
                     Debug.LogError("No InputModule found on player. fix that.");
                     return null;

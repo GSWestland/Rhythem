@@ -1,4 +1,5 @@
 using Sirenix.OdinInspector;
+using Sirenix.Utilities;
 using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -12,77 +13,74 @@ namespace Rhythem.Play
         public TrackedPoseDriver head;
         public PlayerWand leftHand;
         public PlayerWand rightHand;
+        protected PlayerControls controls;
 
-        private PlayerControls _controls;
         private Ray _selectionRay;
         private RaycastHit _selectionHit;
 
         protected override void Start()
         {
             base.Start();
-            _controls ??= new PlayerControls();
+            controls ??= new PlayerControls();
             SubscribeToControls();
         }
-
-        protected void OnDestroy()
+        protected virtual void OnDestroy()
         {
             UnsubscribeToControls();
         }
-
         protected override void OnEnable()
         {
             base.OnEnable();
-            _controls ??= new PlayerControls();
-            _controls.Enable();
+            controls ??= new PlayerControls();
+            controls.Enable();
         }
-
         protected override void OnDisable()
         {
             base.OnDisable();
-            _controls?.Disable();
+            controls?.Disable();
         }
-
         protected override void Update()
         {
             base.Update();
         }
-        private void OnConfirmPerformed(InputAction.CallbackContext context)
+
+        protected virtual void OnConfirmPerformed(InputAction.CallbackContext context)
         {
             Debug.Log("CONFIRM PRESSED");
         }
 
-        private void OnBackPerformed(InputAction.CallbackContext context)
+        protected virtual void OnBackPerformed(InputAction.CallbackContext context)
         {
             Debug.Log("BACK PRESSED");
         }
 
-        private void OnPausePerformed(InputAction.CallbackContext context)
+        protected virtual void OnPausePerformed(InputAction.CallbackContext context)
         {
             Debug.Log("PAUSE PRESSED");
             GameManager.Instance.PauseGame(!GameManager.Instance.Paused);
         }
 
-        private void OnSelectionChangePerformed(InputAction.CallbackContext context)
+        protected virtual void OnSelectionChangePerformed(InputAction.CallbackContext context)
         {
-            
+            var dir = controls.Player.ChangeSelection.ReadValue<Vector2>();
+            Debug.Log($"DIRECTION PRESSED: {dir}");
         }
 
-        protected void SubscribeToControls()
+        protected virtual void SubscribeToControls()
         {
-            if (_controls == null) { return; }
-            _controls.Player.Interact.performed += OnConfirmPerformed;
-            _controls.Player.Back.performed += OnBackPerformed;
-            _controls.Player.Pause.performed += OnPausePerformed;
-            _controls.Player.ChangeSelection.performed += OnSelectionChangePerformed;
+            if (controls == null) { return; }
+            controls.Player.Interact.performed += OnConfirmPerformed;
+            controls.Player.Back.performed += OnBackPerformed;
+            controls.Player.Pause.performed += OnPausePerformed;
+            controls.Player.ChangeSelection.performed += OnSelectionChangePerformed;
         }
-
-        protected void UnsubscribeToControls()
+        protected virtual void UnsubscribeToControls()
         {
-            if (_controls == null) { return; }
-            _controls.Player.Interact.performed -= OnConfirmPerformed;
-            _controls.Player.Back.performed -= OnBackPerformed;
-            _controls.Player.Pause.performed -= OnPausePerformed;
-            _controls.Player.ChangeSelection.performed -= OnSelectionChangePerformed;
+            if (controls == null) { return; }
+            controls.Player.Interact.performed -= OnConfirmPerformed;
+            controls.Player.Back.performed -= OnBackPerformed;
+            controls.Player.Pause.performed -= OnPausePerformed;
+            controls.Player.ChangeSelection.performed -= OnSelectionChangePerformed;
         }
     }
 }
