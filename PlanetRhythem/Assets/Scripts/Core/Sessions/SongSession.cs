@@ -15,10 +15,8 @@ namespace Rhythem.Core
         public override void Initialize()
         {
             base.Initialize();
-            if (beatmap != null)
-            {
-                song = beatmap.DeserializeSongData();
-            }
+            beatmap = GameManager.Instance.CurrentBeatmap;
+            song = beatmap.DeserializeSongData();
             score = 0;
             energy = Globals.STARTING_ENERGY;
         }
@@ -26,7 +24,7 @@ namespace Rhythem.Core
         public override void EndSession()
         {
             base.EndSession();
-            //store score in some persistent data
+            //store score in sme persistent data
         }
     }
 }

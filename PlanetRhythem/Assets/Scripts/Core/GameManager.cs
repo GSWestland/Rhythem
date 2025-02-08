@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using Unity.XR.CoreUtils;
 using Rhythem.Core;
+using Rhythem.TrackEditor;
 
 namespace Rhythem
 {
@@ -20,6 +21,32 @@ namespace Rhythem
         public bool Paused { get; private set; }
         public Action<bool> onPaused;
 
+        private Beatmap _currentBeatmap;
+        //this should only ever be assigned in a Menu Session
+        public Beatmap CurrentBeatmap
+        {
+            get
+            {
+                if (_currentBeatmap == null)
+                {
+                    return null;
+                }
+                return _currentBeatmap;
+            }
+            set
+            {
+                _currentBeatmap = value;
+
+                //if (SessionsManager.Instance.GetCurrentSession<MenuSession>() != null)
+                //{
+                //    _currentBeatmap = value;
+                //}
+                //else
+                //{
+                //    Debug.LogError("# Rhythem.Core Error: Cannot assign beatmap outside of menu mode.");
+                //}
+            }
+        }
 
         protected override void Awake()
         {
