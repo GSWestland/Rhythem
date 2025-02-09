@@ -1,7 +1,6 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
-using FMODUnity;
-using Rhythem.Core;
+using UnityEngine.Events;
 using Rhythem.Songs;
 using Rhythem.Play;
 using Rhythem.TrackEditor;
@@ -13,7 +12,6 @@ namespace Rhythem.Tracks
     {
         public static HighwayController s;
         [Title("Testing Fields")]
-        public Beatmap testBeatmap;
         [SerializeField] private float timePerSong = 0f;
         [SerializeField] private float timePerMeasure = 0f;
         [SerializeField] private float timePerBeat = 0f;
@@ -21,19 +19,22 @@ namespace Rhythem.Tracks
 
         [Title("Notes Setup")]
         public GameObject notePrefab;
-        public int activeNoteLimit = 50;
+        public int activeNoteLimit = 200;
         public int measuresPerRotation = 8;
         public float failTime = 1.5f;
         public Transform ringPivot;
         public Transform notesSpawnStart;
 
-
-        //public SongSession songSession;
+        public UnityEvent OnSongStarted;
+        public UnityEvent OnSongEnded;
+        public UnityEvent OnSongWon;
+        public UnityEvent OnSongFailed;
         private IEnumerator _songStartAsync;
 
         private Player player;
         private NoteManager _noteManager;
         private AudioManager audioManager;
+        private Beatmap _beatmap;
         private Song _song;
 
 
@@ -56,12 +57,12 @@ namespace Rhythem.Tracks
             {
                 _noteManager = GetComponentInChildren<NoteManager>();
             }
-            SetupSong(testBeatmap);
+            SetupSong();
 
-            timePerSong = testBeatmap.audioFile.length - testBeatmap.silenceAtStartOfTrack;
-            timePerMeasure = timePerSong / testBeatmap.bPM / 60f;
-            timePerBeat = timePerMeasure / testBeatmap.beatsPerMeasure;
-            timePerNote = timePerBeat / testBeatmap.subdivisionsPerBeat;
+            timePerSong = _beatmap.audioFile.length - _beatmap.silenceAtStartOfTrack;
+            timePerMeasure = timePerSong / _beatmap.bPM / 60f;
+            timePerBeat = timePerMeasure / _beatmap.beatsPerMeasure;
+            timePerNote = timePerBeat / _beatmap.subdivisionsPerBeat;
 
             player = GameManager.Instance.player;
 
@@ -80,7 +81,6 @@ namespace Rhythem.Tracks
             player.leftHand.OnNoteHit.RemoveListener(DoNoteHit);
             player.rightHand.OnNoteHit.RemoveListener(DoNoteHit);
             _noteManager.deadzoneController.OnNoteMissed.RemoveListener(player.OnMissedNoteAction);
-
         }
 
         private void OnDisable()
@@ -95,7 +95,10 @@ namespace Rhythem.Tracks
 
         void Update()
         {
-
+            if (SessionsManager.Instance.GetCurrentSession<SongSession>().IsSongFailed())
+            {
+                DoSongFail();
+            }
         }
 
         void FixedUpdate()
@@ -113,6 +116,18 @@ namespace Rhythem.Tracks
             }
         }
 
+        public void DoSongWin()
+        {
+            OnSongWon.Invoke();
+            StartCoroutine(SongWin());
+        }
+
+        public void DoSongFail()
+        {
+            OnSongFailed.Invoke();
+            //StartCoroutine(SongFail());
+        }
+
         public IEnumerator SongWin()
         {
             audioManager.PlayOneShot(audioManager.songCompleteSFXEvent, Camera.main.transform.position);
@@ -122,19 +137,24 @@ namespace Rhythem.Tracks
 
         public IEnumerator SongFail()
         {
+            //slow the highway down over time and the music to match
+            //fade to black, load song end scene
             audioManager.activeSong.setParameterByName("Song failed", 1f);
-            audioManager.PlayOneShot(audioManager.songFailSFXEvent, Camera.main.transform.position);
+            audioManager.PlayOneShot(audioManager.songFailSFXEvent, player.head.transform.position);
             yield return new WaitForSeconds(failTime);
             //YOU FAILED MENU
         }
 
-        public void SetupSong(Beatmap beatmap)
+        public void SetupSong()
         {
-            _song = beatmap.DeserializeSongData();
+            var sm = SessionsManager.Instance.GetCurrentSession<SongSession>();
+            _beatmap = sm.beatmap;
+            _song = sm.song;
+
             _noteManager.song = _song;
             _noteManager.Cleanup();
             _noteManager.InitializeNoteList(notePrefab, ringPivot, notesSpawnStart, activeNoteLimit);
-            _songStartAsync = DoSongStartWithDelay(testBeatmap.audioFile);
+            _songStartAsync = DoSongStartWithDelay(_beatmap.audioFile);
             //Debug.Log("Trying to start async function...");
             StartCoroutine(_songStartAsync);
         }
@@ -164,7 +184,7 @@ namespace Rhythem.Tracks
             yield return new WaitForSeconds(waitTime);
             Debug.Log("attempting to start song...");
             audioManager.StartSong(songFile);
-
+            OnSongStarted.Invoke();
         }
     }
 }

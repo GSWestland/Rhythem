@@ -21,13 +21,11 @@ namespace Rhythem
         public int notesClose;
         public int notesMiss;
 
-        public UnityEvent OnSongFailed;
-
         public override void Initialize()
         {
             base.Initialize();
-            beatmap = GameManager.Instance.CurrentBeatmap;
             GameManager.Instance.player.SetInputModule<PlayerSongPlayInputModule>();
+            beatmap = GameManager.Instance.CurrentBeatmap;
             song = beatmap.DeserializeSongData();
             score = 0;
             energy = GameManager.Instance.scoreProfile.energyStartValue;
@@ -47,21 +45,21 @@ namespace Rhythem
         public void AddToScore(int points)
         {
             score += points;
+            if (score < 0)
+            {
+                score = 0;
+            }
         }
 
         public void AddToEnergy(int changeAmount)
         {
             energy += changeAmount;
-            CheckSongFailure();
+            Mathf.Clamp(energy, 0, GameManager.Instance.scoreProfile.energyStartValue);
         }
 
-        public void CheckSongFailure()
+        public bool IsSongFailed()
         {
-            if (energy <= 0)
-            {
-                Debug.Log("SONG FAILED WOOF");
-                OnSongFailed.Invoke();
-            }
+            return energy <= 0;
         }
     }
 }

@@ -182,7 +182,6 @@ Transform:
   m_Children:
   - {fileID: 6139455081395597923}
   - {fileID: 8567839411751703346}
-  - {fileID: 8726780911784221987}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3037913275409593128
@@ -197,7 +196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33de11ce66241a43b19494b0fda7511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testBeatmap: {fileID: 11400000, guid: 074620b957c2e294f9aa0ef4f47c0742, type: 2}
   timePerSong: 0
   timePerMeasure: 0
   timePerBeat: 0
@@ -208,121 +206,3 @@ MonoBehaviour:
   failTime: 1.5
   ringPivot: {fileID: 0}
   notesSpawnStart: {fileID: 6139455081395597923}
-  popSFXEvent:
-    Guid:
-      Data1: -582266472
-      Data2: 1203634081
-      Data3: 1295020701
-      Data4: 1174765834
-    Path: event:/SFX/Notes/Note Hit (correct)
-  perfectSFXEvent:
-    Guid:
-      Data1: -1911416326
-      Data2: 1228855340
-      Data3: -1306424146
-      Data4: 28318356
-    Path: event:/SFX/Notes/Note Hit (perfect)
-  missSFXEvent:
-    Guid:
-      Data1: 1116549216
-      Data2: 1291804809
-      Data3: -1258144121
-      Data4: -2139916640
-    Path: event:/SFX/Notes/Note Hit (miss)
-  songFailSFXEvent:
-    Guid:
-      Data1: -445739149
-      Data2: 1284748372
-      Data3: -799277897
-      Data4: 1714220036
-    Path: event:/SFX/UI/Song Failed
-  songCompleteSFXEvent:
-    Guid:
-      Data1: 2014529978
-      Data2: 1146502696
-      Data3: -698075459
-      Data4: 1170590430
-    Path: event:/SFX/UI/Song Complete
-  obstacleAsteroidSFXEvent:
-    Guid:
-      Data1: 694450774
-      Data2: 1151003676
-      Data3: 598445742
-      Data4: -1671612474
-    Path: event:/SFX/Obstacles/Obstacle Hit (asteroid)
-  obstacleIceSFXEvent:
-    Guid:
-      Data1: 795911776
-      Data2: 1283669882
-      Data3: -2068776794
-      Data4: -78359682
-    Path: event:/SFX/Obstacles/Obstacle Hit (ice mine)
-  musicEvent:
-    Guid:
-      Data1: -438332273
-      Data2: 1292611206
-      Data3: 262691735
-      Data4: -993217669
-    Path: event:/Music/Play Music
---- !u!1001 &1681010597438771159
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 3741077475602470701}
-    m_Modifications:
-    - target: {fileID: 5940984672244036941, guid: cbba0b96885c56142bcd13c821b96ea5, type: 3}
-      propertyPath: m_Name
-      value: PlayerFloor
-      objectReference: {fileID: 0}
-    - target: {fileID: 7948826111470703348, guid: cbba0b96885c56142bcd13c821b96ea5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7948826111470703348, guid: cbba0b96885c56142bcd13c821b96ea5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7948826111470703348, guid: cbba0b96885c56142bcd13c821b96ea5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7948826111470703348, guid: cbba0b96885c56142bcd13c821b96ea5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7948826111470703348, guid: cbba0b96885c56142bcd13c821b96ea5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7948826111470703348, guid: cbba0b96885c56142bcd13c821b96ea5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7948826111470703348, guid: cbba0b96885c56142bcd13c821b96ea5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7948826111470703348, guid: cbba0b96885c56142bcd13c821b96ea5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7948826111470703348, guid: cbba0b96885c56142bcd13c821b96ea5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7948826111470703348, guid: cbba0b96885c56142bcd13c821b96ea5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cbba0b96885c56142bcd13c821b96ea5, type: 3}
---- !u!4 &8726780911784221987 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7948826111470703348, guid: cbba0b96885c56142bcd13c821b96ea5, type: 3}
-  m_PrefabInstance: {fileID: 1681010597438771159}
-  m_PrefabAsset: {fileID: 0}

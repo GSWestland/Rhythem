@@ -14,6 +14,10 @@ namespace Rhythem
     /// </summary>
     public sealed class GameManager : Manager<GameManager>
     {
+        [Title("TESTING")]
+        public Beatmap testBeatmap;
+
+
         [Title("Assignables")]
         [SerializeField] public GameObject playerPrefab;
         private GameObject playerObjectInstance;
@@ -55,16 +59,18 @@ namespace Rhythem
         protected override void Awake()
         {
             base.Awake();
+            
+            _currentBeatmap = testBeatmap;
 
+            playerObjectInstance = Instantiate(playerPrefab);
+            playerObjectInstance.name = playerObjectInstance.name.Replace("(Clone)", "");
+            VRRig = playerObjectInstance.GetComponentInChildren<XROrigin>();
+            player = playerObjectInstance.GetComponent<Play.Player>();
             if (SessionsManager.Instance.GetCurrentSession() == null)
             {
                 //SessionsManager.Instance.LoadSession<MenuSession>();
                 SessionsManager.Instance.LoadSession<SongSession>();
             }
-            playerObjectInstance = Instantiate(playerPrefab);
-            playerObjectInstance.name = playerObjectInstance.name.Replace("(Clone)", "");
-            VRRig = playerObjectInstance.GetComponentInChildren<XROrigin>();
-            player = playerObjectInstance.GetComponent<Play.Player>();
         }
 
         public void PauseGame(bool pause)
@@ -86,6 +92,13 @@ namespace Rhythem
 
         public void LoadScene(int scene, bool additive = false)
         {
+            for (int i = 0; i < SceneManager.sceneCount; i++)
+            {
+                if (SceneManager.GetSceneAt(i).name == SceneManager.GetSceneByBuildIndex(scene).name)
+                {
+                    return;
+                }
+            }
             if (additive)
             {
                 SceneManager.LoadScene(scene, LoadSceneMode.Additive);

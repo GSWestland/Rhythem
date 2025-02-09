@@ -22,7 +22,13 @@ namespace Rhythem.Play
         public Color leftHandColor;
         public Color rightHandColor;
 
-        private SongSession songSession;
+        private SongSession songSession
+        {
+            get
+            {
+                return SessionsManager.Instance.GetCurrentSession<SongSession>();
+            }
+        }
         public UnityEvent<ScorableNote, ScoreZone> OnNoteHit;
 
         public void SetInputModule<T>() where T : InputModule
@@ -50,7 +56,7 @@ namespace Rhythem.Play
 
         public void DoSongStartPlayerSetup()
         {
-            songSession = SessionsManager.Instance.GetCurrentSession<SongSession>();
+
         }
 
         public void OnHitNoteAction(DesiredHand hand, ScorableNote note, ScoreZone zone)
@@ -96,7 +102,10 @@ namespace Rhythem.Play
                 songSession.AddToScore(scoreAdd);
             }
             note.DisableNote();
-            songSession.CheckSongFailure();
+            if (songSession.IsSongFailed())
+            {
+
+            }
         }
 
         
@@ -104,7 +113,6 @@ namespace Rhythem.Play
         {
             songSession.AddToEnergy(GameManager.Instance.scoreProfile.energyLossFromMiss);
             note.DisableNote();
-            songSession.CheckSongFailure();
         }
     }
 }
