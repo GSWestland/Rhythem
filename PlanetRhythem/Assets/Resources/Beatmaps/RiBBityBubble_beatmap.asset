@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51b8a334f002ca54fa969cd1419bf809, type: 3}
+  m_Name: RiBBityBubble_beatmap
+  m_EditorClassIdentifier: 
+  songTitle: RiBBity bubble
+  artist: Spencer Hernandez
+  songThumbnail: {fileID: 0}
+  bPM: 130
+  beatsPerMeasure: 8
+  subdivisionsPerBeat: 12
+  numberOfMeasures: 36
+  silenceAtStartOfTrack: 0
+  audioFile: {fileID: 8300000, guid: b6e38b3fa9c1ac64585469e0c30be235, type: 3}
+  trackDataPath: Assets/Resources/Beatmaps/BeatmapsData/RiBBitybubble.json
