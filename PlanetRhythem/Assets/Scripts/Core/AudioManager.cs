@@ -220,6 +220,5 @@ namespace Rhythem
                     break;
             }
         }
-
     }
 }
