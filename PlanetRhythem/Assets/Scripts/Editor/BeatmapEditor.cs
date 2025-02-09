@@ -10,6 +10,7 @@ namespace Rhythem.TrackEditor {
     public class BeatmapEditor : Editor
     {
         SerializedProperty trackDataPath;
+        [Title("Dummy Song Filling")]
         int dummyFillNoteRatio = 2;
         private void OnEnable()
         {

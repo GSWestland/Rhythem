@@ -1,5 +1,4 @@
 using UnityEngine;
-using Sirenix.OdinInspector;
 using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
@@ -18,7 +17,6 @@ namespace Rhythem.TrackEditor
         public string songTitle;
         public string artist;
         public Texture2D songThumbnail;
-        [Space]
         [Header("Track Editor Info")]
         public int bPM;
         public int beatsPerMeasure;
@@ -29,7 +27,6 @@ namespace Rhythem.TrackEditor
         public AudioClip audioFile;
         [HideInInspector]
         public string trackDataPath;
-
         public void DoJsonTrackDataSetup()
         {
             if (songTitle == null || bPM == 0 || subdivisionsPerBeat == 0 || numberOfMeasures == 0 )

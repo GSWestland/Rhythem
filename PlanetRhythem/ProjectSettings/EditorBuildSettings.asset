@@ -6,13 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/GameEntry.unity
+    path: Assets/Scenes/Scene_GameEntry.unity
     guid: 17393aa6cd3f1624c9b4ce98205259cc
   - enabled: 1
-    path: Assets/Scenes/PlanetTestScene.unity
+    path: Assets/Scenes/Scene_SongPlay.unity
     guid: 1fea840bc3d5d5544b64e786f0a2523b
   - enabled: 1
-    path: Assets/Scenes/TrackEditor.unity
+    path: Assets/Scenes/Scene_SongFinished.unity
+    guid: 255617335fa7c9e40bf46cf3c11f4b5e
+  - enabled: 1
+    path: Assets/Scenes/Scene_TrackEditor.unity
     guid: 41705f4452155c9448ef6fff1463918b
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
