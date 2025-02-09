@@ -36,6 +36,9 @@ namespace Rhythem.Play
         protected override void OnConfirmPerformed(InputAction.CallbackContext context)
         {
             base.OnConfirmPerformed(context);
+            //TEMP FOR TESTING SESSIONS
+            GameManager.Instance.LoadScene(1, true);
+            SessionsManager.Instance.LoadSession<SongSession>();
         }
 
         protected override void OnBackPerformed(InputAction.CallbackContext context)

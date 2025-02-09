@@ -1,16 +1,9 @@
 using UnityEngine;
 
-public class CreditsSession : MonoBehaviour
+namespace Rhythem
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class CreditsSession : Session
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

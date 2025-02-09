@@ -12,8 +12,6 @@ namespace Rhythem
         public const string BEATMAP_ROOT_PATH = "Assets/Resources/Beatmaps";
         public const string JSON_DATA_PATH = "Assets/Resources/Beatmaps/BeatmapsData";
 
-        public const int STARTING_ENERGY = 100;
-
         public bool HeadsetDirection { get; private set; } = true;
 
         public void UseHeadsetDirection()

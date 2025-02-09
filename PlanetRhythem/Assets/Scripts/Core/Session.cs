@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Rhythem.Core
+namespace Rhythem
 {
     /// <summary>
     /// Sessions are the main overall gameplay states of the game. These sessions

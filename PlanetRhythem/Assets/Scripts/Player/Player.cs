@@ -1,3 +1,4 @@
+using Rhythem.Core;
 using Rhythem.Songs;
 using Sirenix.OdinInspector;
 using System;
@@ -5,6 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.SpatialTracking;
+using static UnityEngine.Rendering.DebugUI;
 
 namespace Rhythem.Play
 {
@@ -14,27 +16,26 @@ namespace Rhythem.Play
         public TrackedPoseDriver head;
         public PlayerWand leftHand;
         public PlayerWand rightHand;
-        private PlayerSongPlayInputModule _inputModule;
-        public PlayerSongPlayInputModule inputModule
-        {
-            get
-            {
-                if ( _inputModule == null && (_inputModule = GetComponent<PlayerSongPlayInputModule>()) == null)
-                {
-                    Debug.LogError("No InputModule found on player. fix that.");
-                    return null;
-                }
-                return _inputModule;
-            }
-        }
+        [SerializeField]private InputModule _inputModule;
 
         [Title("Per-hand Color setup")]
         public Color leftHandColor;
         public Color rightHandColor;
 
-        [Title("Player-Related Members")]
-        public int energy = 100;
-        public int score = 0;
+        private SongSession songSession;
+        public UnityEvent<ScorableNote, ScoreZone> OnNoteHit;
+
+        public void SetInputModule<T>() where T : InputModule
+        {
+            if (_inputModule != null)
+            {
+                Destroy(_inputModule);
+            }
+            _inputModule = gameObject.AddComponent<T>();
+            _inputModule.head = head;
+            _inputModule.rightHand = rightHand;
+            _inputModule.leftHand = leftHand;
+        }
 
         void Start()
         {
@@ -49,59 +50,61 @@ namespace Rhythem.Play
 
         public void DoSongStartPlayerSetup()
         {
-            energy = Globals.STARTING_ENERGY;
-            score = 0;
+            songSession = SessionsManager.Instance.GetCurrentSession<SongSession>();
         }
 
-        public void OnHitNoteAction(ScorableNote note, ScoreZone zone)
+        public void OnHitNoteAction(DesiredHand hand, ScorableNote note, ScoreZone zone)
         {
             if(note.noteType == NoteType.Obstacle)
             {
-                energy -= 15;
-                score -= 50;
+                songSession.AddToEnergy(GameManager.Instance.scoreProfile.EnergyLossFromObstacle);
+                songSession.AddToScore(GameManager.Instance.scoreProfile.scoreNoteObstacle);
             }
             else if (note.noteType == NoteType.Note)
             {
-                energy += 3;
-                switch (zone)
+                int scoreAdd = 0;
+                if (hand == note.noteHand)
                 {
-                    case ScoreZone.Stellar:
-                        score += 250;
-                        break;
-                    case ScoreZone.Great:
-                        score += 150;
-                        break;
-                    case ScoreZone.Good:
-                        score += 100;
-                        break;
-                    case ScoreZone.Close:
-                        score += 10;
-                        break;
-                    case ScoreZone.Miss:
-                        score -= 10;
-                        break;
-                    default:
-                        break;
+                    songSession.AddToEnergy(GameManager.Instance.scoreProfile.energyRegain);
+
+                    switch (zone)
+                    {
+                        case ScoreZone.Stellar:
+                            scoreAdd = GameManager.Instance.scoreProfile.scoreNoteStellar;
+                            break;
+                        case ScoreZone.Great:
+                            scoreAdd = GameManager.Instance.scoreProfile.scoreNoteGreat;
+                            break;
+                        case ScoreZone.Good:
+                            scoreAdd = GameManager.Instance.scoreProfile.scoreNoteGood;
+                            break;
+                        case ScoreZone.Close:
+                            scoreAdd = GameManager.Instance.scoreProfile.scoreNoteClose;
+                            break;
+                        case ScoreZone.Miss:
+                            scoreAdd = GameManager.Instance.scoreProfile.scoreNoteMiss;
+                            break;
+                        default:
+                            break;
+                    }
                 }
+                else
+                {
+                    songSession.AddToEnergy(-GameManager.Instance.scoreProfile.energyRegain);
+                    scoreAdd /= 10;
+                }
+                songSession.AddToScore(scoreAdd);
             }
             note.DisableNote();
-            CheckSongFailure();
+            songSession.CheckSongFailure();
         }
 
         
         public void OnMissedNoteAction(ScorableNote note)
         {
-            energy -= 10;
+            songSession.AddToEnergy(GameManager.Instance.scoreProfile.energyLossFromMiss);
             note.DisableNote();
-            CheckSongFailure();
-        }
-
-        public void CheckSongFailure()
-        {
-            if (energy <= 0)
-            {
-                Debug.Log("SONG FAILED WOOF");
-            }
+            songSession.CheckSongFailure();
         }
     }
 }

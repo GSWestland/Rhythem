@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System;
 using Unity.XR.CoreUtils;
 using Rhythem.TrackEditor;
+using Sirenix.OdinInspector;
+using UnityEngine.Rendering;
 
 namespace Rhythem
 {
@@ -11,16 +14,18 @@ namespace Rhythem
     /// </summary>
     public sealed class GameManager : Manager<GameManager>
     {
+        [Title("Assignables")]
         [SerializeField] public GameObject playerPrefab;
         private GameObject playerObjectInstance;
         public bool showDebugLogs = true;
-
         public XROrigin VRRig { get; private set; }
         public Play.Player player { get; private set; }
         public bool Paused { get; private set; }
         public Action<bool> onPaused;
 
+        public SongScoringProfile scoreProfile;
         private Beatmap _currentBeatmap;
+
         //this should only ever be assigned in a Menu Session
         public Beatmap CurrentBeatmap
         {
@@ -50,6 +55,12 @@ namespace Rhythem
         protected override void Awake()
         {
             base.Awake();
+
+            if (SessionsManager.Instance.GetCurrentSession() == null)
+            {
+                //SessionsManager.Instance.LoadSession<MenuSession>();
+                SessionsManager.Instance.LoadSession<SongSession>();
+            }
             playerObjectInstance = Instantiate(playerPrefab);
             playerObjectInstance.name = playerObjectInstance.name.Replace("(Clone)", "");
             VRRig = playerObjectInstance.GetComponentInChildren<XROrigin>();
@@ -71,6 +82,18 @@ namespace Rhythem
         {
             PauseGame(pause);
             Time.timeScale = freezeTime ? 0 : 1;
+        }
+
+        public void LoadScene(int scene, bool additive = false)
+        {
+            if (additive)
+            {
+                SceneManager.LoadScene(scene, LoadSceneMode.Additive);
+            }
+            else
+            {
+                SceneManager.LoadScene(scene, LoadSceneMode.Single);
+            }
         }
     }
 }

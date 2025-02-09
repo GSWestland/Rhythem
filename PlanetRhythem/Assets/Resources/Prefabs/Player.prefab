@@ -382,10 +382,12 @@ MonoBehaviour:
   head: {fileID: 4645821360179589439}
   leftHand: {fileID: 7842582390123773546}
   rightHand: {fileID: 7441815787677268198}
+  _inputModule: {fileID: 0}
   leftHandColor: {r: 0.706393, g: 0.8301887, b: 0.14489143, a: 1}
   rightHandColor: {r: 0.7870576, g: 0.41709682, b: 0.9716981, a: 1}
-  energy: 100
-  score: 0
+  OnNoteHit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &4513138312542639248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -475,7 +477,7 @@ MonoBehaviour:
   m_DefaultControlScheme: XR
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 2602037777266703542}
 --- !u!114 &3373180003139855444
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,7 +19,8 @@ namespace Rhythem.Play
 
 
         private LineRenderer _selectionAssistant;
-        public UnityEvent<ScorableNote, ScoreZone> OnNoteHit;
+        public UnityEvent<DesiredHand, ScorableNote, ScoreZone> OnNoteHit;
+
         void Start()
         {
             _selectionAssistant = lineRenderStartTransform.GetComponent<LineRenderer>();
@@ -67,7 +68,8 @@ namespace Rhythem.Play
                             scoreZone = ScoreZone.Close;
                         }
                     }
-                    OnNoteHit.Invoke(other.gameObject.GetComponent<ScorableNote>(), scoreZone);
+                    OnNoteHit.Invoke(desiredHand, other.gameObject.GetComponent<ScorableNote>(), scoreZone);
+                    AudioManager.Instance.PlayNoteHitOneShot(note);
                 }
             }
         }
