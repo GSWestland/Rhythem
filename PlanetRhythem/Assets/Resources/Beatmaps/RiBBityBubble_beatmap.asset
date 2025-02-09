@@ -17,7 +17,7 @@ MonoBehaviour:
   songThumbnail: {fileID: 0}
   bPM: 130
   beatsPerMeasure: 8
-  subdivisionsPerBeat: 12
+  subdivisionsPerBeat: 4
   numberOfMeasures: 36
   silenceAtStartOfTrack: 0
   audioFile: {fileID: 8300000, guid: b6e38b3fa9c1ac64585469e0c30be235, type: 3}

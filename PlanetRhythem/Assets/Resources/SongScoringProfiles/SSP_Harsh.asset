@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73ba0487eb89dd849b45794fc58ca4c1, type: 3}
-  m_Name: SSP_Default
+  m_Name: SSP_Harsh
   m_EditorClassIdentifier: 
   energyStartValue: 100
-  energyLossFromMiss: -5
-  EnergyLossFromObstacle: -15
+  energyLossFromMiss: -10
+  EnergyLossFromObstacle: -20
   energyRegain: 3
   scoreNoteStellar: 1000
-  scoreNoteGreat: 500
-  scoreNoteGood: 300
-  scoreNoteClose: 100
+  scoreNoteGreat: 250
+  scoreNoteGood: 100
+  scoreNoteClose: 10
   scoreNoteMiss: 0
-  scoreNoteObstacle: -150
+  scoreNoteObstacle: -500
